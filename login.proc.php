@@ -6,7 +6,7 @@
 	$pass_encriptada=md5($_REQUEST['pass']);
 
 	//preparamos la consulta que intenta encontrar el usuario Y la contraseña introducidos
-	$sql = "SELECT * FROM usuario WHERE correo='$_REQUEST[mail]' AND pass='$pass_encriptada' and activo = 1";
+	$sql = "SELECT * FROM usuario WHERE correo='$_REQUEST[mail]' AND pass='$pass_encriptada' AND activo = 1";
 	//ejecutamos la consulta
 	$resultado = mysqli_query($con,$sql);
 
@@ -19,7 +19,7 @@
 		$_SESSION['id']=$datos_usuario['id'];
 		$_SESSION['mail']=$_REQUEST['mail'];
 		$_SESSION['nombre']=$datos_usuario['nombre'];
-		$_SESSION['nivel']=$datos_usuario['usu_nivel'];
+		$_SESSION['nivel']=$datos_usuario['nivel'];
 		$_SESSION['img']=$datos_usuario['img'];
 
 		//redirigimos a la página principal

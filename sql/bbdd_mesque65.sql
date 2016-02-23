@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-02-2016 a las 12:03:17
+-- Tiempo de generación: 23-02-2016 a las 09:51:31
 -- Versión del servidor: 5.6.25
 -- Versión de PHP: 5.6.11
 
@@ -25,156 +25,164 @@ USE `bbdd_mesque65`;
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbl_actividad`
+-- Estructura de tabla para la tabla `actividad`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_actividad` (
-  `act_id` int(3) NOT NULL,
-  `act_nombre` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `act_descripcion` text COLLATE utf8_unicode_ci NOT NULL,
-  `act_plazas` int(3) NOT NULL,
-  `act_fecha` datetime NOT NULL,
-  `act_ubicacion_lat` float NOT NULL,
-  `act_ubicacion_lon` float NOT NULL,
-  `tip_id` int(2) NOT NULL
+CREATE TABLE IF NOT EXISTS `actividad` (
+  `id` int(3) NOT NULL,
+  `nombre` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `descripcion` text COLLATE utf8_unicode_ci NOT NULL,
+  `plazas` int(3) NOT NULL,
+  `fecha_inicio` datetime NOT NULL,
+  `fecha_fin` datetime NOT NULL,
+  `img` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `ubicacion_lat` double NOT NULL,
+  `ubicacion_lon` double NOT NULL,
+  `destacada` tinyint(1) NOT NULL,
+  `id_tipo_actividad` int(2) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `tbl_actividad`
+-- Volcado de datos para la tabla `actividad`
 --
 
-INSERT INTO `tbl_actividad` (`act_id`, `act_nombre`, `act_descripcion`, `act_plazas`, `act_fecha`, `act_ubicacion_lat`, `act_ubicacion_lon`, `tip_id`) VALUES
-(1, 'Paseo por la montaña', 'Paseo por el pirineo egipcio', 30, '0000-00-00 00:00:00', 0, 0, 1);
+INSERT INTO `actividad` (`id`, `nombre`, `descripcion`, `plazas`, `fecha_inicio`, `fecha_fin`, `img`, `ubicacion_lat`, `ubicacion_lon`, `destacada`, `id_tipo_actividad`) VALUES
+(1, 'Paseo por la montaña', 'Paseo por el pirineo egipcio', 30, '2016-02-26 05:38:00', '0000-00-00 00:00:00', '', 41.513162, 2.113968, 0, 1);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbl_asistente`
+-- Estructura de tabla para la tabla `asistente`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_asistente` (
-  `asi_id` int(4) NOT NULL,
-  `usu_id` int(3) NOT NULL,
-  `act_id` int(3) NOT NULL,
-  `asi_fecha` datetime NOT NULL
+CREATE TABLE IF NOT EXISTS `asistente` (
+  `id` int(4) NOT NULL,
+  `id_usuario` int(3) NOT NULL,
+  `id_actividad` int(3) NOT NULL,
+  `fecha` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbl_colaborador`
+-- Estructura de tabla para la tabla `colaborador`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_colaborador` (
-  `col_id` int(3) NOT NULL,
-  `usu_id` int(3) NOT NULL,
-  `act_id` int(3) NOT NULL,
-  `col_fecha` datetime NOT NULL
+CREATE TABLE IF NOT EXISTS `colaborador` (
+  `id` int(3) NOT NULL,
+  `id_usuario` int(3) NOT NULL,
+  `id_actividad` int(3) NOT NULL,
+  `fecha` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbl_tipo_actividad`
+-- Estructura de tabla para la tabla `tipo_actividad`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_tipo_actividad` (
-  `tip_id` int(2) NOT NULL,
-  `tip_nombre` varchar(35) COLLATE utf8_unicode_ci NOT NULL
+CREATE TABLE IF NOT EXISTS `tipo_actividad` (
+  `id` int(2) NOT NULL,
+  `nombre` varchar(35) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `tbl_tipo_actividad`
+-- Volcado de datos para la tabla `tipo_actividad`
 --
 
-INSERT INTO `tbl_tipo_actividad` (`tip_id`, `tip_nombre`) VALUES
+INSERT INTO `tipo_actividad` (`id`, `nombre`) VALUES
 (1, 'Paseo');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbl_usuario`
+-- Estructura de tabla para la tabla `usuario`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_usuario` (
-  `usu_id` int(3) NOT NULL,
-  `usu_nombre` varchar(35) COLLATE utf8_unicode_ci NOT NULL,
-  `usu_mail` varchar(35) COLLATE utf8_unicode_ci NOT NULL,
-  `usu_passwd` varchar(80) COLLATE utf8_unicode_ci NOT NULL,
-  `usu_nivel` int(1) NOT NULL,
-  `usu_imagen` varchar(80) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+CREATE TABLE IF NOT EXISTS `usuario` (
+  `id` int(3) NOT NULL,
+  `nombre` varchar(30) COLLATE utf8_bin NOT NULL,
+  `apellidos` varchar(50) COLLATE utf8_bin NOT NULL,
+  `img` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `correo` varchar(75) COLLATE utf8_bin NOT NULL,
+  `pass` varchar(50) COLLATE utf8_bin NOT NULL,
+  `nivel` tinyint(1) NOT NULL,
+  `activo` tinyint(1) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Volcado de datos para la tabla `tbl_usuario`
+-- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `tbl_usuario` (`usu_id`, `usu_nombre`, `usu_mail`, `usu_passwd`, `usu_nivel`, `usu_imagen`) VALUES
-(2, 'Raul', 'raul.perez@gmail.com', 'c2f004a05fffa487f826003604b87de1', 2, '');
+INSERT INTO `usuario` (`id`, `nombre`, `apellidos`, `img`, `correo`, `pass`, `nivel`, `activo`) VALUES
+(1, 'David ', 'Marin Salvador', '5.jpg', 'david.marin@fje.edu', '827ccb0eea8a706c4c34a16891f84e7b', 0, 1),
+(2, 'Ignasi', 'Romero Sanjuan', '3.jpg', 'ignasi.romero@fje.edu', ' 0ba0dd14265fced34a1202aeced9f02d', 0, 1),
+(3, 'Armand', 'Gutierrez Arumi', '4.jpg', 'armand.gutierrez@fje.edu', 'e10adc3949ba59abbe56e057f20f883e', 0, 1);
 
 --
 -- Índices para tablas volcadas
 --
 
 --
--- Indices de la tabla `tbl_actividad`
+-- Indices de la tabla `actividad`
 --
-ALTER TABLE `tbl_actividad`
-  ADD PRIMARY KEY (`act_id`);
+ALTER TABLE `actividad`
+  ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tbl_asistente`
+-- Indices de la tabla `asistente`
 --
-ALTER TABLE `tbl_asistente`
-  ADD PRIMARY KEY (`asi_id`);
+ALTER TABLE `asistente`
+  ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tbl_colaborador`
+-- Indices de la tabla `colaborador`
 --
-ALTER TABLE `tbl_colaborador`
-  ADD PRIMARY KEY (`col_id`);
+ALTER TABLE `colaborador`
+  ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tbl_tipo_actividad`
+-- Indices de la tabla `tipo_actividad`
 --
-ALTER TABLE `tbl_tipo_actividad`
-  ADD PRIMARY KEY (`tip_id`);
+ALTER TABLE `tipo_actividad`
+  ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tbl_usuario`
+-- Indices de la tabla `usuario`
 --
-ALTER TABLE `tbl_usuario`
-  ADD PRIMARY KEY (`usu_id`);
+ALTER TABLE `usuario`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `correo` (`correo`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT de la tabla `tbl_actividad`
+-- AUTO_INCREMENT de la tabla `actividad`
 --
-ALTER TABLE `tbl_actividad`
-  MODIFY `act_id` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+ALTER TABLE `actividad`
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT de la tabla `tbl_asistente`
+-- AUTO_INCREMENT de la tabla `asistente`
 --
-ALTER TABLE `tbl_asistente`
-  MODIFY `asi_id` int(4) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `asistente`
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT de la tabla `tbl_colaborador`
+-- AUTO_INCREMENT de la tabla `colaborador`
 --
-ALTER TABLE `tbl_colaborador`
-  MODIFY `col_id` int(3) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `colaborador`
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT de la tabla `tbl_tipo_actividad`
+-- AUTO_INCREMENT de la tabla `tipo_actividad`
 --
-ALTER TABLE `tbl_tipo_actividad`
-  MODIFY `tip_id` int(2) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+ALTER TABLE `tipo_actividad`
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT de la tabla `tbl_usuario`
+-- AUTO_INCREMENT de la tabla `usuario`
 --
-ALTER TABLE `tbl_usuario`
-  MODIFY `usu_id` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+ALTER TABLE `usuario`
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
