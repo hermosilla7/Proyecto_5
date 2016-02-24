@@ -20,29 +20,26 @@
 				<?php 
 					} else {
 				?>
-				<h3><?php echo "Bienvenido " .$nom_user?></h3>
-				<div class="perfilimg">
+			<h3><?php echo "Bienvenido " .$nom_user?></h3>
+			<div class="perfilimg">
 	            <input type="image" src="img/<?php echo $foto ?>"style="width: 68px; height: 68px;">
-	            </div>
-	            <div class="logologin">
+            </div>
+            <div class="logologin">
 	            <input type="image" src="img/off.png" onclick="window.location.href='logout.proc.php'">
 	            <input type="image" src="img/baja.png" onclick="confirmar()">
 	            <input type="image" src="img/edit.png" onclick="window.location.href='usuarios_modificar.php'"></br>
-	            </div>
-	            </div>
+            </div>
+        </div>
 				<?php
 					}
 				?>
-			</div>
+	</div>
 	<div class="logo">
 			<img src="img/LOGO2_120px.png" />
-		</div>
-		<div class="title">
-			<h1>Nunca es demasiado tarde</h1>
-		</div>
-
-
-	
+	</div>
+	<div class="title">
+		<h1>Nunca es demasiado tarde</h1>
+	</div>
 </div>
 <?php
 	echo "<div class='log-error'>";
@@ -51,7 +48,7 @@
 			echo "<br/><br/>";
 		}
 	echo "</div>";
-?>	
+?>
 <div class="menu">	
 	<ul>
 	  	<li><a href="index.php">Inicio</a></li>
@@ -59,5 +56,12 @@
 	  	<li><a href="#contact">Contact</a></li>
 	  	<li><a href="actividades.php">Actividades</a></li>
   		<li><a href="donaciones.php">Donaciones</a></li>
+  		<?php
+  			if($_SESSION['nivel'] == 2){
+  		?>
+  		<li><a href="usuarios.php">ABC Usuarios</a></li>
+  		<?php
+  			}
+  		?>
 	</ul>
 </div>
