@@ -22,7 +22,7 @@
 				?>
 			<h3><?php echo "Bienvenido " .$nom_user?></h3>
 			<div class="perfilimg">
-	            <input type="image" src="img/<?php echo $foto ?>"style="width: 68px; height: 68px;">
+	            <input type="image" src="img/<?php echo $_SESSION['img'] ?>"style="width: 68px; height: 68px;">
             </div>
             <div class="logologin">
 	            <input type="image" src="img/off.png" onclick="window.location.href='logout.proc.php'">

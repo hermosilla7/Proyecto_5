@@ -1,4 +1,5 @@
 <?php
+session_start();
 error_reporting(0);
 include 'conexion.proc.php';
 include "header.php";
@@ -39,7 +40,7 @@ $result_usuarios = mysqli_query($con, $consulta_usuarios);
         echo "<b>Correo:</b> ";
         echo utf8_encode($usuario['correo']);
         ?>
-        <a href="usuarios_modificar.php?id=<?php echo $usuario['id']; ?>">Editar contacto</a>
+        <a href="usuarios_modificar_admin.php?id=<?php echo $usuario['id']; ?>">Editar contacto</a>
     <a href="#" onclick="confirmDel(<?php echo $usuario['id']; ?>)">Eliminar contacto</a>
     <?php echo "<br/><br/>";
     }
