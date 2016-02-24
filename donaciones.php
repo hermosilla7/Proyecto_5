@@ -39,31 +39,32 @@ function validar(){
 
 	</head>
 	<body>
+		<div class="donaciones">
 		<div class="mod-form">
 			<h1>Donaciones</h1>
      		<div class="form-group ">
 				<form name="f1" action="donaciones.proc.php" method="post" enctype="multipart/form-data" onsubmit="return validar();">
-					<div class="form-group">
+					
 						<input type="text" name="nombre" class="form-control" placeholder="Nombre" required><br>
-					</div>
-					<div class="form-group">
+					
 						<input type="text" name="apellidos" class="form-control" placeholder="Apellidos" required><br>
-					</div>
-					<div class="form-group">
+					
 						<input type="text" name="correo" class="form-control" placeholder="Correo" required><br>
-					</div>
-					<div class="form-group">
+			
 						<input type="text" name="visa" class="form-control" placeholder="Número de VISA" required><br>
-					</div>
-					<div class="form-group">
+					
 						<input type="password" name="pin" class="form-control" placeholder="Pin VISA" required><br>
-					</div>
-					<div class="form-group">
+				
 						<input type="number" name="cantidad" class="form-control" placeholder="Cantidad a contribuir" required><br>
 					</div>
-					<button type="submit" class="log-btn" onClick="validar()" name="acce">Donar</button>
+					<button type="submit" class="log-btn2" onClick="validar()" name="acce">Donar</button>
 				</form
 			</div>
 		</div>
+	</div>
+</div>
+<?php
+include "footer.php";
+?>
 	</body>
 </html>

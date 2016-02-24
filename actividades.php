@@ -47,5 +47,8 @@ $result_actividades = mysqli_query($con, $consulta_actividades);
                 <a href="#" class="crunchify-top"><img src ="img/btt.png" style="float: right;" width="50px" height="50px"></a>
             </div>
         </div>
+        <?php
+include "footer.php";
+?>
     </body>
 </html>
