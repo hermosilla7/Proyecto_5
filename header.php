@@ -12,7 +12,6 @@
 				    </div>
     				<button type="submit" class="log-btn" name="acce">Entrar</button>
      				<button type="button" class="sign-btn" onclick="window.location.href='usuarios_insert.php'">Registrarme</button>  
-     				<button type="button" class="sign-btn" onclick="window.location.href='donaciones.php'">Donaciones</button>  
 				</form>
 			</div>
 			<div class="logo">
@@ -38,5 +37,6 @@
   <li><a href="#news">News</a></li>
   <li><a href="#contact">Contact</a></li>
   <li><a href="actividades.php">Actividades</a></li>
+  <li><a href="donaciones.php">Donaciones</a></li>
 </ul>
 </div>

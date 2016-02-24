@@ -1,6 +1,6 @@
 <?php
-	session_start();
 	error_reporting(0);
+	include 'header.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -62,7 +62,6 @@ function validar(){
 						<input type="number" name="cantidad" class="form-control" placeholder="Cantidad a contribuir" required><br>
 					</div>
 					<button type="submit" class="log-btn" onClick="validar()" name="acce">Donar</button>
-					<button type="button" class="sign-btn" onClick="window.location.href='index.php'">Volver</button>
 				</form
 			</div>
 		</div>
