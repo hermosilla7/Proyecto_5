@@ -70,18 +70,21 @@ li a.active {
 }
 /*/////////////////////////////////////////////*/
 .destacado {
-  background: wheat none repeat scroll 0 0;
+  background: #5080ef none repeat scroll 0 0;
+  border-radius: 5px;
   float: left;
   height: auto;
+  margin-bottom: 110px;
   margin-left: 3%;
   margin-top: 3%;
   width: 70%;
-   margin-bottom:110px;
 }
 .not {
-  background: violet none repeat scroll 0 0;
+  background: #dbe6ff none repeat scroll 0 0;
+  border-radius: 5px;
+  border-top: 2px solid #fff;
   display: inline-block;
-  height: 250px;
+  height: auto;
   margin: 9px;
   width: 48%;
 }
