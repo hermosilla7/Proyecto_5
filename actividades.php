@@ -14,12 +14,16 @@ $result_actividades = mysqli_query($con, $consulta_actividades);
         <link rel="stylesheet" type="text/css" href="css/estilo.css"/>
     </head>
     <body>
-        <div id="actividades">
+        <div class="titleact">
+            <h1>Actividades</h1>
+        </div>
+        <div id="actividades" class="actividades">
             <div class="prin-img" style="margin-bottom: 15px;">
 
     <?php
     $actividadesArray = [];
     while ($actividad = mysqli_fetch_array($result_actividades)) {
+        echo "<div class='actividad'> ";
         echo "<b style='margin-top: 15px;'>Nombre:</b> ";
         echo utf8_encode($actividad['nombre']);
         echo "<br/>";
@@ -35,17 +39,9 @@ $result_actividades = mysqli_query($con, $consulta_actividades);
         echo "<b>Fecha inicio:</b> ";
         echo utf8_encode($actividad['descripcion']);
         echo "<br/>";
-
-        $nombre_actividad = utf8_encode($actividad['nombre']) . " " . utf8_encode($contacto['apellidos']);
-        $loc_lat = utf8_encode($actividad['ubicacion_lat']);
-        $loc_lon = utf8_encode($actividad['ubicacion_lon']);
-
-        $actividadesArray[] = [
-            'nombre' => $nombre_actividad,
-            'latitud' => (float)$loc_lat,
-            'longitud' => (float)$loc_lon,
-        ];
+        echo" <a href='#'>Ver mas</a>";
         echo "<br/>";
+        echo "</div>";
     }
     ?>
                 <a href="#" class="crunchify-top"><img src ="img/btt.png" style="float: right;" width="50px" height="50px"></a>
