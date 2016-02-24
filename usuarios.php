@@ -3,7 +3,7 @@ session_start();
 error_reporting(0);
 include 'conexion.proc.php';
 include "header.php";
-$consulta_usuarios = "SELECT * FROM usuario";
+$consulta_usuarios = "SELECT * FROM usuario where activo = 1";
 $result_usuarios = mysqli_query($con, $consulta_usuarios);
 
 ?>
@@ -40,8 +40,8 @@ $result_usuarios = mysqli_query($con, $consulta_usuarios);
         echo "<b>Correo:</b> ";
         echo utf8_encode($usuario['correo']);
         ?>
-        <a href="usuarios_modificar_admin.php?id=<?php echo $usuario['id']; ?>">Editar contacto</a>
-    <a href="#" onclick="confirmDel(<?php echo $usuario['id']; ?>)">Eliminar contacto</a>
+        <a href="usuarios_modificar_admin.php?id=<?php echo $usuario['id']; ?>">Editar usuario</a>
+        <a href="usuarios_baja_admin.proc.php?id=<?php echo $usuario['id']; ?>">Eliminar usuario</a>
     <?php echo "<br/><br/>";
     }
     ?>
