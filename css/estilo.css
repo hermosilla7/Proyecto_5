@@ -14,7 +14,6 @@
 input {
   margin-bottom: 5px;
   text-align: center;
-  width: 100%;
 }
 .logo {
   float: left;
@@ -62,7 +61,13 @@ li a.active {
   color: white;
 }
 
-
+.perfilimg {
+  margin-top: 5px;
+  text-align: center;
+}
+.logologin {
+  text-align: center;
+}
 /*/////////////////////////////////////////////*/
 .destacado {
   background: wheat none repeat scroll 0 0;
