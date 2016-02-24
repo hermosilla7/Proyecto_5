@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-02-2016 a las 12:57:39
+-- Tiempo de generación: 24-02-2016 a las 13:01:36
 -- Versión del servidor: 5.6.26
 -- Versión de PHP: 5.6.12
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `bbdd_mesque65`
 --
+CREATE DATABASE IF NOT EXISTS `bbdd_mesque65` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+USE `bbdd_mesque65`;
 
 -- --------------------------------------------------------
 
