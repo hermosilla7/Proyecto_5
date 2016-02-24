@@ -1,18 +1,134 @@
-{
-  box-sizing:border-box;
-  -moz-box-sizing:border-box;
-  -webkit-box-sizing:border-box;
-  font-family:arial;
+.header {
+  background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(80, 128, 239, 1) 0%, rgba(80, 128, 239, 1) 8%, rgba(219, 230, 255, 1) 100%) repeat scroll 0 0;
+  border-radius: 5px;
+  height: 145px;
 }
-body{
-  background:url("../img/fondo.jpg")#60B2FF
+.login-form {
+  background: #dbe6ff none repeat scroll 0 0;
+  border-radius: 5px;
+  float: right;
+  margin-right: 9px;
+  margin-top: 9px;
+  padding: 10px;
+}
+input {
+  margin-bottom: 5px;
+}
+.logo {
+  float: left;
+  margin-left: 9px;
+  padding: 3px;
+}
+.title {
+  padding-top: 2%;
+  text-align: center;
+}
 
+/*///////////////////////////menu/////////////////////*/
+ul {
+  background-color: #dbe6ff;
+  border: 3px solid #e7e7e7;
+  border-radius: 5px;
+  display: block;
+  float: left;
+  list-style-type: none;
+  overflow: hidden;
+  position: absolute;
+  width: 99.6%;
 }
-h1{
-  color:#4000FF;
-  text-align:center;
-  font-family:icon;
+
+li {
+    float: left;
 }
+
+li a {
+  border-radius: 5px;
+  color: #666;
+  display: block;
+  padding: 14px 16px;
+  text-align: center;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #87aafa;
+  color: #fff;
+}
+
+li a.active {
+  background-color: #17326e;
+  color: white;
+}
+
+
+/*/////////////////////////////////////////////*/
+.destacado {
+  background: wheat none repeat scroll 0 0;
+  float: left;
+  height: auto;
+  margin-left: 3%;
+  margin-top: 3%;
+  width: 70%;
+   margin-bottom:110px;
+}
+.not {
+  background: violet none repeat scroll 0 0;
+  display: inline-block;
+  height: 250px;
+  margin: 9px;
+  width: 48%;
+}
+.sidebar {
+  background: turquoise none repeat scroll 0 0;
+  float: right;
+  height: 500px;
+  margin-bottom: 110px;
+  margin-right: 3%;
+  margin-top: 3%;
+  width: 20%;
+}
+.footer {
+  background: #5080ef none repeat scroll 0 0;
+  border-radius: 5px;
+  bottom: 0;
+  display: flex;
+  height: 100px;
+  margin-top: 100px;
+  width: 100%;
+}
+.perfil {
+  display: inline-block;
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+.info {
+  display: inline-block;
+  width: 30%;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+background: rgba(219,230,255,1);
+background: -moz-linear-gradient(top, rgba(219,230,255,1) 0%, rgba(219,230,255,1) 51%, rgba(255,255,255,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(219,230,255,1)), color-stop(51%, rgba(219,230,255,1)), color-stop(100%, rgba(255,255,255,1)));
+background: -webkit-linear-gradient(top, rgba(219,230,255,1) 0%, rgba(219,230,255,1) 51%, rgba(255,255,255,1) 100%);
+background: -o-linear-gradient(top, rgba(219,230,255,1) 0%, rgba(219,230,255,1) 51%, rgba(255,255,255,1) 100%);
+background: -ms-linear-gradient(top, rgba(219,230,255,1) 0%, rgba(219,230,255,1) 51%, rgba(255,255,255,1) 100%);
+background: linear-gradient(to bottom, rgba(219,230,255,1) 0%, rgba(219,230,255,1) 51%, rgba(255,255,255,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbe6ff', endColorstr='#ffffff', GradientType=0 );
+
+    background-repeat: repeat;
+    height: 500px;
+    padding: 1px;
+}
+
+h1 { color: white }
+/*/////////////////////////////other/////////////////////*/
 
 h2{
   color:#4000FF;
@@ -21,7 +137,6 @@ h2{
   font-size: 30px;
   position: absolute;
 }
-
 .login-form{
   width:300px;
   padding:40px 30px;
@@ -43,7 +158,6 @@ h2{
   -webkit-border-radius:4px;
   margin:50px auto;
 }
-
 .contact-form{
   width:100%;
   padding:40px 30px;
@@ -90,7 +204,7 @@ h2{
 .log-status.wrong-entry .form-control, .wrong-entry .form-control + .fa {
   border-color: #ed1c24;
   color: #ed1c24;
-}
+  }
 @keyframes wrong-log {
   0% { left: 0px;}
   20% {left: 15px;}

@@ -1,10 +1,13 @@
 <?php
-	session_start();
-	error_reporting(0);
-	if(isset($_SESSION ['error'])){
-		$error=$_SESSION['error'];
-	}
-	session_destroy();
+session_start();
+error_reporting(0);
+$user_id = $_SESSION['id'];
+$foto = $_SESSION['img'];
+$nom_user=$_SESSION['nombre'];
+include 'conexion.proc.php';
+$consulta_actividades = "SELECT * FROM actividad where actividad.destacada= 1";
+$result_actividades = mysqli_query($con, $consulta_actividades);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,32 +16,77 @@
 		<title>Jubilados</title>
 		<link rel="icon" type="image/png" href="img/favicon.png" />
 		<link rel="stylesheet" type="text/css" href="css/estilo.css"/>
+		<script>
+                function confirmar(){
+                    var txt;
+                    var r = confirm("¿Quieres darte de baja?");
+                    if (r == true){
+                        location.href = "usuarios_baja.proc.php";
+                    }else{
+                        //no hará nada
+                    }
+                }
+            </script>
 	</head>
 	<body>	
-		<div class="login-form">
-			<div class="prin-img" align="middle" style="margin-bottom: 10px;">
+<?php
+include "header.php";
+?>
+<br>
+<br>
+
+<?php
+include "with-jquery.html";
+?>
+<div class="content">
+<div class="destacado">
+	<div id="actividades">
+            <div class="contact-form">
+    <?php
+
+    if (isset($_SESSION['mail'])) {
+        ?>
+
+        <?php
+    } else {
+        $_SESSION['error'] = "No te saltes pasos!";
+        header("location: index.php");
+    }
+    $actividadesArray = [];
+    while ($actividad = mysqli_fetch_array($result_actividades)) {
+    	echo "<div class='not'>";
+	
+        echo "<div class='info'><b style='margin-top: 15px;'>Nombre:</b> ";
+        echo utf8_encode($actividad['nombre']);
+        echo "<br/>";
+        echo "<b>Descripción:</b> ";
+        echo utf8_encode($actividad['descripcion']);
+        echo "<br/></div>";
+$fichero = "img/$actividad[img]";
+        if (file_exists($fichero) && (($actividad['img']) != '')) {
+            echo "<div class='perfil'><img src='$fichero' width='90%' heigth='90%' ></div>";
+        } else {
+            echo "<div class='perfil'><img src ='img/no_disponible.jpg'width='90%' heigth='90%'/></div>";
+        }
+        ?>
+
+        <?php echo "<br/><br/></div>";
+    }
+
+    ?>
+         
+            </div>
+
+        </div>
+        </div>
+  
+</div>
+<div class="sidebar">
+
+
 		</div>
-     		<div class="form-group ">
-				<form name="f1" action="login.proc.php" method="get">
-					<input type="text" name="mail" class="form-control" placeholder="Correo"maxlength="50">
-			</div>
-				    <div class="form-group">
-				       <input type="password" name="pass" class="form-control" placeholder="Contraseña">
-				       <i class="fa fa-lock"></i>
-				    </div>
-    				<button type="submit" class="log-btn" name="acce">Entrar</button>
-     				<button type="button" class="sign-btn" onclick="window.location.href='usuarios_insert.php'">Registrarme</button>  
-     				<button type="button" class="sign-btn" onclick="window.location.href='donaciones.php'">Donaciones</button>  
-				</form>
-			</div>
-		</div>
-		<?php
-		echo "<div class='log-error'>";
-			if(isset($error)){
-				echo "ERROR: " . $error;
-				echo "<br/><br/>";
-			}
-		echo "</div>";
-		?>		
+
+<div class="footer">
+</div>
 	</body>
 </html>
