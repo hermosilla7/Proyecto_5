@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.12
+-- version 4.4.14
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-02-2016 a las 09:51:31
--- Versión del servidor: 5.6.25
--- Versión de PHP: 5.6.11
+-- Tiempo de generación: 24-02-2016 a las 12:57:39
+-- Versión del servidor: 5.6.26
+-- Versión de PHP: 5.6.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `bbdd_mesque65`
 --
-CREATE DATABASE IF NOT EXISTS `bbdd_mesque65` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-USE `bbdd_mesque65`;
 
 -- --------------------------------------------------------
 
@@ -40,14 +38,18 @@ CREATE TABLE IF NOT EXISTS `actividad` (
   `ubicacion_lon` double NOT NULL,
   `destacada` tinyint(1) NOT NULL,
   `id_tipo_actividad` int(2) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `actividad`
 --
 
 INSERT INTO `actividad` (`id`, `nombre`, `descripcion`, `plazas`, `fecha_inicio`, `fecha_fin`, `img`, `ubicacion_lat`, `ubicacion_lon`, `destacada`, `id_tipo_actividad`) VALUES
-(1, 'Paseo por la montaña', 'Paseo por el pirineo egipcio', 30, '2016-02-26 05:38:00', '0000-00-00 00:00:00', '', 41.513162, 2.113968, 0, 1);
+(1, 'Paseo por la montaña', 'Paseo por el pirineo egipcio', 30, '2016-02-26 05:38:00', '0000-00-00 00:00:00', '', 41.513162, 2.113968, 0, 1),
+(2, 'Curso cocina', 'Recetas de cocina fáciles y originales: aperitivos, primeros platos, platos principales, postres, recetas saludables, consejos de cocina.', 20, '2016-03-02 09:00:00', '2016-03-10 13:00:00', 'tallercocina.jpg', 41.348451, 2.1158357, 1, 2),
+(3, 'Taller patchwork', 'Crea originales diseños con la técnica del patchwork. Crea colchas de patchwork, bolsos, ropa para bebés.', 10, '2016-03-15 10:00:00', '2016-03-29 13:00:00', 'tapetepoker.jpg', 41.349791, 2.107665, 1, 3),
+(4, 'Bailes de Salon', ' La actividad consiste en tres clases semanales donde se impartirán distintas modalidades de baile, desde Tango, Rumba, Bailes Latinos y, por supuesto, Pasodoble.', 30, '2016-03-09 10:00:00', '2016-03-30 00:00:00', 'bailes.jpg', 41.349806, 2.107635, 1, 4),
+(5, 'Curso ingles', 'Nada mejor que el inglés, que requiere tiempo y dedicación, y además lo podemos luego usar para otras muchas cosas relacionadas con el tiempo libre: viajar, leer, ver películas o conocer gente. ', 10, '2016-03-01 09:00:00', '2016-02-29 12:00:00', 'ingles.jpg', 41.349911, 2.107528, 1, 5);
 
 -- --------------------------------------------------------
 
@@ -162,7 +164,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `actividad`
 --
 ALTER TABLE `actividad`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT de la tabla `asistente`
 --
