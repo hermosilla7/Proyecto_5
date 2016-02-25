@@ -67,7 +67,7 @@ $result_actividades = mysqli_query($con, $consulta_actividades);
         ];
 
         $fichero = "img/$actividad[img]";
-        if (file_exists($fichero) && (($actividad['img']) != '')) {
+        if (file_exists($fichero) /*&& (($actividad['img']) != '')*/) {
             echo "<div class='perfil'><img src='$fichero' width='50' heigth='50' ></div>";
         } else {
             echo "<div class='perfil'><img src ='img/no_disponible.jpg'width='50' heigth='50'/></div>";
