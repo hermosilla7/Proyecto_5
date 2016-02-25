@@ -5,7 +5,7 @@ $user_id = $_SESSION['id'];
 $foto = $_SESSION['img'];
 $nom_user=$_SESSION['nombre'];
 include 'conexion.proc.php';
-$consulta_actividades = "SELECT * FROM actividad where actividad.destacada= 1";
+$consulta_actividades = "SELECT * FROM actividad where actividad.estado= 2";
 $result_actividades = mysqli_query($con, $consulta_actividades);
 
 ?>
