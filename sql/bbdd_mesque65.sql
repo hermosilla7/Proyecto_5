@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-02-2016 a las 13:01:36
+-- Tiempo de generación: 25-02-2016 a las 11:14:26
 -- Versión del servidor: 5.6.26
 -- Versión de PHP: 5.6.12
 
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `actividad` (
   `ubicacion_lon` double NOT NULL,
   `destacada` tinyint(1) NOT NULL,
   `id_tipo_actividad` int(2) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `actividad`
@@ -51,7 +51,10 @@ INSERT INTO `actividad` (`id`, `nombre`, `descripcion`, `plazas`, `fecha_inicio`
 (2, 'Curso cocina', 'Recetas de cocina fáciles y originales: aperitivos, primeros platos, platos principales, postres, recetas saludables, consejos de cocina.', 20, '2016-03-02 09:00:00', '2016-03-10 13:00:00', 'tallercocina.jpg', 41.348451, 2.1158357, 1, 2),
 (3, 'Taller patchwork', 'Crea originales diseños con la técnica del patchwork. Crea colchas de patchwork, bolsos, ropa para bebés.', 10, '2016-03-15 10:00:00', '2016-03-29 13:00:00', 'tapetepoker.jpg', 41.349791, 2.107665, 1, 3),
 (4, 'Bailes de Salon', ' La actividad consiste en tres clases semanales donde se impartirán distintas modalidades de baile, desde Tango, Rumba, Bailes Latinos y, por supuesto, Pasodoble.', 30, '2016-03-09 10:00:00', '2016-03-30 00:00:00', 'bailes.jpg', 41.349806, 2.107635, 1, 4),
-(5, 'Curso ingles', 'Nada mejor que el inglés, que requiere tiempo y dedicación, y además lo podemos luego usar para otras muchas cosas relacionadas con el tiempo libre: viajar, leer, ver películas o conocer gente. ', 10, '2016-03-01 09:00:00', '2016-02-29 12:00:00', 'ingles.jpg', 41.349911, 2.107528, 1, 5);
+(5, 'Curso ingles', 'Nada mejor que el inglés, que requiere tiempo y dedicación, y además lo podemos luego usar para otras muchas cosas relacionadas con el tiempo libre: viajar, leer, ver películas o conocer gente. ', 10, '2016-03-01 09:00:00', '2016-02-29 12:00:00', 'ingles.jpg', 41.349911, 2.107528, 1, 5),
+(6, 'Curso Informática', '	\r\nEn este curso os ayudamos a manejar el correo electrónico, encontrar por Internet una pieza de la máquina de coser o de su coche de toda la vida, reservar entradas de teatro, chatear con personas de vuestra edad que residen en otros lugares… o incluso buscar ofertas de viajes para jubilados', 15, '2016-02-07 11:00:00', '2016-02-25 13:00:00', 'infor.jpg', 41.349911, 2.107528, 1, 6),
+(7, 'Canta y sé feliz', 'En este curso de canto aprenderás los primeros pasos para cantar.', 20, '2016-03-01 10:00:00', '0000-00-00 00:00:00', 'canta.jpg', 41.349911, 2.107528, 1, 7),
+(8, 'Pilates', 'Taller de Pilates es un método de ejercicio y movimiento físico diseñado para estirar, fortalecer y equilibrar el cuerpo. ', 10, '2016-03-13 11:00:00', '2016-03-18 12:00:00', 'pilates.jpg', 41.349911, 2.107528, 0, 8);
 
 -- --------------------------------------------------------
 
@@ -166,7 +169,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `actividad`
 --
 ALTER TABLE `actividad`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT de la tabla `asistente`
 --
