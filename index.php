@@ -40,44 +40,9 @@ include "with-jquery.html";
 ?>
 <div class="content">
 <div class="destacado">
-	<div id="actividades">
-            <div class="contact-form">
-    <?php
-
-    if (isset($_SESSION['mail'])) {
-        ?>
-
         <?php
-    } else {
-        $_SESSION['error'] = "No te saltes pasos!";
-        header("location: index.php");
-    }
-    $actividadesArray = [];
-    while ($actividad = mysqli_fetch_array($result_actividades)) {
-    	echo "<div class='not'>";
-	
-        echo "<div class='info'><b style='margin-top: 15px;'>Nombre:</b> ";
-        echo utf8_encode($actividad['nombre']);
-        echo "<br/>";
-        echo "<b>Descripción:</b> ";
-        echo utf8_encode($actividad['descripcion']);
-        echo "<br/></div>";
-$fichero = "img/$actividad[img]";
-        if (file_exists($fichero) && (($actividad['img']) != '')) {
-            echo "<div class='perfil'><img src='$fichero' width='90%' heigth='90%' ></div>";
-        } else {
-            echo "<div class='perfil'><img src ='img/no_disponible.jpg'width='90%' heigth='90%'/></div>";
-        }
-        ?>
-
-        <?php echo "<br/><br/></div>";
-    }
-
-    ?>
-         
-            </div>
-
-        </div>
+include "example.php";
+?>
         </div>
   
 </div>
@@ -86,7 +51,8 @@ $fichero = "img/$actividad[img]";
 
 		</div>
 
-<div class="footer">
-</div>
+<?php
+include "footer.php";
+?>
 	</body>
 </html>
