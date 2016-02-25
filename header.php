@@ -55,9 +55,19 @@
 <div class="menu">	
 	<ul>
 	  	<li><a href="index.php">Inicio</a></li>
-	  	<li><a href="#news">News</a></li>
-	  	<li><a href="#contact">Contact</a></li>
 	  	<li><a href="actividades.php">Actividades</a></li>
+	  	<?php 
+	  		if(isset($_SESSION['id']) AND $_SESSION['nivel'] == 0){
+	  	?>
+	  	<li><a href="propuesta_actividad.php">Proponer actividades</a></li>
+	  	<?php
+	  		} else if (isset($_SESSION['id']) AND $_SESSION['nivel'] != 0){
+	  	?>
+	  	<li><a href="actividades_pendientes.php">Actividades pendientes</a></li>
+	  	<?php		
+	  		}
+	  	?>
+	  	<li><a href="contacto.php">Contacto</a></li>
   		<li><a href="donaciones.php">Donaciones</a></li>
   		<?php
   			if($_SESSION['nivel'] == 2){
