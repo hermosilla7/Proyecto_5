@@ -55,6 +55,7 @@
 
 .pc_item .desc {
   background-image: url("../images/slide_fade.png");
+  color: #fff;
   height: 180px;
   line-height: 1.8em;
   padding: 10px;
