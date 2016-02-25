@@ -59,5 +59,12 @@
 	  	<li><a href="#contact">Contact</a></li>
 	  	<li><a href="actividades.php">Actividades</a></li>
   		<li><a href="donaciones.php">Donaciones</a></li>
+  		<?php
+  			if($_SESSION['nivel'] == 2){
+  		?>
+  		<li><a href="usuarios.php">ABC Usuarios</a></li>
+  		<?php
+  			}
+  		?>
 	</ul>
 </div>
