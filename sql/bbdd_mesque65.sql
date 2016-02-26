@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-02-2016 a las 11:34:18
+-- Tiempo de generación: 26-02-2016 a las 13:48:36
 -- Versión del servidor: 5.6.26
 -- Versión de PHP: 5.6.12
 
@@ -32,55 +32,27 @@ CREATE TABLE IF NOT EXISTS `actividad` (
   `id` int(3) NOT NULL,
   `nombre` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `descripcion` text COLLATE utf8_unicode_ci NOT NULL,
-  `plazas` int(3) NOT NULL,
-  `fecha_inicio` datetime NOT NULL,
-  `fecha_fin` datetime NOT NULL,
+  `fecha` datetime NOT NULL,
   `img` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `ubicacion_lat` double NOT NULL,
   `ubicacion_lon` double NOT NULL,
-  `estado` tinyint(1) NOT NULL,
-  `id_tipo_actividad` int(2) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `id_tipo_actividad` int(2) NOT NULL,
+  `compensacion` int(11) NOT NULL,
+  `direccion` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `peticion` tinyint(1) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `actividad`
 --
 
-INSERT INTO `actividad` (`id`, `nombre`, `descripcion`, `plazas`, `fecha_inicio`, `fecha_fin`, `img`, `ubicacion_lat`, `ubicacion_lon`, `estado`, `id_tipo_actividad`) VALUES
-(1, 'Paseo por la montaña', 'Paseo por el pirineo egipcio', 30, '2016-02-26 05:38:00', '0000-00-00 00:00:00', '', 41.513162, 2.113968, 0, 1),
-(2, 'Curso cocina', 'Recetas de cocina fáciles y originales: aperitivos, primeros platos, platos principales, postres, recetas saludables, consejos de cocina.', 20, '2016-03-02 09:00:00', '2016-03-10 13:00:00', 'tallercocina.jpg', 41.348451, 2.1158357, 1, 2),
-(3, 'Taller patchwork', 'Crea originales diseños con la técnica del patchwork. Crea colchas de patchwork, bolsos, ropa para bebés.', 10, '2016-03-15 10:00:00', '2016-03-29 13:00:00', 'tapetepoker.jpg', 41.349791, 2.107665, 1, 3),
-(4, 'Bailes de Salon', ' La actividad consiste en tres clases semanales donde se impartirán distintas modalidades de baile, desde Tango, Rumba, Bailes Latinos y, por supuesto, Pasodoble.', 30, '2016-03-09 10:00:00', '2016-03-30 00:00:00', 'bailes.jpg', 41.349806, 2.107635, 2, 4),
-(5, 'Curso ingles', 'Nada mejor que el inglés, que requiere tiempo y dedicación, y además lo podemos luego usar para otras muchas cosas relacionadas con el tiempo libre: viajar, leer, ver películas o conocer gente. ', 10, '2016-03-01 09:00:00', '2016-02-29 12:00:00', 'ingles.jpg', 41.349911, 2.107528, 1, 5),
-(6, 'Curso Informática', '	\r\nEn este curso os ayudamos a manejar el correo electrónico, encontrar por Internet una pieza de la máquina de coser o de su coche de toda la vida, reservar entradas de teatro, chatear con personas de vuestra edad que residen en otros lugares… o incluso buscar ofertas de viajes para jubilados', 15, '2016-02-07 11:00:00', '2016-02-25 13:00:00', 'infor.jpg', 41.349911, 2.107528, 2, 6),
-(7, 'Canta y sé feliz', 'En este curso de canto aprenderás los primeros pasos para cantar.', 20, '2016-03-01 10:00:00', '0000-00-00 00:00:00', 'canta.jpg', 41.349911, 2.107528, 2, 7),
-(8, 'Pilates', 'Taller de Pilates es un método de ejercicio y movimiento físico diseñado para estirar, fortalecer y equilibrar el cuerpo. ', 10, '2016-03-13 11:00:00', '2016-03-18 12:00:00', 'pilates.jpg', 41.349911, 2.107528, 2, 8);
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `asistente`
---
-
-CREATE TABLE IF NOT EXISTS `asistente` (
-  `id` int(4) NOT NULL,
-  `id_usuario` int(3) NOT NULL,
-  `id_actividad` int(3) NOT NULL,
-  `fecha` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `colaborador`
---
-
-CREATE TABLE IF NOT EXISTS `colaborador` (
-  `id` int(3) NOT NULL,
-  `id_usuario` int(3) NOT NULL,
-  `id_actividad` int(3) NOT NULL,
-  `fecha` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+INSERT INTO `actividad` (`id`, `nombre`, `descripcion`, `fecha`, `img`, `ubicacion_lat`, `ubicacion_lon`, `id_tipo_actividad`, `compensacion`, `direccion`, `peticion`) VALUES
+(1, 'Paseo por la montaña', 'Paseo por el pirineo egipcio', '2016-02-26 05:38:00', '', 41.513162, 2.113968, 1, 0, '', 0),
+(2, 'Curso cocina', 'Recetas de cocina fáciles y originales: aperitivos, primeros platos, platos principales, postres, recetas saludables, consejos de cocina.', '2016-03-02 09:00:00', 'tallercocina.jpg', 41.348451, 2.1158357, 2, 0, '', 0),
+(3, 'Taller patchwork', 'Crea originales diseños con la técnica del patchwork. Crea colchas de patchwork, bolsos, ropa para bebés.', '2016-03-15 10:00:00', 'tapetepoker.jpg', 41.349791, 2.107665, 3, 0, '', 0),
+(4, 'Bailes de Salon', ' La actividad consiste en tres clases semanales donde se impartirán distintas modalidades de baile, desde Tango, Rumba, Bailes Latinos y, por supuesto, Pasodoble.', '2016-03-09 10:00:00', 'bailes.jpg', 41.349806, 2.107635, 4, 0, '', 0),
+(5, 'Curso ingles', 'Nada mejor que el inglés, que requiere tiempo y dedicación, y además lo podemos luego usar para otras muchas cosas relacionadas con el tiempo libre: viajar, leer, ver películas o conocer gente. ', '2016-03-01 09:00:00', 'ingles.jpg', 41.349911, 2.107528, 5, 0, '', 0),
+(6, 'Curso Informática', '	\r\nEn este curso os ayudamos a manejar el correo electrónico, encontrar por Internet una pieza de la máquina de coser o de su coche de toda la vida, reservar entradas de teatro, chatear con personas de vuestra edad que residen en otros lugares… o incluso buscar ofertas de viajes para jubilados', '2016-02-07 11:00:00', 'infor.jpg', 41.349911, 2.107528, 6, 0, '', 0);
 
 -- --------------------------------------------------------
 
@@ -91,14 +63,35 @@ CREATE TABLE IF NOT EXISTS `colaborador` (
 CREATE TABLE IF NOT EXISTS `tipo_actividad` (
   `id` int(2) NOT NULL,
   `nombre` varchar(35) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `tipo_actividad`
 --
 
 INSERT INTO `tipo_actividad` (`id`, `nombre`) VALUES
-(1, 'Paseo');
+(1, 'Paseo'),
+(2, 'Electronica'),
+(3, 'Informática'),
+(4, 'Manualidades'),
+(5, 'Alimentación'),
+(6, 'Mecánica'),
+(7, 'Compañia'),
+(8, 'Deporte');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `trueque`
+--
+
+CREATE TABLE IF NOT EXISTS `trueque` (
+  `id` int(11) NOT NULL,
+  `id_creador` int(11) NOT NULL,
+  `id_usuario_realiza` int(11) NOT NULL,
+  `valoracion_usuario` int(1) NOT NULL,
+  `id_actividad` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -114,17 +107,20 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `correo` varchar(75) COLLATE utf8_bin NOT NULL,
   `pass` varchar(50) COLLATE utf8_bin NOT NULL,
   `nivel` tinyint(1) NOT NULL,
-  `activo` tinyint(1) NOT NULL
+  `activo` tinyint(1) NOT NULL,
+  `telefono` int(11) NOT NULL,
+  `monedas` int(11) NOT NULL,
+  `dni` varchar(20) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`id`, `nombre`, `apellidos`, `img`, `correo`, `pass`, `nivel`, `activo`) VALUES
-(1, 'David ', 'Marin Salvador', '5.jpg', 'david.marin@fje.edu', '827ccb0eea8a706c4c34a16891f84e7b', 2, 1),
-(2, 'Ignasi', 'Romero Sanjuan', '3.jpg', 'ignasi.romero@fje.edu', '827ccb0eea8a706c4c34a16891f84e7b', 1, 1),
-(3, 'Armand', 'Gutierrez Arumi', '4.jpg', 'armand.gutierrez@fje.edu', '827ccb0eea8a706c4c34a16891f84e7b', 0, 1);
+INSERT INTO `usuario` (`id`, `nombre`, `apellidos`, `img`, `correo`, `pass`, `nivel`, `activo`, `telefono`, `monedas`, `dni`) VALUES
+(1, 'David ', 'Marin Salvador', '5.jpg', 'david.marin@fje.edu', '827ccb0eea8a706c4c34a16891f84e7b', 2, 1, 933367898, 0, '33789876A'),
+(2, 'Ignasi', 'Romero Sanjuan', '3.jpg', 'ignasi.romero@fje.edu', '827ccb0eea8a706c4c34a16891f84e7b', 1, 1, 654678987, 0, '33567987B'),
+(3, 'Armand', 'Gutierrez Arumi', '4.jpg', 'armand.gutierrez@fje.edu', '827ccb0eea8a706c4c34a16891f84e7b', 0, 1, 634789867, 0, '44567908B');
 
 --
 -- Índices para tablas volcadas
@@ -134,25 +130,25 @@ INSERT INTO `usuario` (`id`, `nombre`, `apellidos`, `img`, `correo`, `pass`, `ni
 -- Indices de la tabla `actividad`
 --
 ALTER TABLE `actividad`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `asistente`
---
-ALTER TABLE `asistente`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `colaborador`
---
-ALTER TABLE `colaborador`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_tipo_actividad` (`id_tipo_actividad`),
+  ADD KEY `id` (`id`);
 
 --
 -- Indices de la tabla `tipo_actividad`
 --
 ALTER TABLE `tipo_actividad`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id` (`id`);
+
+--
+-- Indices de la tabla `trueque`
+--
+ALTER TABLE `trueque`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id_creador_2` (`id_creador`,`id_usuario_realiza`),
+  ADD KEY `id_actividad` (`id_actividad`),
+  ADD KEY `id_creador` (`id_creador`,`id_usuario_realiza`);
 
 --
 -- Indices de la tabla `usuario`
@@ -169,27 +165,32 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `actividad`
 --
 ALTER TABLE `actividad`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
---
--- AUTO_INCREMENT de la tabla `asistente`
---
-ALTER TABLE `asistente`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT de la tabla `colaborador`
---
-ALTER TABLE `colaborador`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT de la tabla `tipo_actividad`
 --
 ALTER TABLE `tipo_actividad`
-  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT de la tabla `trueque`
+--
+ALTER TABLE `trueque`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
   MODIFY `id` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `trueque`
+--
+ALTER TABLE `trueque`
+  ADD CONSTRAINT `trueque_ibfk_1` FOREIGN KEY (`id_actividad`) REFERENCES `actividad` (`id`);
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
