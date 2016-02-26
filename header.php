@@ -13,6 +13,14 @@
        			<input type="password" name="pass" class="form-control" placeholder="Contraseña">
    				<i class="fa fa-lock"></i>
 	    	</div>
+	    	<?php
+				echo "<div class='log-error'>";
+					if(isset($_SESSION['error'])){
+						echo "ERROR: " . $_SESSION['error'];
+						echo "<br/><br/>";
+					}
+				echo "</div>";
+			?>
 			<button type="submit" class="log-btn" name="acce">Entrar</button>
 			<button type="button" class="sign-btn" onclick="window.location.href='usuarios_insert.php'">Registrarme</button>
 				</form>
@@ -40,18 +48,7 @@
 		<div class="title">
 			<h1>Nunca es demasiado tarde</h1>
 		</div>
-
-
-	
-</div>
-<?php
-	echo "<div class='log-error'>";
-		if(isset($error)){
-			echo "ERROR: " . $error;
-			echo "<br/><br/>";
-		}
-	echo "</div>";
-?>	
+</div>	
 <div class="menu">	
 	<ul>
 	  	<li><a href="index.php">Inicio</a></li>

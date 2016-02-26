@@ -22,15 +22,6 @@
             <div class="contact-form">
 <div id="presentation_container" class="pc_container">
     <?php
-
-    if (isset($_SESSION['mail'])) {
-        ?>
-
-        <?php
-    } else {
-        $_SESSION['error'] = "No te saltes pasos!";
-        header("location: index.php");
-    }
     $actividadesArray = [];
     while ($actividad = mysqli_fetch_array($result_actividades)) {
       
@@ -40,15 +31,14 @@
         echo "<b>Descripción:</b> ";
         echo utf8_encode($actividad['descripcion']);
         echo "<br/></div>";
-$fichero = "img/$actividad[img]";
+        $fichero = "img/$actividad[img]";
         if (file_exists($fichero) && (($actividad['img']) != '')) {
             echo "<img src='$fichero' width='100%' heigth='200px' >";
         } else {
             echo "<img src ='img/no_disponible.jpg'width='90%' heigth='90%'/>";
         }
-        ?>
-
-        <?php echo "<br/><br/></div>";
+        
+        echo "<br/><br/></div>";
     }
 
     ?>
