@@ -24,7 +24,11 @@ input {
   padding-top: 4%;
   text-align: center;
 }
-
+input {
+  margin-bottom: 5px;
+  text-align: center;
+  border-radius: 5px;
+}
 /*///////////////////////////menu/////////////////////*/
 ul {
   background-color: #dbe6ff;
