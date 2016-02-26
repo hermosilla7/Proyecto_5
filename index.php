@@ -40,9 +40,7 @@ include "with-jquery.html";
 ?>
 <div class="content">
 <div class="destacado">
-        <?php
-include "example.php";
-?>
+        
         </div>
   
 </div>
