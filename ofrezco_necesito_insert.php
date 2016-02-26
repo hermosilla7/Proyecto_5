@@ -1,12 +1,13 @@
 <?php
 	session_start();
+	include 'header.php';
 	error_reporting(0);
 ?>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8"/>
-		<title>Ofrezco insert</title>
+		<title>Ofrezco/Necesito insert</title>
 		<link rel="icon" type="image/png" href="img/portada.png" />
 		<link rel="stylesheet" type="text/css" href="css/estilo.css"/>
 		<script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
@@ -47,17 +48,16 @@ function validar(){
 						<input type="text" name="nombre" class="form-control" placeholder="Nombre" required><br>
 					</div>
 					<div class="form-group">
-						<input type="text" name="apellidos" class="form-control" placeholder="Apellidos" required><br>
+						<input type="text" name="descripcion" class="form-control" placeholder="Descripción" required><br>
 					</div>
 					<div class="form-group">
-						<input type="text" name="correo" class="form-control" placeholder="Correo" required><br>
+						<input type="datetime-local" name="fecha" class="form-control" placeholder="Fecha/hora" required><br>
 					</div>
 					<div class="form-group">
-						<input type="password" name="pass" class="form-control" placeholder="Contraseña" required><br>
+						<input type="number" name="compensacion" class="form-control" placeholder="Compensación" required><br>
 					</div>
-					<div class="form-group">
-						<input type="password" name="repass" class="form-control" placeholder="Repetir contraseña" required><br>
-					</div>
+					<input id="radio" type="radio" name="nivel" <?php if( $user['nivel'] == '0' ) { ?>checked="checked"<?php } ?> value='0' >Ofrezco</br><br>		
+					<input id="radio" type="radio" name="nivel" <?php if( $user['nivel'] == '1' ) { ?>checked="checked"<?php } ?> value='1' >Necesito</br><br>
 					<div class="form-group">
 						<input type="file" name="foto" id="foto" class="form-control"></br>
 					</div>
