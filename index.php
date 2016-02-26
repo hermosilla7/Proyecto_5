@@ -39,16 +39,18 @@ include "header.php";
 include "with-jquery.html";
 ?>
 <div class="content">
-<div class="destacado">
+    <div class="destacado">
+        <h1>ofrezco</h1>
+        <a href="ofrezco_necesito_insert.php"><img src="img/plus.png" /></a> 
         
-        </div>
+    </div>
   
+
+    <div class="necesito">
+        <h1>Necesito</h1>
+		<a href="ofrezco_necesito_insert.php"><img src="img/plus.png" /></a> 
+    </div>
 </div>
-<div class="sidebar">
-
-
-		</div>
-
 <?php
 include "footer.php";
 ?>
