@@ -3,7 +3,8 @@ session_start();
 error_reporting(0);
 include 'conexion.proc.php';
 include "header.php";
-$consulta_actividades = "SELECT * FROM actividad";
+$user_id = $_SESSION['id'];
+$consulta_actividades = "SELECT * FROM actividad where id_usuario = $user_id";
 $result_actividades = mysqli_query($con, $consulta_actividades);
 
 ?>
@@ -31,14 +32,8 @@ $result_actividades = mysqli_query($con, $consulta_actividades);
         echo "<b>Descripción:</b> ";
         echo utf8_encode($actividad['descripcion']);
         echo "<br/>";
-        echo "<b>Plazas totales:</b> ";
-        echo utf8_encode($actividad['plazas']);
-        echo "<br/>";
-        echo "<b>Plazas disponibles:</b> ";
-        echo utf8_encode($actividad['plazas']);
-        echo "<br/>";
-        echo "<b>Fecha inicio:</b> ";
-        echo utf8_encode($actividad['fecha_inicio']);
+        echo "<b>Fecha:</b> ";
+        echo utf8_encode($actividad['fecha']);
         echo "<br/>";
         echo" <a href='#'>Ver mas</a>";
         echo "<br/>";
