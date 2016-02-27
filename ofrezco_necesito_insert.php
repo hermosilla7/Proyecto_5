@@ -3,6 +3,7 @@
 	include 'conexion.proc.php';
 	include 'header.php';
 	error_reporting(0);
+	$user_id = $_SESSION['id'];
 	$consulta_actividad = ("SELECT * FROM tipo_actividad");
 	$result_actividad = mysqli_query($con, $consulta_actividad);
 ?>

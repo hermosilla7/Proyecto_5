@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-02-2016 a las 13:48:36
+-- Tiempo de generación: 27-02-2016 a las 17:49:10
 -- Versión del servidor: 5.6.26
 -- Versión de PHP: 5.6.12
 
@@ -39,20 +39,24 @@ CREATE TABLE IF NOT EXISTS `actividad` (
   `id_tipo_actividad` int(2) NOT NULL,
   `compensacion` int(11) NOT NULL,
   `direccion` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `peticion` tinyint(1) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `peticion` tinyint(1) NOT NULL,
+  `id_usuario` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `actividad`
 --
 
-INSERT INTO `actividad` (`id`, `nombre`, `descripcion`, `fecha`, `img`, `ubicacion_lat`, `ubicacion_lon`, `id_tipo_actividad`, `compensacion`, `direccion`, `peticion`) VALUES
-(1, 'Paseo por la montaña', 'Paseo por el pirineo egipcio', '2016-02-26 05:38:00', '', 41.513162, 2.113968, 1, 0, '', 0),
-(2, 'Curso cocina', 'Recetas de cocina fáciles y originales: aperitivos, primeros platos, platos principales, postres, recetas saludables, consejos de cocina.', '2016-03-02 09:00:00', 'tallercocina.jpg', 41.348451, 2.1158357, 2, 0, '', 0),
-(3, 'Taller patchwork', 'Crea originales diseños con la técnica del patchwork. Crea colchas de patchwork, bolsos, ropa para bebés.', '2016-03-15 10:00:00', 'tapetepoker.jpg', 41.349791, 2.107665, 3, 0, '', 0),
-(4, 'Bailes de Salon', ' La actividad consiste en tres clases semanales donde se impartirán distintas modalidades de baile, desde Tango, Rumba, Bailes Latinos y, por supuesto, Pasodoble.', '2016-03-09 10:00:00', 'bailes.jpg', 41.349806, 2.107635, 4, 0, '', 0),
-(5, 'Curso ingles', 'Nada mejor que el inglés, que requiere tiempo y dedicación, y además lo podemos luego usar para otras muchas cosas relacionadas con el tiempo libre: viajar, leer, ver películas o conocer gente. ', '2016-03-01 09:00:00', 'ingles.jpg', 41.349911, 2.107528, 5, 0, '', 0),
-(6, 'Curso Informática', '	\r\nEn este curso os ayudamos a manejar el correo electrónico, encontrar por Internet una pieza de la máquina de coser o de su coche de toda la vida, reservar entradas de teatro, chatear con personas de vuestra edad que residen en otros lugares… o incluso buscar ofertas de viajes para jubilados', '2016-02-07 11:00:00', 'infor.jpg', 41.349911, 2.107528, 6, 0, '', 0);
+INSERT INTO `actividad` (`id`, `nombre`, `descripcion`, `fecha`, `img`, `ubicacion_lat`, `ubicacion_lon`, `id_tipo_actividad`, `compensacion`, `direccion`, `peticion`, `id_usuario`) VALUES
+(1, 'Paseo por la montaña', 'Paseo por el pirineo egipcio', '2016-02-26 05:38:00', '', 41.513162, 2.113968, 1, 0, '', 0, 1),
+(2, 'Curso cocina', 'Recetas de cocina fáciles y originales: aperitivos, primeros platos, platos principales, postres, recetas saludables, consejos de cocina.', '2016-03-02 09:00:00', 'tallercocina.jpg', 41.348451, 2.1158357, 2, 0, '', 0, 1),
+(3, 'Taller patchwork', 'Crea originales diseños con la técnica del patchwork. Crea colchas de patchwork, bolsos, ropa para bebés.', '2016-03-15 10:00:00', 'tapetepoker.jpg', 41.349791, 2.107665, 3, 0, '', 0, 2),
+(4, 'Bailes de Salon', ' La actividad consiste en tres clases semanales donde se impartirán distintas modalidades de baile, desde Tango, Rumba, Bailes Latinos y, por supuesto, Pasodoble.', '2016-03-09 10:00:00', 'bailes.jpg', 41.349806, 2.107635, 4, 0, '', 0, 1),
+(5, 'Curso ingles', 'Nada mejor que el inglés, que requiere tiempo y dedicación, y además lo podemos luego usar para otras muchas cosas relacionadas con el tiempo libre: viajar, leer, ver películas o conocer gente. ', '2016-03-01 09:00:00', 'ingles.jpg', 41.349911, 2.107528, 5, 0, '', 0, 2),
+(6, 'Curso Informática', '	\r\nEn este curso os ayudamos a manejar el correo electrónico, encontrar por Internet una pieza de la máquina de coser o de su coche de toda la vida, reservar entradas de teatro, chatear con personas de vuestra edad que residen en otros lugares… o incluso buscar ofertas de viajes para jubilados', '2016-02-07 11:00:00', 'infor.jpg', 41.349911, 2.107528, 6, 0, '', 0, 1),
+(11, 'asd', 'asd', '1212-12-12 09:00:00', '', 41, 41, 0, 150, 'asd', 0, 3),
+(12, 'asd', 'fes', '1545-12-12 12:12:00', '', 84, 84, 6, 99, 'sdf', 1, 3),
+(13, 'raul', 'asd', '1212-12-12 12:12:00', '', 54, 54, 7, 222, 'adf', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -111,7 +115,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `telefono` int(11) NOT NULL,
   `monedas` int(11) NOT NULL,
   `dni` varchar(20) COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Volcado de datos para la tabla `usuario`
@@ -120,7 +124,8 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 INSERT INTO `usuario` (`id`, `nombre`, `apellidos`, `img`, `correo`, `pass`, `nivel`, `activo`, `telefono`, `monedas`, `dni`) VALUES
 (1, 'David ', 'Marin Salvador', '5.jpg', 'david.marin@fje.edu', '827ccb0eea8a706c4c34a16891f84e7b', 2, 1, 933367898, 0, '33789876A'),
 (2, 'Ignasi', 'Romero Sanjuan', '3.jpg', 'ignasi.romero@fje.edu', '827ccb0eea8a706c4c34a16891f84e7b', 1, 1, 654678987, 0, '33567987B'),
-(3, 'Armand', 'Gutierrez Arumi', '4.jpg', 'armand.gutierrez@fje.edu', '827ccb0eea8a706c4c34a16891f84e7b', 0, 1, 634789867, 0, '44567908B');
+(3, 'Armand', 'Gutierrez Arumi', '4.jpg', 'armand.gutierrez@fje.edu', '827ccb0eea8a706c4c34a16891f84e7b', 0, 1, 634789867, 0, '44567908B'),
+(4, 'prueba', '', '', '', 'd41d8cd98f00b204e9800998ecf8427e', 0, 0, 0, 0, '');
 
 --
 -- Índices para tablas volcadas
@@ -165,7 +170,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `actividad`
 --
 ALTER TABLE `actividad`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT de la tabla `tipo_actividad`
 --
@@ -180,7 +185,7 @@ ALTER TABLE `trueque`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- Restricciones para tablas volcadas
 --

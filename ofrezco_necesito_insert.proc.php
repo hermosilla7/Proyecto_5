@@ -1,5 +1,7 @@
 <?php
 	include_once 'conexion.proc.php';
+	session_start();
+	$user_id = $_SESSION['id'];
 	error_reporting(0);
 ?>
 <html>
@@ -19,7 +21,7 @@
 			echo $destino;
 			//
 			// if ($foto != "") {
-			$sql = "INSERT INTO actividad (nombre, descripcion, fecha, img, ubicacion_lat, ubicacion_lon, id_tipo_actividad, compensacion, direccion, peticion) VALUES ('$_REQUEST[nombre]', '$_REQUEST[descripcion]', '$_REQUEST[fecha]', '$foto', '$_REQUEST[ubicacion_lat]', '$_REQUEST[ubicacion_lon]', '$_REQUEST[id_tipo_actividad]', '$_REQUEST[compensacion]', '$_REQUEST[direccion]', '$_REQUEST[peticion]')";
+			$sql = "INSERT INTO actividad (nombre, descripcion, fecha, img, ubicacion_lat, ubicacion_lon, id_tipo_actividad, compensacion, direccion, peticion, id_usuario) VALUES ('$_REQUEST[nombre]', '$_REQUEST[descripcion]', '$_REQUEST[fecha]', '$foto', '$_REQUEST[ubicacion_lat]', '$_REQUEST[ubicacion_lon]', '$_REQUEST[id_tipo_actividad]', '$_REQUEST[compensacion]', '$_REQUEST[direccion]', '$_REQUEST[peticion]', $user_id)";
 			$sql=utf8_decode($sql);
 			echo $sql;
 			// }
