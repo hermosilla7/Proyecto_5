@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	$user_id = $_SESSION['id'];
 	error_reporting(0);
 	include 'header.php';
 ?>
@@ -45,12 +46,6 @@ function validar(){
 			<h1>Donaciones</h1>
      		<div class="form-group ">
 				<form name="f1" action="donaciones.proc.php" method="post" enctype="multipart/form-data" onsubmit="return validar();">
-					
-						<input type="text" name="nombre" class="form-control" placeholder="Nombre" required><br>
-					
-						<input type="text" name="apellidos" class="form-control" placeholder="Apellidos" required><br>
-					
-						<input type="text" name="correo" class="form-control" placeholder="Correo" required><br>
 			
 						<input type="text" name="visa" class="form-control" placeholder="Número de VISA" required><br>
 					

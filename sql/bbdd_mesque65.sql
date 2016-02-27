@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-02-2016 a las 17:49:10
+-- Tiempo de generación: 27-02-2016 a las 18:26:20
 -- Versión del servidor: 5.6.26
 -- Versión de PHP: 5.6.12
 
@@ -57,6 +57,28 @@ INSERT INTO `actividad` (`id`, `nombre`, `descripcion`, `fecha`, `img`, `ubicaci
 (11, 'asd', 'asd', '1212-12-12 09:00:00', '', 41, 41, 0, 150, 'asd', 0, 3),
 (12, 'asd', 'fes', '1545-12-12 12:12:00', '', 84, 84, 6, 99, 'sdf', 1, 3),
 (13, 'raul', 'asd', '1212-12-12 12:12:00', '', 54, 54, 7, 222, 'adf', 0, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `donacion`
+--
+
+CREATE TABLE IF NOT EXISTS `donacion` (
+  `id` int(11) NOT NULL,
+  `cantidad` double NOT NULL,
+  `id_usuario` int(5) NOT NULL,
+  `fecha` datetime NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `donacion`
+--
+
+INSERT INTO `donacion` (`id`, `cantidad`, `id_usuario`, `fecha`) VALUES
+(1, 200, 0, '0000-00-00 00:00:00'),
+(2, 3000, 0, '0000-00-00 00:00:00'),
+(3, 150, 1, '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -140,6 +162,12 @@ ALTER TABLE `actividad`
   ADD KEY `id` (`id`);
 
 --
+-- Indices de la tabla `donacion`
+--
+ALTER TABLE `donacion`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `tipo_actividad`
 --
 ALTER TABLE `tipo_actividad`
@@ -171,6 +199,11 @@ ALTER TABLE `usuario`
 --
 ALTER TABLE `actividad`
   MODIFY `id` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
+--
+-- AUTO_INCREMENT de la tabla `donacion`
+--
+ALTER TABLE `donacion`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT de la tabla `tipo_actividad`
 --
