@@ -29,6 +29,9 @@
 					} else {
 				?>
 				<h3><?php echo "Bienvenido " .$nom_user?></h3>
+				<?php
+	            	echo "Monedas: ".$_SESSION['monedas']." $";
+	            ?>
 				<div class="perfilimg">
 	            <input type="image" src="img/<?php echo $foto ?>"style="width: 68px; height: 68px;">
 	            </div>
@@ -36,6 +39,7 @@
 	            <input type="image" src="img/off.png" onclick="window.location.href='logout.proc.php'">
 	            <input type="image" src="img/baja.png" onclick="confirmar()">
 	            <input type="image" src="img/edit.png" onclick="window.location.href='usuarios_modificar.php'"></br>
+
 	            </div>
 	            </div>
 				<?php

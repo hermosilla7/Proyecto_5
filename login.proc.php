@@ -21,6 +21,7 @@
 		$_SESSION['nombre']=$datos_usuario['nombre'];
 		$_SESSION['nivel']=$datos_usuario['nivel'];
 		$_SESSION['img']=$datos_usuario['img'];
+		$_SESSION['monedas']=$datos_usuario['monedas'];
 
 		//redirigimos a la página principal
 		header("location: index.php");
