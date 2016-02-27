@@ -7,11 +7,11 @@ $nom_user=$_SESSION['nombre'];
 include 'conexion.proc.php';
 
 // Peticiones Ofrezco
-$consulta_actividades = "SELECT actividad.nombre, actividad.fecha, actividad.img, actividad.compensacion, actividad.direccion, tipo_actividad.nombre FROM actividad INNER JOIN tipo_actividad ON actividad.id_tipo_actividad=tipo_actividad.id WHERE actividad.peticion = 0";
+$consulta_actividades = "SELECT actividad.nombre, actividad.fecha, actividad.img, actividad.compensacion, actividad.direccion, tipo_actividad.nombre AS 'ntact' FROM actividad LEFT JOIN tipo_actividad ON actividad.id_tipo_actividad=tipo_actividad.id WHERE actividad.peticion = 0";
 $result_actividades = mysqli_query($con, $consulta_actividades);
 
 // Peticiones Necesito
-$consulta_actividades2 = "SELECT actividad.nombre, actividad.fecha, actividad.img, actividad.compensacion, actividad.direccion, tipo_actividad.nombre FROM actividad INNER JOIN tipo_actividad ON actividad.id=tipo_actividad.id WHERE actividad.peticion = 1";
+$consulta_actividades2 = "SELECT actividad.nombre, actividad.fecha, actividad.img, actividad.compensacion, actividad.direccion, tipo_actividad.nombre AS 'ntact' FROM actividad LEFT JOIN tipo_actividad ON actividad.id=tipo_actividad.id WHERE actividad.peticion = 1";
 $result_actividades2 = mysqli_query($con, $consulta_actividades2);
 
 ?>
@@ -63,7 +63,7 @@ include "with-jquery.html";
                 }
                 echo "Título actividad: ".utf8_encode($ofrezco['nombre'])."<br />";
                 echo "Fecha: ".$ofrezco['fecha']."<br />";
-                echo "Tipo de actividad: ".utf8_encode($ofrezco['nombre'])."<br />";
+                echo "Tipo de actividad: ".utf8_encode($ofrezco['ntact'])."<br />";
                 echo "Dirección: ".utf8_encode($ofrezco['direccion'])."<br />";
                 echo "Monedas: ".$ofrezco['compensacion']."<br />";
                 echo "<a href='#'>Ver más</a><br /><br />";
@@ -90,7 +90,7 @@ include "with-jquery.html";
                 }
                 echo "Título actividad: ".utf8_encode($necesito['nombre'])."<br />";
                 echo "Fecha: ".$necesito['fecha']."<br />";
-                echo "Tipo de actividad: ".utf8_encode($necesito['nombre'])."<br />";
+                echo "Tipo de actividad: ".utf8_encode($necesito['ntact'])."<br />";
                 echo "Dirección: ".utf8_encode($necesito['direccion'])."<br />";
                 echo "Monedas: ".$necesito['compensacion']."<br />";
                 echo "<a href='#'>Ver más</a><br /><br />";
