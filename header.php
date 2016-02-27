@@ -63,6 +63,7 @@
   			if($_SESSION['nivel'] == 2){
   		?>
   		<li><a href="usuarios.php">ABC Usuarios</a></li>
+  		<li><a href="consulta_donaciones.php">Saldo</a></li>
   		<?php
   			}
   		?>
