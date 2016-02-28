@@ -1,49 +1,20 @@
 <?php
-session_start();
-error_reporting(0);
-$user_id = $_SESSION['id'];
-$foto = $_SESSION['img'];
-$nom_user=$_SESSION['nombre'];
-include 'conexion.proc.php';
+    include "header.php";
+    // Peticiones Ofrezco
+    $consulta_actividades = "SELECT actividad.nombre, actividad.fecha, actividad.img, actividad.compensacion, actividad.direccion, tipo_actividad.nombre AS 'ntact' FROM actividad LEFT JOIN tipo_actividad ON actividad.id_tipo_actividad=tipo_actividad.id WHERE actividad.peticion = 0";
+    $result_actividades = mysqli_query($con, $consulta_actividades);
 
-// Peticiones Ofrezco
-$consulta_actividades = "SELECT actividad.nombre, actividad.fecha, actividad.img, actividad.compensacion, actividad.direccion, tipo_actividad.nombre AS 'ntact' FROM actividad LEFT JOIN tipo_actividad ON actividad.id_tipo_actividad=tipo_actividad.id WHERE actividad.peticion = 0";
-$result_actividades = mysqli_query($con, $consulta_actividades);
-
-// Peticiones Necesito
-$consulta_actividades2 = "SELECT actividad.nombre, actividad.fecha, actividad.img, actividad.compensacion, actividad.direccion, tipo_actividad.nombre AS 'ntact' FROM actividad LEFT JOIN tipo_actividad ON actividad.id=tipo_actividad.id WHERE actividad.peticion = 1";
-$result_actividades2 = mysqli_query($con, $consulta_actividades2);
-
+    // Peticiones Necesito
+    $consulta_actividades2 = "SELECT actividad.nombre, actividad.fecha, actividad.img, actividad.compensacion, actividad.direccion, tipo_actividad.nombre AS 'ntact' FROM actividad LEFT JOIN tipo_actividad ON actividad.id=tipo_actividad.id WHERE actividad.peticion = 1";
+    $result_actividades2 = mysqli_query($con, $consulta_actividades2);
 ?>
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8"/>
-		<title>Jubilados</title>
-		<link rel="icon" type="image/png" href="img/favicon.png" />
-		<link rel="stylesheet" type="text/css" href="css/estilo.css"/>
-		<script>
-                function confirmar(){
-                    var txt;
-                    var r = confirm("¿Quieres darte de baja?");
-                    if (r == true){
-                        location.href = "usuarios_baja.proc.php";
-                    }else{
-                        //no hará nada
-                    }
-                }
-            </script>
-	</head>
-	<body>	
-<?php
-include "header.php";
-?>
-<br>
-<br>
+<br />
+<br />
 
 <?php
-include "with-jquery.html";
+    include "with-jquery.html";
 ?>
+
 <div class="content">
     <div class="destacado">
         <h1>Ofrezco</h1>
@@ -98,8 +69,38 @@ include "with-jquery.html";
         ?>
     </div>
 </div>
+
+<!--<script type="text/javascript">
+    $(document).ready(function(){
+        $('#f1').bootstrapValidator({
+            message: 'This value is not valid',
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                mail: {
+                    validators: {
+                        notEmpty: {
+                            message: "El nom és obligatori"
+                        }
+                    }
+                }
+            },
+            submitHandler: function(validator, form, submitButton) {
+                $.post( $("#f1").attr("action"), 
+                    $("#f1").serializeArray(),function(data){
+                        $('#f1').data('bootstrapValidator').resetForm(true);
+                        $('#f1').trigger('reset');
+                        $("#result").show();
+                        $("#result").html(data); 
+                    }
+                );              
+            }
+        });
+    });
+</script>-->
 <?php
-include "footer.php";
+    include "footer.php";
 ?>
-	</body>
-</html>

@@ -1,26 +1,13 @@
 <?php
-session_start();
-error_reporting(0);
-include 'conexion.proc.php';
-include "header.php";
-$user_id = $_SESSION['id'];
-$consulta_actividades = "SELECT * FROM actividad where id_usuario = $user_id";
-$result_actividades = mysqli_query($con, $consulta_actividades);
-
+    include "header.php";
+    $consulta_actividades = "SELECT * FROM actividad WHERE id_usuario = $user_id";
+    $result_actividades = mysqli_query($con, $consulta_actividades);
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Actividades</title>
-        <link rel="icon" type="image/png" href="img/favicon.png" />
-        <link rel="stylesheet" type="text/css" href="css/estilo.css"/>
-    </head>
-    <body>
-        <div class="titleact">
-            <h1>Actividades</h1>
-        </div>
-        <div id="actividades" class="actividades">
-            <div class="prin-img" style="margin-bottom: 15px;">
+    <div class="titleact">
+        <h1>Actividades</h1>
+    </div>
+    <div id="actividades" class="actividades">
+        <div class="prin-img" style="margin-bottom: 15px;">
 
     <?php
     $actividadesArray = [];
@@ -40,11 +27,9 @@ $result_actividades = mysqli_query($con, $consulta_actividades);
         echo "</div>";
     }
     ?>
-                <a href="#" class="crunchify-top"><img src ="img/btt.png" style="float: right;" width="50px" height="50px"></a>
-            </div>
+            <a href="#" class="crunchify-top"><img src ="img/btt.png" style="float: right;" width="50px" height="50px"></a>
         </div>
-        <?php
-include "footer.php";
+    </div>
+<?php
+    include "footer.php";
 ?>
-    </body>
-</html>
