@@ -1,11 +1,11 @@
 <?php
     include "header.php";
     // Peticiones Ofrezco
-    $consulta_actividades = "SELECT actividad.nombre, actividad.fecha, actividad.img, actividad.compensacion, actividad.direccion, tipo_actividad.nombre AS 'ntact' FROM actividad LEFT JOIN tipo_actividad ON actividad.id_tipo_actividad=tipo_actividad.id WHERE actividad.peticion = 0";
+    $consulta_actividades = "SELECT actividad.nombre, actividad.fecha, actividad.img, actividad.direccion, tipo_actividad.nombre AS 'ntact', tipo_actividad.compensacion FROM actividad LEFT JOIN tipo_actividad ON actividad.id_tipo_actividad=tipo_actividad.id WHERE actividad.peticion = 0";
     $result_actividades = mysqli_query($con, $consulta_actividades);
 
     // Peticiones Necesito
-    $consulta_actividades2 = "SELECT actividad.nombre, actividad.fecha, actividad.img, actividad.compensacion, actividad.direccion, tipo_actividad.nombre AS 'ntact' FROM actividad LEFT JOIN tipo_actividad ON actividad.id=tipo_actividad.id WHERE actividad.peticion = 1";
+    $consulta_actividades2 = "SELECT actividad.nombre, actividad.fecha, actividad.img, actividad.direccion, tipo_actividad.nombre AS 'ntact', tipo_actividad.compensacion FROM actividad LEFT JOIN tipo_actividad ON actividad.id=tipo_actividad.id WHERE actividad.peticion = 1";
     $result_actividades2 = mysqli_query($con, $consulta_actividades2);
 ?>
 <br />
