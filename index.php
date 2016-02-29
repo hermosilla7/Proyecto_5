@@ -18,9 +18,9 @@
 <div class="content">
     <div class="destacado">
         <div class="titlofrezco">
-        <h1>Ofrezco</h1>
-        <a href="ofrezco_necesito_insert.php"><img src="img/plus.png" /></a> 
-         </div>
+            <h1>Ofrezco</h1>
+            <a href="ofrezco_necesito_insert.php"><img src="img/plus.png" /></a> 
+        </div>
         <?php
             if (isset($_SESSION['id'])){
         ?>
@@ -64,7 +64,7 @@
             }
         ?>
     </div>
-  </div>
+</div>
 <div class="content">
     <div class="necesito">
         <div class="titlofrezco">
@@ -114,37 +114,6 @@
     </div>
 </div>
 
-<!--<script type="text/javascript">
-    $(document).ready(function(){
-        $('#f1').bootstrapValidator({
-            message: 'This value is not valid',
-            feedbackIcons: {
-                valid: 'glyphicon glyphicon-ok',
-                invalid: 'glyphicon glyphicon-remove',
-                validating: 'glyphicon glyphicon-refresh'
-            },
-            fields: {
-                mail: {
-                    validators: {
-                        notEmpty: {
-                            message: "El nom és obligatori"
-                        }
-                    }
-                }
-            },
-            submitHandler: function(validator, form, submitButton) {
-                $.post( $("#f1").attr("action"), 
-                    $("#f1").serializeArray(),function(data){
-                        $('#f1').data('bootstrapValidator').resetForm(true);
-                        $('#f1').trigger('reset');
-                        $("#result").show();
-                        $("#result").html(data); 
-                    }
-                );              
-            }
-        });
-    });
-</script>-->
 <?php
     include "footer.php";
 ?>

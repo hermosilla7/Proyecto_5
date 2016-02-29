@@ -27,15 +27,6 @@
 		<!-- JQUERY -->
 		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
-		<!-- BOOTSTRAP -->
-		<!--<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
-		<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>-->
-
-		<!-- BOOTSTRAP VALIDATOR -->
-		<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.css">
-		<script type="text/javascript" src="js/bootstrapValidator.js"></script>-->
-
-
 		<script>
                 function confirmar(){
                     var txt;
@@ -99,7 +90,7 @@
 				<img src="img/logo150px.png" />
 			</div>
 			<div class="title">
-				<h1>Nunca es demasiado tarde</h1>
+				<h1>Hoy por tí, mañana por mí</h1>
 			</div>
 		</div>
 		</div>	
@@ -114,8 +105,13 @@
 			  		}
 			  	?>
 			  	<li><a href="contacto.php">Contacto</a></li>
+			  	<?php
+			  		if(isset($_SESSION['id'])){
+			  	?>
 		  		<li><a href="donaciones.php">Donaciones</a></li>
 		  		<?php
+		  			}
+
 		  			if($_SESSION['nivel'] == 2){
 		  		?>
 		  		<li><a href="usuarios.php">ABC Usuarios</a></li>
