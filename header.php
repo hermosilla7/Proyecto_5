@@ -90,17 +90,18 @@
 				            <input type="image" src="img/baja.png" onclick="confirmar()">
 				            <input type="image" src="img/edit.png" onclick="window.location.href='usuarios_modificar.php'">
 			            </div>
-	            </div>
+	            
 					<?php
 						}
 					?>
-			</div>
+			 </div>
 			<div class="logo">
 				<img src="img/logo150px.png" />
 			</div>
 			<div class="title">
 				<h1>Nunca es demasiado tarde</h1>
 			</div>
+		</div>
 		</div>	
 		<div class="menu">	
 			<ul>
