@@ -27,7 +27,10 @@
 			return enviar;
 		}
 	</script>
-
+	  <div class="titledona">
+        <h1>Campaña asociación de jubilados causas solidarias</h1>
+    </div>
+<div class="donacio">
 	<div class="donaciones">
 		<div class="mod-form">
 			<h1>Donaciones</h1>
@@ -45,24 +48,9 @@
 			</div>
 		</div>
 	</div>
+<div class="donacionestxt">
 
-</br>
-<html>
-<h1>CAMPAÑA ASOCIACIÓN DE JUBILADOS CAUSAS SOLIDARIAS</h1>
-
-</br>
-
-Suscríbete a nuestro boletín </br>
-Email*: </br>
-Nombre*:  </br>
-Apellidos:  </br>
-Introduce el código de seguridad*: img  
- 
- 
-
-<br/>
- <div class="footer">
- 		<p><Suscríbete haz donativos a LA AS0CIACIÓN DE JUBILADOS MÉS DE 65 con Paypal
+ 		<p>Suscríbete haz donativos a LA AS0CIACIÓN DE JUBILADOS MÉS DE 65 con Paypal
 
 PayPal. La forma rápida y segura de pagar en Internet. 
 Campaña ASOCIACIÓN DE JUBILADOS MÉS DE 65 2016
@@ -79,7 +67,8 @@ Cada euro es destinado para ayudar a sus asociados a realizar y disfrutar de las
 
 ¡Deja de buscar una ASOCIACIÓN para colaborar, porque ya la has encontrado! ¡Anímate a colaborar con la ASOCIACIÓN DE JUBILADOS MÉS DE 65
 para así ayudar a lograr un mundo mejor para todos.</p>
- 		<center>
+</div>
+</div>
 		<div class="formaPago">
        	 <img src="./img/servired.jpg" width="85" height="50">
          <img src="./img/maestro.jpg" width="85" height="50">
@@ -90,7 +79,7 @@ para así ayudar a lograr un mundo mejor para todos.</p>
          <img src="./img/mastercard.jpg" width="85" height="50"> 
          <img src="./img/paypal.jpg" width="85" height="50">
         <img src="./img/trasnferencia.jpg" width="85" height="50" class="last"> 
-	</div>
+    </div>
 
 <?php
 	include "footer.php";
