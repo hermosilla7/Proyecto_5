@@ -19,11 +19,12 @@
     <div class="destacado">
         <div class="titlofrezco">
         <h1>Ofrezco</h1>
+        <a href="ofrezco_necesito_insert.php"><img src="img/plus.png" /></a> 
+         </div>
         <?php
             if (isset($_SESSION['id'])){
         ?>
-        <a href="ofrezco_necesito_insert.php"><img src="img/plus.png" /></a> 
-         </div>
+
         <?php
             }
 
@@ -63,16 +64,17 @@
             }
         ?>
     </div>
-  
-
+  </div>
+<div class="content">
     <div class="necesito">
         <div class="titlofrezco">
         <h1>Necesito</h1>
-        <?php
-            if (isset($_SESSION['id'])){
-        ?>
+       
         <a href="ofrezco_necesito_insert.php"><img src="img/plus.png" /></a>  
     </div>
+     <?php
+            if (isset($_SESSION['id'])){
+        ?>
         <?php
             }
 
