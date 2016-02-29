@@ -45,6 +45,54 @@
 			</div>
 		</div>
 	</div>
+
+</br>
+<html>
+<h1>CAMPAÑA ASOCIACIÓN DE JUBILADOS CAUSAS SOLIDARIAS</h1>
+
+</br>
+
+Suscríbete a nuestro boletín </br>
+Email*: </br>
+Nombre*:  </br>
+Apellidos:  </br>
+Introduce el código de seguridad*: img  
+ 
+ <Suscríbete haz donativos a LA AS0CIACIÓN DE JUBILADOS MÉS DE 65 con Paypal
+
+PayPal. La forma rápida y segura de pagar en Internet. 
+Campaña ASOCIACIÓN DE JUBILADOS MÉS DE 65 2016
+ 
+¿Cómo puedo colaborar con la ASOCIACIÓN DE JUBILADOS MÉS DE 65?
+
+Colaborar con una ASOCIACIÓN DE JUBILADOS MÉS DE 65 es una buena forma para ayudar a los demas.
+Elegir la ASOCICIÓN DE JUBILADOS MÉS DE 65 es muy buena elección. Nuestra labor,
+esfuerzo y colaboración constante en ayudar a las personas más necesitadas.
+
+Tú también puedes colaborar para ayudar hacer posible los proyectos de desarrollo que realiza nuestra ASOCIACIÓN DE JUBILADOS MÉS DE 65.
+Cada euro es destinado para ayudar a sus asociados a realizar y disfrutar de las actividades.
+
+
+¡Deja de buscar una ASOCIACIÓN para colaborar, porque ya la has encontrado! ¡Anímate a colaborar con la ASOCIACIÓN DE JUBILADOS MÉS DE 65
+para así ayudar a lograr un mundo mejor para todos.
+
+ <div class="footer">
+
+		<div class="formaPago">
+       	 <img src="./img/servired.jpg" width="45" height="30">
+         <img src="./img/maestro.jpg" width="45" height="30">
+         <img src="./img/VISA(1).jpg" width="45" height="30">
+         <img src="./img/americanexpress.jpg" width="45" height="30"> 
+         <img src="./img/euro6000.jpg" width="45" height="30"> 
+         <img src="./img/4b.jpg" width="45" height="30"> 
+         <img src="./img/mastercard.jpg" width="45" height="30"> 
+         <img src="./img/paypal.jpg" width="45" height="30">
+        <img src="./img/trasnferencia.jpg" width="75" height="30" class="last"> 
+	</div>
+
 <?php
 	include "footer.php";
 ?>
+
+
+</html>
