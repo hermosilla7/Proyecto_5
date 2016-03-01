@@ -18,7 +18,15 @@
 		<meta name="description" content="Página web més de 65">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="utf-8"/>
-		
+
+		<!-- MAPA WEB -->
+		<script type="text/javascript" src="js/maps.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBW_5m9Miz3xloHRp1QF3cW5V_I0qoz3RI&callback=initMap" async defer></script>
+      <script type="text/javascript">
+         window.onload = function(){
+            initMap();
+         }
+      </script>
 
 		<!-- ESTILOS Y FAVICON -->
 		<link rel="icon" type="image/png" href="img/favicon.png" />
@@ -65,8 +73,8 @@
 						<button type="submit" class="log-btn" name="acce">Entrar</button>
 						<button type="button" class="sign-btn" onclick="window.location.href='usuarios_insert.php'">Registrarme</button>
 					</form>
-				
-					<?php 
+
+					<?php
 						} else {
 					?>
 						<h3><?php echo "Bienvenido " .$nom_user?></h3>
@@ -81,20 +89,20 @@
 				            <input type="image" src="img/baja.png" onclick="confirmar()">
 				            <input type="image" src="img/edit.png" onclick="window.location.href='usuarios_modificar.php'">
 			            </div>
-	            
+
 					<?php
 						}
 					?>
 			 </div>
 			<div class="logo">
-				<img src="img/logo150px.png" />
+				<a href="index.php"><img src="img/logo150px.png" /></a>
 			</div>
 			<div class="title">
 				<h1>Hoy por tí, mañana por mí</h1>
 			</div>
 		</div>
-		</div>	
-		<div class="menu">	
+		</div>
+		<div class="menu">
 			<ul>
 			  	<li><a href="index.php">Inicio</a></li>
 			  	<?php
