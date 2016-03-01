@@ -19,7 +19,7 @@
     <div class="destacado">
         <div class="titlofrezco">
             <h1>Ofrezco</h1>
-            <a href="ofrezco_necesito_insert.php"><img src="img/plus.png" /></a> 
+            <a href="ofrezco_necesito_insert.php"><img src="img/plus.png" /></a>
         </div>
         <?php
             if (isset($_SESSION['id'])){
@@ -36,7 +36,7 @@
                      echo"<div class='notcont'>";
                 echo "<h2>Tipo de actividad: </h2><br />".utf8_encode($ofrezco['ntact']).".<br /><br />";
                 echo "<h2>Fecha: </h2><br />".$ofrezco['fecha'].".<br /><br />";
-               
+
                 echo "<h2>Dirección: </h2><br />".utf8_encode($ofrezco['direccion']).".<br /><br />";
                 echo "<h2>Monedas: ".$ofrezco['compensacion']."</h2><br /><br />";
                 echo "<a href='#'>Ver más</a><br /><br />";
@@ -48,10 +48,10 @@
                     echo "<div class='notic'>";
                     echo  "<h1>".utf8_encode($ofrezco['nombre'])."</h1><br />";
                      echo"<div class='notcont'>";
-                
+
                    echo "<h2>Tipo de actividad: </h2><br />".utf8_encode($ofrezco['ntact']).".<br /><br />";
                 echo "<h2>Fecha: </h2><br />".$ofrezco['fecha'].".<br /><br />";
-               
+
                 echo "<h2>Dirección: </h2><br />".utf8_encode($ofrezco['direccion']).".<br /><br />";
                 echo "<h2>Monedas: ".$ofrezco['compensacion']."</h2><br /><br />";
                 echo "<a href='#'>Ver más</a><br /><br />";
@@ -69,8 +69,8 @@
     <div class="necesito">
         <div class="titlofrezco">
         <h1>Necesito</h1>
-       
-        <a href="ofrezco_necesito_insert.php"><img src="img/plus.png" /></a>  
+
+        <a href="ofrezco_necesito_insert.php"><img src="img/plus.png" /></a>
     </div>
      <?php
             if (isset($_SESSION['id'])){
@@ -86,7 +86,7 @@
                      echo"<div class='notcont'>";
                 echo "<h2>Tipo de actividad: </h2><br />".utf8_encode($necesito['ntact']).".<br /><br />";
                 echo "<h2>Fecha: </h2><br />".$necesito['fecha'].".<br /><br />";
-               
+
                 echo "<h2>Dirección: </h2><br />".utf8_encode($necesito['direccion']).".<br /><br />";
                 echo "<h2>Monedas: 10</h2><br /><br />";
                 echo "<a href='#'>Ver más</a><br /><br />";
