@@ -138,9 +138,16 @@ li a.active {
 .notcont {
   float: left;
 }
-.notic > h1 {
-  color: #5080ef;
-  text-align: center;
+.notic > a {
+  text-decoration: none;
+  color: #5080ef !important;
+  text-align: center !important;
+}
+.notic h1 {
+  color: #5080ef !important;
+}
+.notic h1:hover{
+  color: #17326E !important;
 }
 .notcont > h2 {
   color: #2358d1;
