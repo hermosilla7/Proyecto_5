@@ -1,11 +1,11 @@
 <?php
     include "header.php";
     // Peticiones Ofrezco
-    $consulta_actividades = "SELECT actividad.nombre, actividad.fecha, actividad.img, actividad.direccion, tipo_actividad.nombre AS 'ntact', tipo_actividad.compensacion FROM actividad LEFT JOIN tipo_actividad ON actividad.id_tipo_actividad=tipo_actividad.id WHERE actividad.peticion = 0";
+    $consulta_actividades = "SELECT actividad.nombre, actividad.fecha, actividad.img, actividad.direccion, tipo_actividad.nombre AS 'ntact' FROM actividad LEFT JOIN tipo_actividad ON actividad.id_tipo_actividad=tipo_actividad.id WHERE actividad.peticion = 0";
     $result_actividades = mysqli_query($con, $consulta_actividades);
 
     // Peticiones Necesito
-    $consulta_actividades2 = "SELECT actividad.nombre, actividad.fecha, actividad.img, actividad.direccion, tipo_actividad.nombre AS 'ntact', tipo_actividad.compensacion FROM actividad LEFT JOIN tipo_actividad ON actividad.id=tipo_actividad.id WHERE actividad.peticion = 1";
+    $consulta_actividades2 = "SELECT actividad.nombre, actividad.fecha, actividad.img, actividad.direccion, tipo_actividad.nombre AS 'ntact' FROM actividad LEFT JOIN tipo_actividad ON actividad.id=tipo_actividad.id WHERE actividad.peticion = 1";
     $result_actividades2 = mysqli_query($con, $consulta_actividades2);
 ?>
 <br />
@@ -88,7 +88,7 @@
                 echo "<h2>Fecha: </h2><br />".$necesito['fecha'].".<br /><br />";
                
                 echo "<h2>Dirección: </h2><br />".utf8_encode($necesito['direccion']).".<br /><br />";
-                echo "<h2>Monedas: ".$necesito['compensacion']."</h2><br /><br />";
+                echo "<h2>Monedas: 10</h2><br /><br />";
                 echo "<a href='#'>Ver más</a><br /><br />";
                 echo "</div>";
                     echo"<div class='notimg'>";
