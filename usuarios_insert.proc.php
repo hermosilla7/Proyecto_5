@@ -5,7 +5,7 @@
 <html>
 	<head>
 		<meta charset="utf-8"/>
-		<title>Ejemplo de formularios con datos en BD</title>
+		<title>Insertar Usuario</title>
 	</head>
 	<body>
 		<?php
@@ -14,18 +14,18 @@
 			$ruta=$_FILES["foto"]["tmp_name"];
 			$destino="img/".$foto;
 			copy($ruta, $destino);
-			echo $foto;
-			echo $ruta;
-			echo $destino;
-			//
-			$sql = "INSERT INTO usuario (nombre, apellidos, correo, pass, img, activo) VALUES ('$_REQUEST[nombre]', '$_REQUEST[apellidos]', '$_REQUEST[correo]', md5('$_REQUEST[pass]'), '$foto', $_REQUEST(activo))";
+
+			$nombre = mb_strtolower($_REQUEST['nombre'],'UTF-8');
+			$apellidos = mb_strtolower($_REQUEST['apellidos'],'UTF-8');
+
+			$sql = "INSERT INTO usuario (nombre, apellidos, correo, pass, img, activo) VALUES ('$nombre', '$apellidos', '$_REQUEST[correo]', md5('$_REQUEST[pass]'), '$foto', $_REQUEST[activo]);";
 			$sql=utf8_decode($sql);
 
 			//lanzamos la sentencia sql
 			mysqli_query($con, $sql);
 
 			$message = 'Usuario dado de alta';
-			echo "<SCRIPT type='text/javascript'> //not showing me this
+			echo "<SCRIPT type='text/javascript'>
 		        alert('$message');
 		        window.location.replace(\"index.php\");
 		    </SCRIPT>";

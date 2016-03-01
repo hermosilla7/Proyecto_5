@@ -17,8 +17,6 @@
     include "with-jquery.html";
 ?>
 
-
-
 <div class="content">
     <div class="destacado">
         <div class="titlofrezco">
@@ -32,7 +30,6 @@
                 }
             ?>
         </div>
-
 
         <?php
 

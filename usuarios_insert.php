@@ -41,7 +41,7 @@
 					<input type="text" name="apellidos" class="form-control" placeholder="Apellidos"  maxlength="50"required><br>
 				</div>
 				<div class="form-group">
-					<input type="text" name="correo" class="form-control" placeholder="Correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required title="Formato correcto: xxx.xxx@dominio.com"  maxlength="75"required><br>
+					<input type="text" name="correo" class="form-control" placeholder="Correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required title="Formato en minúsculas. Ejemplo: info@gmail.com"  maxlength="75"required><br>
 				</div>
 				<div class="form-group">
 					<input name="telefono" type="tel" pattern="[0-9]{9}" placeholder="Telefono"  maxlength="9" required title="Formato correcto: 618589666">
