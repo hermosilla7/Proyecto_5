@@ -1,11 +1,11 @@
 <?php
     include "header.php";
     // Peticiones Ofrezco
-    $consulta_actividades = "SELECT actividad.nombre, actividad.fecha, actividad.img, actividad.direccion, tipo_actividad.nombre AS 'ntact', tipo_actividad.compensacion FROM actividad LEFT JOIN tipo_actividad ON actividad.id_tipo_actividad=tipo_actividad.id WHERE actividad.peticion = 0";
+    $consulta_actividades = "SELECT actividad.nombre, actividad.fecha, actividad.img, actividad.direccion, tipo_actividad.nombre AS 'ntact' FROM actividad LEFT JOIN tipo_actividad ON actividad.id_tipo_actividad=tipo_actividad.id WHERE actividad.peticion = 0";
     $result_actividades = mysqli_query($con, $consulta_actividades);
 
     // Peticiones Necesito
-    $consulta_actividades2 = "SELECT actividad.nombre, actividad.fecha, actividad.img, actividad.direccion, tipo_actividad.nombre AS 'ntact', tipo_actividad.compensacion FROM actividad LEFT JOIN tipo_actividad ON actividad.id=tipo_actividad.id WHERE actividad.peticion = 1";
+    $consulta_actividades2 = "SELECT actividad.nombre, actividad.fecha, actividad.img, actividad.direccion, tipo_actividad.nombre AS 'ntact' FROM actividad LEFT JOIN tipo_actividad ON actividad.id=tipo_actividad.id WHERE actividad.peticion = 1";
     $result_actividades2 = mysqli_query($con, $consulta_actividades2);
 ?>
 <br />
@@ -18,9 +18,9 @@
 <div class="content">
     <div class="destacado">
         <div class="titlofrezco">
-        <h1>Ofrezco</h1>
-        <a href="ofrezco_necesito_insert.php"><img src="img/plus.png" /></a> 
-         </div>
+            <h1>Ofrezco</h1>
+            <a href="ofrezco_necesito_insert.php"><img src="img/plus.png" /></a> 
+        </div>
         <?php
             if (isset($_SESSION['id'])){
         ?>
@@ -64,7 +64,7 @@
             }
         ?>
     </div>
-  </div>
+</div>
 <div class="content">
     <div class="necesito">
         <div class="titlofrezco">
@@ -88,7 +88,7 @@
                 echo "<h2>Fecha: </h2><br />".$necesito['fecha'].".<br /><br />";
                
                 echo "<h2>Dirección: </h2><br />".utf8_encode($necesito['direccion']).".<br /><br />";
-                echo "<h2>Monedas: ".$necesito['compensacion']."</h2><br /><br />";
+                echo "<h2>Monedas: 10</h2><br /><br />";
                 echo "<a href='#'>Ver más</a><br /><br />";
                 echo "</div>";
                     echo"<div class='notimg'>";
@@ -114,37 +114,6 @@
     </div>
 </div>
 
-<!--<script type="text/javascript">
-    $(document).ready(function(){
-        $('#f1').bootstrapValidator({
-            message: 'This value is not valid',
-            feedbackIcons: {
-                valid: 'glyphicon glyphicon-ok',
-                invalid: 'glyphicon glyphicon-remove',
-                validating: 'glyphicon glyphicon-refresh'
-            },
-            fields: {
-                mail: {
-                    validators: {
-                        notEmpty: {
-                            message: "El nom és obligatori"
-                        }
-                    }
-                }
-            },
-            submitHandler: function(validator, form, submitButton) {
-                $.post( $("#f1").attr("action"), 
-                    $("#f1").serializeArray(),function(data){
-                        $('#f1').data('bootstrapValidator').resetForm(true);
-                        $('#f1').trigger('reset');
-                        $("#result").show();
-                        $("#result").html(data); 
-                    }
-                );              
-            }
-        });
-    });
-</script>-->
 <?php
     include "footer.php";
 ?>
