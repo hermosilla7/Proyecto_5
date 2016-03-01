@@ -12,7 +12,7 @@
 			//imagen avatar
 			$foto=$_FILES["foto"]["name"];
 			$ruta=$_FILES["foto"]["tmp_name"];
-			$destino="img/".$foto;
+			$destino="img/avatar/".$foto;
 			copy($ruta, $destino);
 
 			$nombre = mb_strtolower($_REQUEST['nombre'],'UTF-8');

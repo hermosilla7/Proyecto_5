@@ -14,7 +14,7 @@
 			//imagen avatar
 			$foto=$_FILES["foto"]["name"];
 			$ruta=$_FILES["foto"]["tmp_name"];
-			$destino="img/".$foto;
+			$destino="img/avatar/".$foto;
 			copy($ruta, $destino);
 			echo $foto;
 			echo $ruta;

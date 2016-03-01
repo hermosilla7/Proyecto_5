@@ -82,7 +82,7 @@
 			            	echo "Monedas: ".$_SESSION['monedas']." $";
 			            ?>
 						<div class="perfilimg">
-			            	<input type="image" src="img/<?php echo $foto ?>"style="width: 68px; height: 68px;">
+			            	<input type="image" src="img/avatar/<?php echo $foto ?>"style="width: 68px; height: 68px;">
 			            </div>
 			            <div class="logologin">
 				            <input type="image" src="img/off.png" onclick="window.location.href='logout.proc.php'">

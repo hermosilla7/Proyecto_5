@@ -34,7 +34,7 @@
         <?php
 
             while ($ofrezco = mysqli_fetch_array($result_actividades)){
-                $fichero = "img/$ofrezco[img]";
+                $fichero = "img/actividades/$ofrezco[img]";
                 if (file_exists($fichero) && (($ofrezco['img']) != '')) {
                     echo "<div class='notic' >";
                     echo "<a href='ver_mas.php?actividad=".$ofrezco['id']."'><h1>".utf8_encode($ofrezco['nombre'])."</h1></a><br />";
@@ -85,7 +85,7 @@
         <?php
 
             while ($necesito = mysqli_fetch_array($result_actividades2)){
-                $fichero = "img/$necesito[img]";
+                $fichero = "img/actividades/$necesito[img]";
                 if (file_exists($fichero) && (($necesito['img']) != '')) {
                     echo "<div class='notic'>";
                     echo "<a href='ver_mas.php?actividad=".$necesito['id']."'><h1>".utf8_encode($necesito['nombre'])."</h1></a><br />";
