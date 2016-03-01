@@ -18,7 +18,7 @@
 			echo $ruta;
 			echo $destino;
 			//
-			$sql = "INSERT INTO usuario (nombre, apellidos, correo, pass, img) VALUES ('$_REQUEST[nombre]', '$_REQUEST[apellidos]', '$_REQUEST[correo]', md5('$_REQUEST[pass]'), '$foto')";
+			$sql = "INSERT INTO usuario (nombre, apellidos, correo, pass, img, activo) VALUES ('$_REQUEST[nombre]', '$_REQUEST[apellidos]', '$_REQUEST[correo]', md5('$_REQUEST[pass]'), '$foto', $_REQUEST(activo))";
 			$sql=utf8_decode($sql);
 
 			//lanzamos la sentencia sql
