@@ -41,7 +41,7 @@
 
                 echo "<h2>Dirección: </h2><br />".utf8_encode($ofrezco['direccion']).".<br /><br />";
                 echo "<h2>Monedas: ".$ofrezco['compensacion']."</h2><br /><br />";
-                
+
                 echo "</div>";
                     echo"<div class='notimg'>";
                     echo "<img src='$fichero' width='60%' /><br />";

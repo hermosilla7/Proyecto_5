@@ -1,7 +1,7 @@
 <?php
     include "header.php";
-    $actividad=$_REQUEST['actividad'];
-    $consulta_actividades = "SELECT * FROM actividad WHERE id_usuario = $actividad";
+    //recogida de variable de index
+    $consulta_actividades = "SELECT * FROM actividad WHERE id = $_REQUEST[actividad]";
     $result_actividades = mysqli_query($con, $consulta_actividades);
 ?>
     <div class="titleact">
@@ -9,7 +9,6 @@
     </div>
     <div id="actividades" class="actividades">
         <div class="prin-img" style="margin-bottom: 15px;">
-
     <?php
     $actividadesArray = [];
     while ($actividad = mysqli_fetch_array($result_actividades)) {
