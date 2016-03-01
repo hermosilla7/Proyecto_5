@@ -30,9 +30,11 @@
 			return enviar;
 		}
 	</script>
-
+   <div class="titleact">
+        <h1>creacion de eventos</h1>
+    </div>
 	<div class="mod-form">
-		<h1>Registro</h1>
+		
  		<div class="form-group ">
 			<form name="f1" action="ofrezco_necesito_insert.proc.php" method="post" enctype="multipart/form-data" onsubmit="return validar();">
 				<br></br><br></br>
