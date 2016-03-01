@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.12
+-- version 4.4.14
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-03-2016 a las 08:25:42
--- Versión del servidor: 5.6.25
--- Versión de PHP: 5.6.11
+-- Tiempo de generación: 01-03-2016 a las 13:16:58
+-- Versión del servidor: 5.6.26
+-- Versión de PHP: 5.6.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -37,25 +37,28 @@ CREATE TABLE IF NOT EXISTS `actividad` (
   `ubicacion_lat` double NOT NULL,
   `ubicacion_lon` double NOT NULL,
   `id_tipo_actividad` int(2) NOT NULL,
-  `direccion` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `direccion` varchar(70) COLLATE utf8_unicode_ci NOT NULL,
   `peticion` tinyint(1) NOT NULL,
-  `id_usuario` int(3) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `id_usuario` int(3) NOT NULL,
+  `estado` tinyint(1) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `actividad`
 --
 
-INSERT INTO `actividad` (`id`, `nombre`, `descripcion`, `fecha`, `img`, `ubicacion_lat`, `ubicacion_lon`, `id_tipo_actividad`, `direccion`, `peticion`, `id_usuario`) VALUES
-(1, 'Paseo por la montaña', 'Paseo por el pirineo egipcio', '2016-02-26 05:38:00', '', 41.513162, 2.113968, 1, '', 0, 1),
-(2, 'Curso cocina', 'Recetas de cocina fáciles y originales: aperitivos, primeros platos, platos principales, postres, recetas saludables, consejos de cocina.', '2016-03-02 09:00:00', 'tallercocina.jpg', 41.348451, 2.1158357, 2, '', 0, 1),
-(3, 'Taller patchwork', 'Crea originales diseños con la técnica del patchwork. Crea colchas de patchwork, bolsos, ropa para bebés.', '2016-03-15 10:00:00', 'tapetepoker.jpg', 41.349791, 2.107665, 3, '', 0, 2),
-(4, 'Bailes de Salon', ' La actividad consiste en tres clases semanales donde se impartirán distintas modalidades de baile, desde Tango, Rumba, Bailes Latinos y, por supuesto, Pasodoble.', '2016-03-09 10:00:00', 'bailes.jpg', 41.349806, 2.107635, 4, '', 0, 1),
-(5, 'Curso ingles', 'Nada mejor que el inglés, que requiere tiempo y dedicación, y además lo podemos luego usar para otras muchas cosas relacionadas con el tiempo libre: viajar, leer, ver películas o conocer gente. ', '2016-03-01 09:00:00', 'ingles.jpg', 41.349911, 2.107528, 5, '', 0, 2),
-(6, 'Curso Informática', '	\r\nEn este curso os ayudamos a manejar el correo electrónico, encontrar por Internet una pieza de la máquina de coser o de su coche de toda la vida, reservar entradas de teatro, chatear con personas de vuestra edad que residen en otros lugares… o incluso buscar ofertas de viajes para jubilados', '2016-02-07 11:00:00', 'infor.jpg', 41.349911, 2.107528, 6, '', 0, 1),
-(11, 'asd', 'asd', '1212-12-12 09:00:00', '', 41, 41, 0, 'asd', 0, 3),
-(12, 'asd', 'fes', '1545-12-12 12:12:00', '', 84, 84, 6, 'sdf', 1, 3),
-(13, 'raul', 'asd', '1212-12-12 12:12:00', '', 54, 54, 7, 'adf', 0, 1);
+INSERT INTO `actividad` (`id`, `nombre`, `descripcion`, `fecha`, `img`, `ubicacion_lat`, `ubicacion_lon`, `id_tipo_actividad`, `direccion`, `peticion`, `id_usuario`, `estado`) VALUES
+(1, 'Paseo por la montaña', 'Me ofrezco para dar un paseo por el rio LLobregat.', '2016-02-26 05:38:00', 'riollobregat.jpg', 41.340078, 2.096054, 1, 'Camí Ribera, 6 Hospitalet de LLobregat', 0, 1, 0),
+(2, 'Curso cocina', 'Me ofrezco para realizar aprendizaje en recetas de cocina fáciles y originales: aperitivos, primeros platos, platos principales, postres, recetas saludables, consejos de cocina.', '2016-03-02 09:00:00', 'tallercocina.jpg', 41.364519, 2.110524, 2, 'av Josep Tarradellas i Joan nº89 Hospitalet de Llobregat', 0, 1, 0),
+(3, 'Taller patchwork', 'Me ofrezco para enseñar originales diseños con la técnica del patchwork. Crea colchas de patchwork, bolsos, ropa para bebés..', '2016-03-15 10:00:00', 'tapetepoker.jpg', 41.356229, 2.11424, 3, 'Av Europan nº164 7º2 Hospitalet de LLobregat', 0, 2, 0),
+(4, 'Bailes de Salon', 'Me ofrezco para el aprendizaje de distintas modalidades de baile, desde Tango, Rumba, Bailes Latinos y, por supuesto, Pasodoble.', '2016-03-09 10:00:00', 'bailes.jpg', 41.3747849, 2.1322064, 8, 'C/De Cáceres nº22 Barcelona', 0, 1, 0),
+(5, 'Curso ingles', 'Me ofrezco para dar clases de ingles. ', '2016-03-01 09:00:00', 'ingles.jpg', 41.3727298, 2.1284286, 9, 'C/Bacardi nº21-25 Barcelona', 0, 2, 0),
+(6, 'Curso Informática', 'Me ofrezco para dar clases de informatica te puedo ayudar  a manejar el correo electrónico, encontrar por Internet una pieza de la máquina de coser o de su coche de toda la vida, reservar entradas de teatro, chatear con personas de vuestra edad que residen en otros lugares… o incluso buscar ofertas de viajes para jubilados', '2016-02-07 11:00:00', 'infor.jpg', 41.3628815, 2.1102299, 3, 'C/Enric Prat de la Riba nº106 Hospitalet de LLobregat', 0, 1, 0),
+(7, 'Instalacion home cinema', 'Me ofrezco para enseñar a realizar cualquier instalación de un home cinema.', '1212-12-12 09:00:00', 'electronica1.jpg', 41.3728971, 2.1212168, 0, 'C/Paris nº14 6º1 Hospitalet de LLobregat\r\n', 1, 3, 0),
+(8, 'Mantenimiento de un vehículo.', 'Me ofrezco para enseñar como llevar el mantenimiento de un vehículo. ', '1545-12-12 12:12:00', 'mecanica1.jpg', 41.3762342, 2.1390416, 6, 'C/de Premia nº18 ent Barcelona', 1, 3, 0),
+(9, 'Compañia', 'Me ofrezco para dar compañia durante un dia a la semana.', '2016-03-16 00:00:00', 'compa.jpg', 41.3726882, 2.1131448, 7, 'C/Torrente Gornal nº 59 Hospitalet de Llobregat', 0, 1, 0),
+(10, 'Compañia para ir a correr.', 'Necesito compañia para ir a correr y que me enseñe como debo hacer los estiramientos.', '2016-03-23 09:00:00', 'correr1.jpg', 41.3563355, 2.0857301, 8, 'Carretera Hospitalet nº 137 Cornella de LLobregat', 1, 0, 0),
+(11, 'Arreglar pc', 'Necesito a una persona que me ayude arreglar mi pc.', '2016-03-04 12:00:00', 'mipc.jpg', 41.372627, 2.119982, 3, 'Calle Llobregat nº89 3º2 Hospitalet de LLobregat', 1, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -87,22 +90,24 @@ INSERT INTO `donacion` (`id`, `cantidad`, `id_usuario`, `fecha`) VALUES
 
 CREATE TABLE IF NOT EXISTS `tipo_actividad` (
   `id` int(2) NOT NULL,
-  `nombre` varchar(35) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `nombre` varchar(35) COLLATE utf8_unicode_ci NOT NULL,
+  `compensacion` int(4) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `tipo_actividad`
 --
 
-INSERT INTO `tipo_actividad` (`id`, `nombre`) VALUES
-(1, 'Paseo'),
-(2, 'Electronica'),
-(3, 'Informática'),
-(4, 'Manualidades'),
-(5, 'Alimentación'),
-(6, 'Mecánica'),
-(7, 'Compañia'),
-(8, 'Deporte');
+INSERT INTO `tipo_actividad` (`id`, `nombre`, `compensacion`) VALUES
+(1, 'Paseo', 100),
+(2, 'Electronica', 50),
+(3, 'Informática', 30),
+(4, 'Manualidades', 10),
+(5, 'Alimentación', 0),
+(6, 'Mecánica', 0),
+(7, 'Compañia', 0),
+(8, 'Deporte', 0),
+(9, 'Idiomas', 0);
 
 -- --------------------------------------------------------
 
@@ -197,7 +202,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `actividad`
 --
 ALTER TABLE `actividad`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT de la tabla `donacion`
 --
@@ -207,7 +212,7 @@ ALTER TABLE `donacion`
 -- AUTO_INCREMENT de la tabla `tipo_actividad`
 --
 ALTER TABLE `tipo_actividad`
-  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT de la tabla `trueque`
 --
