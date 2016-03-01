@@ -21,7 +21,7 @@
 
 		<!-- MAPA WEB -->
 		<script type="text/javascript" src="js/maps.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBW_5m9Miz3xloHRp1QF3cW5V_I0qoz3RI&callback=initMap" async defer></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmihl9cGb7phazsa5HoQebsd4Eyv0B4T0&signed_in=true&callback=initMap">//felipe iglesias</script>
       <script type="text/javascript">
          window.onload = function(){
             initMap();
