@@ -27,7 +27,13 @@
             initMap();
          }
       </script>
-
+		<style>
+		  #map {
+			  width: 440px;
+			  height: 200px;
+		  }
+		  /*felipe iglesias*/
+		</style>
 		<!-- ESTILOS Y FAVICON -->
 		<link rel="icon" type="image/png" href="img/favicon.png" />
 		<link rel="stylesheet" type="text/css" href="css/estilo.css"/>
