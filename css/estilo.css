@@ -163,7 +163,7 @@ li a.active {
   height: 550px;
   margin-bottom: 2%;
   margin-left: 3%;
-  padding: 2%;
+  padding: 1%;
   width: 250px;
 }
 .notimg {
@@ -433,7 +433,7 @@ h2{
   border-bottom: 2px solid #17326e;
   border-radius: 5px;
   padding: 2%;
-  height: 480px;
+  height: 280px;
 }
 .actividad2 {
   padding: 1%;
@@ -534,3 +534,14 @@ h2{
   width: 50%;
 }
 
+
+/*/////////////////////////////////////registro//////////////////////*/
+.mod-form4 {
+  background:none 0 0 repeat scroll #DBE6FF;
+  border-radius:5px;
+  float:right;
+  margin-right:43%;
+  margin-top:9px;
+  padding:10px;
+  text-align:center;
+}
