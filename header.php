@@ -21,12 +21,7 @@
 
 		<!-- MAPA WEB -->
 		<script type="text/javascript" src="js/maps.js"></script>
-		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmihl9cGb7phazsa5HoQebsd4Eyv0B4T0&signed_in=true&callback=initMap">//felipe iglesias</script>
-      <script type="text/javascript">
-         window.onload = function(){
-            initMap();
-         }
-      </script>
+
 		<style>
 		  #map {
 			  width: 440px;
@@ -88,7 +83,13 @@
 			            	echo "Monedas: ".$_SESSION['monedas']." $";
 			            ?>
 						<div class="perfilimg">
-			            	<input type="image" src="img/avatar/<?php echo $foto ?>"style="width: 68px; height: 68px;">
+							<?php
+								if($foto==null){
+									echo '<input type="image" src="img/avatar/nodisponible.jpg" style="width: 68px; height: 68px;">';
+								}else {
+									echo '<input type="image" src="img/avatar/<?php echo $foto ?>" style="width: 68px; height: 68px;">';
+								}
+							 ?>
 			            </div>
 			            <div class="logologin">
 				            <input type="image" src="img/off.png" onclick="window.location.href='logout.proc.php'">

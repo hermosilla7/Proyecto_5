@@ -1,8 +1,9 @@
 <?php
 	include 'header.php';
-			
-	//Imagen Avatar
+
 	$foto=$_FILES["foto"]["name"];
+
+	//Imagen Avatar
 	$ruta=$_FILES["foto"]["tmp_name"];
 	$destino="img/avatar/".$foto;
 	copy($ruta, $destino);

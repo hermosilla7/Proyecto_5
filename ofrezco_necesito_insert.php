@@ -1,7 +1,6 @@
 <?php
 	include 'header.php';
-	$consulta_actividad = ("SELECT * FROM tipo_actividad");
-	$result_actividad = mysqli_query($con, $consulta_actividad);
+
 ?>
 	<script>
 		function valEmail(valor){
@@ -34,7 +33,6 @@
         <h1>creacion de eventos</h1>
     </div>
 	<div class="mod-form">
-		
  		<div class="form-group ">
 			<form name="f1" action="ofrezco_necesito_insert.proc.php" method="post" enctype="multipart/form-data" onsubmit="return validar();">
 				<br></br><br></br>
@@ -59,7 +57,7 @@
 				<div class="form-group">
 					<input type="number" name="compensacion" class="form-control" placeholder="Compensación" required><br>
 				</div>
-				<input id="radio" type="radio" name="peticion" <?php if( $user['nivel'] == '0' ) { ?>checked="checked"<?php } ?> value='0' >Ofrezco</br><br>		
+				<input id="radio" type="radio" name="peticion" <?php if( $user['nivel'] == '0' ) { ?>checked="checked"<?php } ?> value='0' >Ofrezco</br><br>
 				<input id="radio" type="radio" name="peticion" <?php if( $user['nivel'] == '1' ) { ?>checked="checked"<?php } ?> value='1' >Necesito</br><br>
 				<div class="form-group">
 					<input type="file" name="foto" id="foto" class="form-control"></br>
