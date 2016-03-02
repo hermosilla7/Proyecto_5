@@ -1,9 +1,11 @@
 <?php
 	include 'header.php';
 ?>
-
-	<div class="mod-form">
-		<h1>Registro</h1>
+<div class="titleact">
+        <h1>Registro</h1>
+    </div>
+	<div class="mod-form4">
+		
  		<div class="form-group ">
 			<form name="f1" action="usuarios_insert.proc.php" method="get" enctype="multipart/form-data" onsubmit="return validar();">
 				<div class="form-group"><br/>
