@@ -7,7 +7,7 @@
 	<div class="donacio">
 
 		<div class="donaciones">
-			<div class="mod-form">
+			<div class="mod-form2">
 				<h1>Donaciones</h1>
 	     		<div class="form-group ">
 					<form name="f1" action="donaciones.proc.php" method="post" enctype="multipart/form-data" onsubmit="return validar();">

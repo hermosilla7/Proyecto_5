@@ -15,10 +15,32 @@
   background: #dbe6ff none repeat scroll 0 0;
   border-radius: 5px;
   float: right;
-  margin-right: 40%;
+  margin-right: 45%;
   margin-top: 9px;
   padding: 10px;
   text-align: center;
+}
+.mod-form2 {
+  border-radius: 5px;
+  float: right;
+  margin-top: 9px;
+  text-align: center;
+}
+.mod-form3 {
+  border-radius: 5px;
+  margin-left: 21%;
+  margin-top: -7px;
+  padding: 10px;
+  text-align: center;
+  width: 13%;
+}
+.regis {
+  margin-left: 20%;
+  width: 50%;
+}
+.form-grouptxt {
+  float: right;
+  margin-right: 30%;
 }
 input {
   margin-bottom: 5px;
@@ -48,7 +70,7 @@ ul {
   list-style-type: none;
   overflow: hidden;
   position: absolute;
-  width: 99.6%;
+  width: 99.5%;
 }
 
 li {
@@ -137,15 +159,19 @@ li a.active {
 .notic {
   background: #dbe6ff none repeat scroll 0 0;
   border-radius: 5px;
+  display: inline-table;
+  height: 550px;
   margin-bottom: 2%;
+  margin-left: 3%;
   padding: 2%;
-  height: auto;
+  width: 250px;
 }
 .notimg {
   text-align: center;
 }
 .notcont {
-  float: left;
+  margin-left: 3%;
+  padding: 2%;
 }
 .notic > a {
   text-decoration: none;
@@ -409,6 +435,10 @@ h2{
   padding: 2%;
   height: 480px;
 }
+.actividad2 {
+  padding: 1%;
+  height: auto;
+}
 
 .subir {
   margin-top: 1%;
@@ -425,7 +455,7 @@ h2{
   margin-top: 1.4%;
   padding: 1%;
   text-align: center;
-  width: 11%;
+  width: 13%;
   border: 4px solid #fff;
 }
 .log-btn2 {
@@ -503,3 +533,4 @@ h2{
   text-align: center;
   width: 50%;
 }
+
