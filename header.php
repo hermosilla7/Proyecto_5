@@ -80,7 +80,7 @@
 								if($foto==null){
 									echo '<input type="image" src="img/avatar/nodisponible.jpg" style="width: 68px; height: 68px;">';
 								}else {
-									echo '<input type="image" src="img/avatar/<?php echo $foto ?>" style="width: 68px; height: 68px;">';
+									echo '<input type="image" src="img/avatar/'.$foto.'" style="width: 68px; height: 68px;">';
 								}
 							 ?>
 			            </div>
