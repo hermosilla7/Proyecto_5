@@ -24,12 +24,6 @@
 		<!-- MAPA WEB -->
 		<script type="text/javascript" src="js/maps.js"></script>
 
-		<style>
-		  #map {
-			  width: 440px;
-			  height: 200px;
-		  }
-		</style>
 		<!-- ESTILOS Y FAVICON -->
 		<link rel="icon" type="image/png" href="img/favicon.png" />
 		<link rel="stylesheet" type="text/css" href="css/estilo.css"/>
@@ -37,9 +31,6 @@
 		<!-- JQUERY -->
 		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
-		<script>
-
-            </script>
 	</head>
 	<body>
 		<div class="header">

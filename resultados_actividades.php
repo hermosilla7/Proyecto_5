@@ -15,7 +15,7 @@
 	if ($_REQUEST['tipo_actividad'] == "") {
 		//extraemos los productos uno a uno en la variable $anuncio que es un array
             while ($ofrezco = mysqli_fetch_array($result_actividades)){
-                $fichero = "img/$ofrezco[img]";
+                $fichero = "img/actividades/$ofrezco[img]";
                 if (file_exists($fichero) && (($ofrezco['img']) != '')) {
                     echo "<div class='notic' >";
                     echo "<a href='ver_mas.php?actividad=".$ofrezco['id']."'><h1>".utf8_encode($ofrezco['nombre'])."</h1></a><br />";
@@ -47,7 +47,7 @@
                 }
                 echo "</div>";
         	}
-            ?> 
+            ?>
 			</div>
 			</div>
 			<div class="content">
@@ -66,7 +66,7 @@
         <?php
 
             while ($necesito = mysqli_fetch_array($result_actividades2)){
-                $fichero = "img/$necesito[img]";
+                $fichero = "img/actividades/$necesito[img]";
                 if (file_exists($fichero) && (($necesito['img']) != '')) {
                     echo "<div class='notic'>";
                     echo "<a href='ver_mas.php?actividad=".$necesito['id']."'><h1>".utf8_encode($necesito['nombre'])."</h1></a><br />";
@@ -99,18 +99,18 @@
     </div>
 </div>
 <?php
-	}	
+	}
 	else {
-		$sql_ofrezco = "SELECT actividad.id, actividad.nombre, actividad.fecha, actividad.img, actividad.direccion, tipo_actividad.nombre AS 'ntact' 
+		$sql_ofrezco = "SELECT actividad.id, actividad.nombre, actividad.fecha, actividad.img, actividad.direccion, tipo_actividad.nombre AS 'ntact'
                         FROM actividad LEFT JOIN tipo_actividad ON actividad.id_tipo_actividad=tipo_actividad.id
-                        WHERE actividad.peticion = 0 
-                        AND actividad.fecha >= '$fecha' 
+                        WHERE actividad.peticion = 0
+                        AND actividad.fecha >= '$fecha'
                         AND id_tipo_actividad = $_REQUEST[tipo_actividad]
                         ORDER BY actividad.fecha DESC";
 		$datos_ofrezco = mysqli_query($con, $sql_ofrezco);
 		//extraemos los productos uno a uno en la variable $anuncio que es un array
 		while($ofrezco = mysqli_fetch_array($datos_ofrezco)){
-			$fichero = "img/$ofrezco[img]";
+			$fichero = "img/actividades/$ofrezco[img]";
                 if (file_exists($fichero) && (($ofrezco['img']) != '')) {
                     echo "<div class='notic' >";
                     echo "<a href='ver_mas.php?actividad=".$ofrezco['id']."'><h1>".utf8_encode($ofrezco['nombre'])."</h1></a><br />";
@@ -156,15 +156,15 @@
                     ?>
                 </div>
         <?php
-        $sql_necesito = "SELECT actividad.id, actividad.nombre, actividad.fecha, actividad.img, actividad.direccion, tipo_actividad.nombre AS 'ntact' 
+        $sql_necesito = "SELECT actividad.id, actividad.nombre, actividad.fecha, actividad.img, actividad.direccion, tipo_actividad.nombre AS 'ntact'
                         FROM actividad LEFT JOIN tipo_actividad ON actividad.id_tipo_actividad=tipo_actividad.id
-                        WHERE actividad.peticion = 1 
-                        AND actividad.fecha >= '$fecha' 
+                        WHERE actividad.peticion = 1
+                        AND actividad.fecha >= '$fecha'
                         AND id_tipo_actividad = $_REQUEST[tipo_actividad]
                         ORDER BY actividad.fecha DESC";
         $datos_necesito = mysqli_query($con, $sql_necesito);
         while($necesito = mysqli_fetch_array($datos_necesito)){
-            $fichero = "img/$necesito[img]";
+            $fichero = "img/actividades/$necesito[img]";
                 if (file_exists($fichero) && (($necesito['img']) != '')) {
                     echo "<div class='notic'>";
                     echo "<a href='ver_mas.php?actividad=".$necesito['id']."'><h1>".utf8_encode($necesito['nombre'])."</h1></a><br />";

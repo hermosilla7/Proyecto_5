@@ -12,3 +12,8 @@ h1, a {
 p {
     padding-bottom: 10px;
 }
+
+#map {
+  width: 440px;
+  height: 200px;
+}
