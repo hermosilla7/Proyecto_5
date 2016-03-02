@@ -29,13 +29,22 @@
 			return enviar;
 		}
 	</script>
-
-	<div class="mod-form">
-		<h1>Registro</h1>
+  <div class="titleact">
+  	<h1>Registro</h1>
+    </div>
+    <div class="regis">
+    <p>Para cualquier duda o sugerencia rellena este formulario de contacto. Estudiaremos tu caso e intentaremos ponernos en contacto contigo lo antes posible. Gracias por la paciencia.
+    </p>
+</div>
+	
+	
  		<div class="form-group ">
 			<form name="f1" action="contacto.proc.php" method="post" enctype="multipart/form-data" onsubmit="return validar();">
 			<br></br>
-			Para cualquier duda o sugerencia rellena este formulario de contacto. Estudiaremos tu caso e intentaremos ponernos en contacto contigo lo antes posible. Gracias por la paciencia.
+			<div class="form-grouptxt">
+					​<textarea id="txtArea" rows="10" cols="55" placeholder="Déjanos tu sugerencia o consulta..." required></textarea>
+				</div>
+			<div class="mod-form3">
 				<div class="form-group">
 					<input type="text" name="nombre" class="form-control" placeholder="Nombre" required><br>
 				</div>
@@ -48,9 +57,7 @@
 				<div class="form-group">
 					<input type="text" name="telefono" class="form-control" placeholder="Teléfono" required><br>
 				</div>
-				<div class="form-group">
-					​<textarea id="txtArea" rows="10" cols="70" placeholder="Déjanos tu sugerencia o consulta..." required></textarea>
-				</div>
+				
 				<button type="submit" class="log-btn" onClick="validar()" name="acce">Registrar</button>
 				<button type="button" class="sign-btn" onClick="window.location.href='index.php'">Volver</button>
 			</form>

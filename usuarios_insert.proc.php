@@ -1,34 +1,47 @@
 <?php
-	include_once 'conexion.proc.php';
-	error_reporting(0);
+	include 'header.php';
+
+	$foto=$_FILES["foto"]["name"];
+
+	//Imagen Avatar
+	$ruta=$_FILES["foto"]["tmp_name"];
+	$destino="img/avatar/".$foto;
+	copy($ruta, $destino);
+
+	$nombre = mb_strtolower($_REQUEST['nombre'],'UTF-8');
+	$apellidos = mb_strtolower($_REQUEST['apellidos'],'UTF-8');
+	$correo = mb_strtolower($_REQUEST['correo'],'UTF-8');
+
+	$sql = "INSERT INTO usuario (nombre, apellidos, correo, pass, img, activo) VALUES ('$nombre', '$apellidos', '$correo', md5('$_REQUEST[pass]'), '$foto', $_REQUEST[activo]);";
+	$sql=utf8_decode($sql);
+
+	//lanzamos la sentencia sql
+	mysqli_query($con, $sql);
 ?>
-<html>
-	<head>
-		<meta charset="utf-8"/>
-		<title>Insertar Usuario</title>
-	</head>
-	<body>
-		<?php
-			//imagen avatar
-			$foto=$_FILES["foto"]["name"];
-			$ruta=$_FILES["foto"]["tmp_name"];
-			$destino="img/avatar/".$foto;
-			copy($ruta, $destino);
+ <div class="titleact">
+       <h1>Bienvenido</h1>
+   </div>
+  
+   <?php
+    echo "<div class='bienvenido'>";
+    	echo ' <b>'.$nombre.'</b>, <br>tu usuario ha sido registrado correctamente. Ya puedes iniciar sesión en el siguiente formulario (o puedes hacerlo en el formulario de la esquina superior derecha). ¡Grácias!';
+   		echo '<form id="f1" name="f1" action="login.proc.php" method="get">';
+			echo '<div class="form-group">';
+				echo '<input type="text" name="mail" class="form-control" placeholder="Correo" maxlength="50" value="'.$correo.'">';
+			echo '</div>';
+			echo '<div class="form-group">';
+				echo '<input type="password" name="pass" class="form-control" placeholder="Contraseña"><i class="fa fa-lock"></i>';
+			echo '</div>';
+			echo '<div class="log-error">';
+				if(isset($_SESSION['error'])){
+					echo "ERROR: " . $_SESSION['error'];
+					echo "<br/><br/>";
+				}
+			echo '</div>';
+			echo '<button type="submit" class="log-btn" name="acce">Entrar</button>';
+		echo '</form>';
+    echo '</div>';
 
-			$nombre = mb_strtolower($_REQUEST['nombre'],'UTF-8');
-			$apellidos = mb_strtolower($_REQUEST['apellidos'],'UTF-8');
 
-			$sql = "INSERT INTO usuario (nombre, apellidos, correo, pass, img, activo) VALUES ('$nombre', '$apellidos', '$_REQUEST[correo]', md5('$_REQUEST[pass]'), '$foto', $_REQUEST[activo]);";
-			$sql=utf8_decode($sql);
-
-			//lanzamos la sentencia sql
-			mysqli_query($con, $sql);
-
-			$message = 'Usuario dado de alta';
-			echo "<SCRIPT type='text/javascript'>
-		        alert('$message');
-		        window.location.replace(\"index.php\");
-		    </SCRIPT>";
-		?>
-	</body>
-</html>
+    include 'footer.php';
+?>
