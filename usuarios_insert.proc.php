@@ -12,7 +12,7 @@
 	$apellidos = mb_strtolower($_REQUEST['apellidos'],'UTF-8');
 	$correo = mb_strtolower($_REQUEST['correo'],'UTF-8');
 
-	$sql = "INSERT INTO usuario (nombre, apellidos, correo, pass, img, activo) VALUES ('$nombre', '$apellidos', '$correo', md5('$_REQUEST[pass]'), '$foto', $_REQUEST[activo]);";
+	$sql = "INSERT INTO usuario (nombre, apellidos, correo, dni, pass, img, activo) VALUES ('$nombre', '$apellidos', '$correo', '$_REQUEST[dni]', md5('$_REQUEST[pass]'), '$foto', $_REQUEST[activo]);";
 	$sql=utf8_decode($sql);
 
 	//lanzamos la sentencia sql
@@ -21,7 +21,7 @@
  <div class="titleact">
        <h1>Bienvenido</h1>
    </div>
-  
+
    <?php
     echo "<div class='bienvenido'>";
     	echo ' <b>'.$nombre.'</b>, <br>tu usuario ha sido registrado correctamente. Ya puedes iniciar sesión en el siguiente formulario (o puedes hacerlo en el formulario de la esquina superior derecha). ¡Grácias!';

@@ -2,33 +2,6 @@
 	include 'header.php';
 
 ?>
-	<script>
-		function valEmail(valor){
-			re=/^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*[.]([a-z]{2,3})$/
-			if(!re.exec(valor)) {
-				return false;
-			}else{
-				return true;
-			}
-		}
-
-		function validar(){
-			enviar=false;
-			if(f1.pass.value==f1.repass.value){
-				if(valEmail(f1.correo.value)){
-					enviar=true;
-				} else {
-					alert("El email " + f1.correo.value + " es incorrecto.");
-					enviar=false;
-				}
-			} else {
-				alert("Las contraseñas no coinciden");
-				enviar=false;
-			}
-
-			return enviar;
-		}
-	</script>
    <div class="titleact">
         <h1>creacion de eventos</h1>
     </div>
@@ -53,9 +26,6 @@
 				</div>
 				<div class="form-group">
 					<input type="text" name="ubicacion_lon" class="form-control" placeholder="Longitud"><br>
-				</div>
-				<div class="form-group">
-					<input type="number" name="compensacion" class="form-control" placeholder="Compensación" required><br>
 				</div>
 				<input id="radio" type="radio" name="peticion" <?php if( $user['nivel'] == '0' ) { ?>checked="checked"<?php } ?> value='0' >Ofrezco</br><br>
 				<input id="radio" type="radio" name="peticion" <?php if( $user['nivel'] == '1' ) { ?>checked="checked"<?php } ?> value='1' >Necesito</br><br>

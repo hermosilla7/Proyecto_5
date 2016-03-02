@@ -19,6 +19,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="utf-8"/>
 
+		<script type="text/javascript" src="js/funciones.js"></script>
+
 		<!-- MAPA WEB -->
 		<script type="text/javascript" src="js/maps.js"></script>
 
@@ -27,7 +29,6 @@
 			  width: 440px;
 			  height: 200px;
 		  }
-		  /*felipe iglesias*/
 		</style>
 		<!-- ESTILOS Y FAVICON -->
 		<link rel="icon" type="image/png" href="img/favicon.png" />
@@ -37,15 +38,7 @@
 		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 		<script>
-                function confirmar(){
-                    var txt;
-                    var r = confirm("¿Quieres darte de baja?");
-                    if (r == true){
-                        location.href = "usuarios_baja.proc.php";
-                    }else{
-                        //no hará nada
-                    }
-                }
+
             </script>
 	</head>
 	<body>
