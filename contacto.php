@@ -42,7 +42,7 @@
 			<form name="f1" action="contacto.proc.php" method="post" enctype="multipart/form-data" onsubmit="return validar();">
 			<br></br>
 			<div class="form-grouptxt">
-					​<textarea id="txtArea" rows="10" cols="70" placeholder="Déjanos tu sugerencia o consulta..." required></textarea>
+					​<textarea id="txtArea" rows="10" cols="55" placeholder="Déjanos tu sugerencia o consulta..." required></textarea>
 				</div>
 			<div class="mod-form3">
 				<div class="form-group">

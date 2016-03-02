@@ -24,7 +24,6 @@
   border-radius: 5px;
   float: right;
   margin-top: 9px;
-  padding: 10px;
   text-align: center;
 }
 .mod-form3 {
@@ -71,7 +70,7 @@ ul {
   list-style-type: none;
   overflow: hidden;
   position: absolute;
-  width: 99.6%;
+  width: 99.5%;
 }
 
 li {
