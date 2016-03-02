@@ -2,7 +2,7 @@
 	include 'header.php';
 ?>
   	<div class="titledona">
-    	<h1>Campaña asociación de jubilados causas solidarias</h1>
+    	<h1>Campaña Solidaria</h1>
     </div>
 	<div class="donacio">
 
