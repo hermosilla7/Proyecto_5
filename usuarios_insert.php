@@ -2,34 +2,6 @@
 	include 'header.php';
 ?>
 
-	<script>
-		function valEmail(valor){
-			re=/^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*[.]([a-z]{2,3})$/
-			if(!re.exec(valor)) {
-				return false;
-			}else{
-				return true;
-			}
-		}
-
-		function validar(){
-			enviar=false;
-			if(f1.pass.value==f1.repass.value){
-				if(valEmail(f1.correo.value)){
-					enviar=true;
-				} else {
-					alert("El email " + f1.correo.value + " es incorrecto.");
-					enviar=false;
-				}
-			} else {
-				alert("Las contraseñas no coinciden");
-				enviar=false;
-			}
-
-			return enviar;
-		}
-	</script>
-
 	<div class="mod-form">
 		<h1>Registro</h1>
  		<div class="form-group ">
@@ -61,6 +33,7 @@
 			</form>
 		</div>
 	</div>
+	
 <?php
 	include 'footer.php';
 ?>
