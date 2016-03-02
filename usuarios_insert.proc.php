@@ -16,12 +16,16 @@
 
 	//lanzamos la sentencia sql
 	mysqli_query($con, $sql);
-
-
-    echo '<br /><br /><br /><br /><div>';
-    	echo 'Bienvenido <b>'.$nombre.'</b>, tu usuario ha sido registrado correctamente. Ya puedes iniciar sesión en el siguiente formulario (o puedes hacerlo en el formulario de la esquina superior derecha). ¡Grácias!';
+?>
+ <div class="titleact">
+       <h1>Bienvenido</h1>
+   </div>
+  
+   <?php
+    echo "<div class='bienvenido'>";
+    	echo ' <b>'.$nombre.'</b>, <br>tu usuario ha sido registrado correctamente. Ya puedes iniciar sesión en el siguiente formulario (o puedes hacerlo en el formulario de la esquina superior derecha). ¡Grácias!';
    		echo '<form id="f1" name="f1" action="login.proc.php" method="get">';
-			echo '<div class="form-group ">';
+			echo '<div class="form-group">';
 				echo '<input type="text" name="mail" class="form-control" placeholder="Correo" maxlength="50" value="'.$correo.'">';
 			echo '</div>';
 			echo '<div class="form-group">';
