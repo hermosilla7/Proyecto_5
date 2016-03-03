@@ -52,8 +52,7 @@
          <img src="./img/formapago/4b.jpg" width="85" height="50">
          <img src="./img/formapago/mastercard.jpg" width="85" height="50">
          <img src="./img/formapago/paypal.jpg" width="85" height="50">
-        <img src="./img/formapago/trasnferencia.jpg" width="85" height="50" class="last">
-
+        
 		</div>
 
 <?php

@@ -32,6 +32,7 @@
                                 echo "<h2>Tipo de actividad: </h2><br />".utf8_encode($ofrezco['ntact']).".<br /><br />";
                                 echo "<h2>Fecha: </h2><br />".$ofrezco['fecha'].".<br /><br />";
 
+
                                 echo "<h2>Dirección: </h2><br />".utf8_encode($ofrezco['direccion']).".<br /><br />";
                             echo "</div>";
                             echo"<div class='notimg'>";
@@ -73,6 +74,7 @@
                         echo"<div class='notcont'>";
                         echo "<h2>Tipo de actividad: </h2><br />".utf8_encode($necesito['ntact']).".<br /><br />";
                         echo "<h2>Fecha: </h2><br />".$necesito['fecha'].".<br /><br />";
+
 
                         echo "<h2>Dirección: </h2><br />".utf8_encode($necesito['direccion']).".<br /><br />";
                         echo "</div>";
