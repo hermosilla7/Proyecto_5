@@ -589,7 +589,22 @@ h2{
   margin-left: 0;
   width: 100%;
 }
-
+/*/////////////////////////////////////icons//////////////////////*/
+.fa.fa-user {
+  margin-right: 5px;
+}
+.fa.fa-at {
+  margin-right: 5px;
+}
+.fa.fa-lock {
+  margin-right: 5px;
+}
+.fa.fa-phone {
+  margin-right: 5px; 
+}
+.fa.fa-newspaper-o {
+  margin-right: 2px;
+}
 /*/////////////////////////////////////responsive//////////////////////*/
 
 @media (max-width: 1330px) {
