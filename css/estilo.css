@@ -104,6 +104,17 @@ li a.active {
   text-align: center;
 }
 /*/////////////////////////////////////////////*/
+.filtro {
+  background: #5080ef none repeat scroll 0 0;
+  border-radius: 5px;
+  box-shadow: 14px 14px 18px #999;
+  margin-left: 40%;
+  margin-top: 20px;
+  padding: 1%;
+  text-align: center;
+  width: 220px;
+  border: 2px solid #fff;
+}
 .destacado {
   background: #5080ef none repeat scroll 0 0;
   border-radius: 5px;
@@ -165,6 +176,18 @@ li a.active {
   margin-left: 3%;
   padding: 1%;
   width: 250px;
+  border: 3px solid transparent;
+}
+.notic:hover {
+  background: #dbe6ff none repeat scroll 0 0;
+  border-radius: 5px;
+  display: inline-table;
+  height: 550px;
+  margin-bottom: 2%;
+  margin-left: 3%;
+  padding: 1%;
+  width: 250px;
+  border: 3px solid #0E2862; 
 }
 .notimg {
   text-align: center;
@@ -566,7 +589,50 @@ h2{
   margin-left: 0;
   width: 100%;
 }
-
+/*/////////////////////////////////////icons//////////////////////*/
+.fa.fa-user {
+  margin-right: 5px;
+}
+.fa.fa-at {
+  margin-right: 5px;
+}
+.fa.fa-lock {
+  margin-right: 5px;
+}
+.fa.fa-phone {
+  margin-right: 5px; 
+}
+.fa.fa-newspaper-o {
+  margin-right: 2px;
+}
+.fa.fa-user-times.fa-2x {
+  color: #5080ef;
+  opacity: 0.6;
+}
+.fa.fa-power-off.fa-2x {
+  color: red;
+  opacity: 0.6;
+}
+.fa.fa-pencil-square-o.fa-2x:hover {
+  color: #5080ef;
+  opacity: 1;
+}
+.fa.fa-user-times.fa-2x:hover {
+  color: #5080ef;
+  opacity: 1;
+}
+.fa.fa-power-off.fa-2x:hover {
+  color: red;
+  opacity: 1;
+}
+.fa.fa-pencil-square-o.fa-2x:hover {
+  color: #5080ef;
+  opacity: 1;
+}
+.fa-edit::before, .fa-pencil-square-o::before {
+  color: #5080ef;
+  content: "";
+}
 /*/////////////////////////////////////responsive//////////////////////*/
 
 @media (max-width: 1330px) {
