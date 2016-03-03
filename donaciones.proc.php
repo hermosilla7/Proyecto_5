@@ -11,7 +11,7 @@
 	</head>
 	<body>
 		<?php
-			$sql = "INSERT INTO donacion (cantidad, id_usuario) VALUES ('$_REQUEST[cantidad]', $user_id)";
+			$sql = "INSERT INTO donacion (cantidad, id_usuario,fecha) VALUES ('$_REQUEST[cantidad]', $user_id, NOW())";
 			$sql=utf8_decode($sql);
 			echo $sql;
 			// }
@@ -21,7 +21,7 @@
 
 			$message = 'Donación realizada';
 			echo "<SCRIPT type='text/javascript'> //not showing me this
-		        alert('$message');
+		        //alert('$message');
 		        window.location.replace(\"index.php\");
 		    </SCRIPT>";
 		?>
