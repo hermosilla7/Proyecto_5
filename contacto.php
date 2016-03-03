@@ -57,6 +57,7 @@
 				</div>
 				<button type="submit" class="log-btn" onClick="validar()" name="acce">Registrar</button>
 				<button type="button" class="sign-btn" onClick="window.location.href='index.php'">Volver</button>
+			</div>
 		</form>
 	</div>
 <?php

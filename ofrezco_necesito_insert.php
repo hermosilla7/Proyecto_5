@@ -3,12 +3,11 @@
 
 ?>
    <div class="titleact">
-        <h1>creacion de eventos</h1>
+        <h1>Creación de eventos</h1>
     </div>
 	<div class="mod-form">
  		<div class="form-group ">
 			<form name="f1" action="ofrezco_necesito_insert.proc.php" method="post" enctype="multipart/form-data" onsubmit="return validar();">
-				<br></br><br></br>
 				<div class="form-group">
 					<input type="text" name="nombre" class="form-control" placeholder="Nombre" required><br>
 				</div>
