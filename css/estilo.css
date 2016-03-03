@@ -104,6 +104,17 @@ li a.active {
   text-align: center;
 }
 /*/////////////////////////////////////////////*/
+.filtro {
+  background: #5080ef none repeat scroll 0 0;
+  border-radius: 5px;
+  box-shadow: 14px 14px 18px #999;
+  margin-left: 40%;
+  margin-top: 20px;
+  padding: 1%;
+  text-align: center;
+  width: 220px;
+  border: 2px solid #fff;
+}
 .destacado {
   background: #5080ef none repeat scroll 0 0;
   border-radius: 5px;
