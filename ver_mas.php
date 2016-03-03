@@ -1,7 +1,7 @@
 <?php
     include "header.php";
     //recogida de variable de index
-    $consulta_actividades = "SELECT * FROM actividad WHERE id = $_REQUEST[actividad]";
+    $consulta_actividades = "SELECT actividad.*, usuario.nombre AS 'nusu', usuario.apellidos, usuario.correo, usuario.telefono FROM actividad LEFT JOIN usuario ON actividad.id_usuario = usuario.id WHERE actividad.id = $_REQUEST[actividad]";
     $result_actividades = mysqli_query($con, $consulta_actividades);
 ?>
 
@@ -22,22 +22,33 @@
               <div id="actividades" class="actividades">
               <div class="prin-img" style="margin-bottom: 15px;">
               <?php
-                 echo "<div class='actividad'> ";
-                 echo '<img src="img/actividades/'.$actividad[img].'" alt="" />';
-                 echo "<br/><br/>";
-                 echo "<b>Descripción:</b> ";
-                 echo utf8_encode($actividad['descripcion']);
-                 echo "<br/><br/>";
-                 echo "<b>Fecha:</b> ";
-                 echo utf8_encode($actividad['fecha']);
-                 echo "<br/><br/>";
-                 echo "<b>Dirección:</b> ";
-                 echo utf8_encode($actividad['direccion']);
-                 echo "<br/><br/>";
-                 echo "</div>";
-                 echo '<div id="map"></div>';
-                 echo '<script type="text/javascript">var myLat='.$actividad['ubicacion_lat'].'</script>';
-                 echo '<script type="text/javascript">var myLng='.$actividad['ubicacion_lon'].'</script>';
+                echo "<div class='actividad'> ";
+                echo '<img src="img/actividades/'.$actividad[img].'" alt="" />';
+                echo "<br/><br/>";
+                echo "<b>Creador:</b>";
+                echo utf8_encode($actividad['nusu'])." ".utf8_encode($actividad['apellidos']);
+                echo "<br/><br/>";
+                echo "<b>Correo:</b>";
+                echo utf8_encode($actividad['correo']);
+                echo "<br/><br/>";
+                echo "<b>Teléfono:</b>";
+                echo utf8_encode($actividad['telefono']);
+                echo "<br/><br/>";
+                echo "<b>Descripción:</b> ";
+                echo utf8_encode($actividad['descripcion']);
+                echo "<br/><br/>";
+                echo "<b>Fecha:</b> ";
+                echo utf8_encode($actividad['fecha']);
+                echo "<br/><br/>";
+                echo "<b>Dirección:</b> ";
+                echo utf8_encode($actividad['direccion']);
+                echo "<br/><br/>";
+                echo "<a href=''><i class='fa fa-thumbs-up'></i>¡Lo quiero!</a>";
+                echo "<a href=''><i class='fa fa-times'></i>¡Cancelar!</a>";
+                echo "</div>";
+                echo '<div id="map"></div>';
+                echo '<script type="text/javascript">var myLat='.$actividad['ubicacion_lat'].'</script>';
+                echo '<script type="text/javascript">var myLng='.$actividad['ubicacion_lon'].'</script>';
 
              }
           ?>
