@@ -50,10 +50,10 @@
 					<i class="fa fa-at"></i><input type="text" name="correo" class="form-control" value="<?php echo $user['correo']; ?>"><br>
 				</div>
 				<div class="form-group">
-					<i class="fa fa-lock"></i><input type="password" name="pass" class="form-control" placeholder="Contraseña" required><br>
+					<i class="fa fa-lock"></i><input type="password" name="pass" class="form-control" placeholder="Contraseña"><br>
 				</div>
 				<div class="form-group">
-					<i class="fa fa-lock"></i><input type="password" name="repass" class="form-control" placeholder="Repetir contraseña" required><br>
+					<i class="fa fa-lock"></i><input type="password" name="repass" class="form-control" placeholder="Repetir contraseña"><br>
 				</div>
 				Imagen:
 				<?php		
@@ -67,7 +67,7 @@
 				<input type="file" name="foto" class="form-control" id="foto"></br><br>
 				<input type="hidden" name="id_usuario_seleccionado" value="<?php echo $id_anterior; ?>">
 				<input id="boton" type="submit" class="log-btn" value="Guardar cambios" onClick="validar()">
-				<button type="button" class="sign-btn" onClick="window.location.href='principal.php'">Volver</button>
+				<button type="button" class="sign-btn" onClick="window.location.href='index.php'">Volver</button>
 			</form>
 <?php
 	}

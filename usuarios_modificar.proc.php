@@ -27,7 +27,7 @@
 	//lanzamos la sentencia sql
 	$datos = mysqli_query($con, $sql);
 
-	header("location: principal.php")
+	header("location: index.php")
 
 ?>
 
