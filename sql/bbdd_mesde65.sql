@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-03-2016 a las 10:41:47
+-- Tiempo de generación: 03-03-2016 a las 11:23:55
 -- Versión del servidor: 5.6.26
 -- Versión de PHP: 5.6.12
 
@@ -78,16 +78,16 @@ CREATE TABLE IF NOT EXISTS `donacion` (
   `cantidad` double NOT NULL,
   `id_usuario` int(3) NOT NULL,
   `fecha` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `donacion`
 --
 
 INSERT INTO `donacion` (`id`, `cantidad`, `id_usuario`, `fecha`) VALUES
-(1, 200, 0, '0000-00-00 00:00:00'),
-(2, 3000, 0, '0000-00-00 00:00:00'),
-(3, 150, 1, '0000-00-00 00:00:00');
+(1, 200, 2, '2016-06-08 12:00:00'),
+(2, 3000, 3, '2016-05-19 13:00:00'),
+(3, 150, 1, '2016-06-13 10:00:00');
 
 -- --------------------------------------------------------
 
@@ -159,7 +159,7 @@ INSERT INTO `usuario` (`id`, `nombre`, `apellidos`, `img`, `correo`, `pass`, `ni
 (2, 'Ignasi', 'Romero Sanjuan', '3.jpg', 'ignasi.romero@fje.edu', '827ccb0eea8a706c4c34a16891f84e7b', 1, 1, 654678987, 0, '33567987B'),
 (3, 'Armand', 'Gutierrez Arumi', '4.jpg', 'armand.gutierrez@fje.edu', '827ccb0eea8a706c4c34a16891f84e7b', 0, 1, 634789867, 0, '44567908B'),
 (4, 'prueba', '', '', '', 'd41d8cd98f00b204e9800998ecf8427e', 0, 0, 0, 0, ''),
-(5, 'german', 'luque sanchez', '', 'fasion4@hotmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 0, 1, 0, 0, '');
+(5, 'german', 'luque sanchez', 'icon.png', 'fasion4@hotmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 0, 1, 0, 0, '');
 
 --
 -- Índices para tablas volcadas
@@ -215,7 +215,7 @@ ALTER TABLE `actividad`
 -- AUTO_INCREMENT de la tabla `donacion`
 --
 ALTER TABLE `donacion`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT de la tabla `tipo_actividad`
 --
