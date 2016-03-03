@@ -605,6 +605,34 @@ h2{
 .fa.fa-newspaper-o {
   margin-right: 2px;
 }
+.fa.fa-user-times.fa-2x {
+  color: #5080ef;
+  opacity: 0.6;
+}
+.fa.fa-power-off.fa-2x {
+  color: red;
+  opacity: 0.6;
+}
+.fa.fa-pencil-square-o.fa-2x:hover {
+  color: #5080ef;
+  opacity: 1;
+}
+.fa.fa-user-times.fa-2x:hover {
+  color: #5080ef;
+  opacity: 1;
+}
+.fa.fa-power-off.fa-2x:hover {
+  color: red;
+  opacity: 1;
+}
+.fa.fa-pencil-square-o.fa-2x:hover {
+  color: #5080ef;
+  opacity: 1;
+}
+.fa-edit::before, .fa-pencil-square-o::before {
+  color: #5080ef;
+  content: "";
+}
 /*/////////////////////////////////////responsive//////////////////////*/
 
 @media (max-width: 1330px) {
