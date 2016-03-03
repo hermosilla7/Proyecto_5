@@ -29,39 +29,35 @@
 			return enviar;
 		}
 	</script>
-  <div class="titleact">
-  	<h1>Registro</h1>
+  	<div class="titleact">
+  		<h1>Contáctanos</h1>
     </div>
     <div class="regis">
-    <p>Para cualquier duda o sugerencia rellena este formulario de contacto. Estudiaremos tu caso e intentaremos ponernos en contacto contigo lo antes posible. Gracias por la paciencia.
-    </p>
-</div>
+    	<p>Para cualquier duda o sugerencia rellena este formulario de contacto. Estudiaremos tu caso e intentaremos ponernos en contacto contigo lo antes posible. Gracias por la paciencia.</p>
+	</div>
 	
 	
- 		<div class="form-group ">
-			<form name="f1" action="contacto.proc.php" method="post" enctype="multipart/form-data" onsubmit="return validar();">
-			<br></br>
+	<div class="form-group ">
+		<form name="f1" action="contacto.proc.php" method="post" enctype="multipart/form-data" onsubmit="return validar();"><br /></br />
 			<div class="form-grouptxt">
-					​<textarea id="txtArea" rows="10" cols="55" placeholder="Déjanos tu sugerencia o consulta..." required></textarea>
-				</div>
+				<textarea id="txtArea" rows="10" cols="55" placeholder="Déjanos tu sugerencia o consulta..." required></textarea>
+			</div>
 			<div class="mod-form3">
 				<div class="form-group">
-					<input type="text" name="nombre" class="form-control" placeholder="Nombre" required><br>
+					<i class="fa fa-user"></i><input type="text" name="nombre" class="form-control" placeholder="Nombre" required <?php if(isset($nom_user)){ echo "value = '".$nom_user."'"; } ?>><br />
 				</div>
 				<div class="form-group">
-					<input type="text" name="apellidos" class="form-control" placeholder="Apellidos" required><br>
+					<i class="fa fa-user"></i><input type="text" name="apellidos" class="form-control" placeholder="Apellidos" required <?php if(isset($apellidos)){ echo "value = '".$apellidos."'"; } ?>><br />
 				</div>
 				<div class="form-group">
-					<input type="text" name="correo" class="form-control" placeholder="Correo" required><br>
+					<i class="fa fa-at"></i><input type="text" name="correo" class="form-control" placeholder="Correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Formato en minúsculas. Ejemplo: info@gmail.com" required <?php if(isset($mail)){ echo "value = '".$mail."'"; } ?>><br />
 				</div>
 				<div class="form-group">
-					<input type="text" name="telefono" class="form-control" placeholder="Teléfono" required><br>
+					<i class="fa fa-phone"></i><input type="text" name="telefono" class="form-control" placeholder="Teléfono" pattern="[0-9]{9}" title="Formato correcto: 618589666" required <?php if(isset($telf)){ echo "value = '".$telf."'"; } ?>><br />
 				</div>
-				
 				<button type="submit" class="log-btn" onClick="validar()" name="acce">Registrar</button>
 				<button type="button" class="sign-btn" onClick="window.location.href='index.php'">Volver</button>
-			</form>
-		</div>
+		</form>
 	</div>
 <?php
 	include 'footer.php';

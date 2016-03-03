@@ -40,44 +40,40 @@
 		<h1>Mi perfil</h1>
  		<div class="form-group ">
 			<form name="f1" action="usuarios_modificar_admin.proc.php?id=<?php echo $_REQUEST['id']; ?>" method="post" enctype="multipart/form-data" onsubmit="return validar();">
-			<div class="form-group">
-			<input type="text" name="nombre" class="form-control" value="<?php echo $user['nombre']; ?>"><br>
-			</div>
-			<div class="form-group">
-			<input type="text" name="apellidos" class="form-control" value="<?php echo $user['apellidos']; ?>"><br>
-			</div>
-			<div class="form-group">
-			<input type="text" name="correo" class="form-control" value="<?php echo $user['correo']; ?>"><br>
-			</div>
-			<div class="form-group">
-				<input type="password" name="pass" class="form-control" placeholder="Nueva contraseña"><br>
-			</div>
-			<div class="form-group">
-				<input type="password" name="repass" class="form-control" placeholder="Repetir nueva contraseña"><br>
-			</div>
-			<input id="radio" type="radio" name="nivel" <?php if( $user['nivel'] == '0' ) { ?>checked="checked"<?php } ?> value='0' >Usuario</br><br>		
-			<input id="radio" type="radio" name="nivel" <?php if( $user['nivel'] == '1' ) { ?>checked="checked"<?php } ?> value='1' >Administrador</br><br>
-			Imagen:
-			<?php		
-				$fichero="img/$user[img]";
-				$foto = $user['img'];
-				
-				// echo $foto;
-				echo "<img src='$fichero' width='50' heigth='50' ></div></br>";
-			?>
+				<div class="form-group">
+					<i class="fa fa-user"></i><input type="text" name="nombre" class="form-control" value="<?php echo $user['nombre']; ?>"><br>
+				</div>
+				<div class="form-group">
+					<i class="fa fa-user"></i><input type="text" name="apellidos" class="form-control" value="<?php echo $user['apellidos']; ?>"><br>
+				</div>
+				<div class="form-group">
+					<i class="fa fa-at"></i><input type="text" name="correo" class="form-control" value="<?php echo $user['correo']; ?>"><br>
+				</div>
+				<div class="form-group">
+					<i class="fa fa-lock"></i><input type="password" name="pass" class="form-control" placeholder="Nueva contraseña"><br>
+				</div>
+				<div class="form-group">
+					<i class="fa fa-lock"></i><input type="password" name="repass" class="form-control" placeholder="Repetir nueva contraseña"><br>
+				</div>
+				<input id="radio" type="radio" name="nivel" <?php if( $user['nivel'] == '0' ) { ?>checked="checked"<?php } ?> value='0' >Usuario</br><br>		
+				<input id="radio" type="radio" name="nivel" <?php if( $user['nivel'] == '1' ) { ?>checked="checked"<?php } ?> value='1' >Administrador</br><br>
+				Imagen:
+				<?php		
+					$fichero="img/$user[img]";
+					$foto = $user['img'];
+					
+					// echo $foto;
+					echo "<img src='$fichero' width='50' heigth='50' ></div></br>";
+				?>
 			
-			<input type="file" name="foto" class="form-control" id="foto"></br><br>
-
-			<input type="hidden" name="id_usuario_seleccionado" value="<?php echo $id_anterior; ?>">
-
-			<!-- <input type="hidden" name="foto_usuario" value="<?php echo $foto_new; ?>"> -->
-
-			<input id="boton" type="submit" class="log-btn" value="Guardar cambios" onClick="validar()">
-			<button type="button" class="sign-btn" onClick="window.location.href='usuarios.php'">Volver</button>
-
-	<?php
-		}
-	?>
+				<input type="file" name="foto" class="form-control" id="foto"></br><br>
+				<input type="hidden" name="id_usuario_seleccionado" value="<?php echo $id_anterior; ?>">
+				<input id="boton" type="submit" class="log-btn" value="Guardar cambios" onClick="validar()">
+				<button type="button" class="sign-btn" onClick="window.location.href='usuarios.php'">Volver</button>
+			</form>
+<?php
+	}
+?>
 		</div>
 	</div>	
 <?php

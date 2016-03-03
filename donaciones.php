@@ -12,11 +12,11 @@
 	     		<div class="form-group ">
 					<form name="f1" action="donaciones.proc.php" method="post" enctype="multipart/form-data" onsubmit="return validar();">
 
-						<input type="text" name="visa" class="form-control" placeholder="Número de VISA" required><br>
+						<i class="fa fa-cc-visa"></i><input type="text" name="visa" class="form-control" placeholder="Número de VISA" required><br>
 
-						<input type="password" name="pin" class="form-control" placeholder="Pin VISA" required><br>
+						<i class="fa fa-lock"></i><input type="password" name="pin" class="form-control" placeholder="Pin VISA" required><br>
 
-						<input type="number" name="cantidad" class="form-control" placeholder="Cantidad a contribuir" required><br>
+						<i class="fa fa-money"></i><input type="number" name="cantidad" class="form-control" placeholder="Cantidad a contribuir" required><br>
 
 						<button type="submit" class="log-btn2" onClick="validar()" name="acce">Donar</button>
 					</form>

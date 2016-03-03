@@ -22,8 +22,8 @@
                 echo utf8_encode($usuario['correo']);
                  echo "<br/>";
         ?>
-            <a href="usuarios_modificar_admin.php?id=<?php echo $usuario['id']; ?>">Editar usuario</a>
-            <a href="usuarios_baja_admin.proc.php?id=<?php echo $usuario['id']; ?>">Eliminar usuario</a>
+            <a href="usuarios_modificar_admin.php?id=<?php echo $usuario['id']; ?>"><i class="fa fa-pencil-square-o fa-2x"></i></a>
+            <a href="usuarios_baja_admin.proc.php?id=<?php echo $usuario['id']; ?>"><i class="fa fa-user-times fa-2x"></i></a>
         <?php 
                 echo "<br/></div><br/>";
             }

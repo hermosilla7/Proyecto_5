@@ -3,7 +3,10 @@
 	error_reporting(0);
 	$user_id = $_SESSION['id'];
 	$foto = $_SESSION['img'];
-	$nom_user=$_SESSION['nombre'];
+	$nom_user = $_SESSION['nombre'];
+	$apellidos = $_SESSION['apellidos'];
+	$telf = $_SESSION['telefono'];
+	$mail = $_SESSION['mail'];
 	include 'conexion.proc.php';
 ?>
 <!DOCTYPE html>
@@ -31,6 +34,9 @@
 		<!-- JQUERY -->
 		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
+		<!-- FONT AWESOME -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
 	</head>
 	<body>
 		<div class="header">
@@ -41,11 +47,10 @@
 		 			?>
 					<form id="f1" name="f1" action="login.proc.php" method="get">
 						<div class="form-group ">
-							<input type="text" name="mail" class="form-control" placeholder="Correo"maxlength="50">
+							<i class="fa fa-at"></i><input type="text" name="mail" class="form-control" placeholder="Correo"maxlength="50">
 						</div>
 			    		<div class="form-group">
-			       			<input type="password" name="pass" class="form-control" placeholder="Contraseña">
-			   				<i class="fa fa-lock"></i>
+			       			<i class="fa fa-lock"></i><input type="password" name="pass" class="form-control" placeholder="Contraseña">
 				    	</div>
 				    	<?php
 							echo "<div class='log-error'>";
@@ -76,9 +81,9 @@
 							 ?>
 			            </div>
 			            <div class="logologin">
-				            <input type="image" src="img/off.png" onclick="window.location.href='logout.proc.php'">
-				            <input type="image" src="img/baja.png" onclick="confirmar()">
-				            <input type="image" src="img/edit.png" onclick="window.location.href='usuarios_modificar.php'">
+				            <a href="logout.proc.php"><i class="fa fa-power-off fa-2x"></i></a>
+							<a href="#" onclick="confirmar();"><i class="fa fa-user-times fa-2x"></i></a>
+							<a href="usuarios_modificar.php"><i class="fa fa-pencil-square-o fa-2x"></i></a>
 			            </div>
 
 					<?php
