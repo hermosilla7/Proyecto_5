@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-03-2016 a las 13:40:10
+-- Tiempo de generación: 03-03-2016 a las 10:41:47
 -- Versión del servidor: 5.6.26
 -- Versión de PHP: 5.6.12
 
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `actividad` (
   `peticion` tinyint(1) NOT NULL,
   `id_usuario` int(3) NOT NULL,
   `estado` tinyint(1) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `actividad`
@@ -49,19 +49,23 @@ CREATE TABLE IF NOT EXISTS `actividad` (
 
 INSERT INTO `actividad` (`id`, `nombre`, `descripcion`, `fecha`, `img`, `ubicacion_lat`, `ubicacion_lon`, `id_tipo_actividad`, `direccion`, `peticion`, `id_usuario`, `estado`) VALUES
 (1, 'Paseo por la montaña', 'Me ofrezco para dar un paseo por el rio LLobregat.', '2016-04-14 05:38:00', 'riollobregat.jpg', 41.340078, 2.096054, 1, 'Camí Ribera, 6 Hospitalet de LLobregat', 0, 1, 0),
-(2, 'Curso cocina', 'Me ofrezco para realizar aprendizaje en recetas de cocina fáciles y originales: aperitivos, primeros platos, platos principales, postres, recetas saludables, consejos de cocina.', '2016-05-19 09:00:00', 'tallercocina.jpg', 41.364519, 2.110524, 5, 'av Josep Tarradellas i Joan nº89 Hospitalet de Llobregat', 0, 1, 0),
+(2, 'Curso cocina', 'Me ofrezco para realizar aprendizaje en recetas de cocina fáciles y originales: aperitivos, primeros platos, platos principales, postres, recetas saludables, consejos de cocina.', '2016-05-19 09:00:00', 'tallercocina.jpg', 41.364519, 2.110524, 5, 'av Josep Tarradellas i Joan nº89 1º1 Hospitalet de Llobregat', 0, 1, 0),
 (3, 'Taller patchwork', 'Me ofrezco para enseñar originales diseños con la técnica del patchwork. Crea colchas de patchwork, bolsos, ropa para bebés..', '2016-05-19 10:00:00', 'tapetepoker.jpg', 41.356229, 2.11424, 4, 'Av Europan nº164 7º2 Hospitalet de LLobregat', 0, 2, 0),
-(4, 'Bailes de Salon', 'Me ofrezco para el aprendizaje de distintas modalidades de baile, desde Tango, Rumba, Bailes Latinos y, por supuesto, Pasodoble.', '2016-05-12 10:00:00', 'bailes.jpg', 41.3747849, 2.1322064, 8, 'C/De Cáceres nº22 Barcelona', 0, 1, 0),
-(5, 'Curso ingles', 'Me ofrezco para dar clases de ingles. ', '2016-05-12 09:00:00', 'ingles.jpg', 41.3727298, 2.1284286, 9, 'C/Bacardi nº21-25 Barcelona', 0, 2, 0),
-(6, 'Curso Informática', 'Me ofrezco para dar clases de informatica te puedo ayudar  a manejar el correo electrónico, encontrar por Internet una pieza de la máquina de coser o de su coche de toda la vida, reservar entradas de teatro, chatear con personas de vuestra edad que residen en otros lugares… o incluso buscar ofertas de viajes para jubilados', '2016-05-12 11:00:00', 'infor.jpg', 41.3628815, 2.1102299, 3, 'C/Enric Prat de la Riba nº106 Hospitalet de LLobregat', 0, 1, 0),
+(4, 'Bailes de Salon', 'Me ofrezco para el aprendizaje de distintas modalidades de baile, desde Tango, Rumba, Bailes Latinos y, por supuesto, Pasodoble.', '2016-05-12 10:00:00', 'bailes.jpg', 41.3747849, 2.1322064, 8, 'C/De Cáceres nº22 2º3 Barcelona', 0, 1, 0),
+(5, 'Curso ingles', 'Me ofrezco para dar clases de ingles. ', '2016-05-12 09:00:00', 'clasesingles.jpg', 41.3727298, 2.1284286, 9, 'C/Bacardi nº21-25 6º2 Barcelona', 0, 2, 0),
+(6, 'Curso Informática', 'Me ofrezco para dar clases de informatica te puedo ayudar  a manejar el correo electrónico, encontrar por Internet una pieza de la máquina de coser o de su coche de toda la vida, reservar entradas de teatro, chatear con personas de vuestra edad que residen en otros lugares… o incluso buscar ofertas de viajes para jubilados', '2016-05-12 11:00:00', 'cursoinformatica.jpg', 41.3628815, 2.1102299, 3, 'C/Enric Prat de la Riba nº106 5º1 Hospitalet de LLobregat', 0, 1, 0),
 (7, 'Instalacion home cinema', 'Me ofrezco para enseñar a realizar cualquier instalación de un home cinema.', '2016-06-08 09:00:00', 'electronica1.jpg', 41.3728971, 2.1212168, 2, 'C/Paris nº14 6º1 Hospitalet de LLobregat\r\n', 0, 3, 0),
 (8, 'Mantenimiento de un vehículo.', 'Me ofrezco para enseñar como llevar el mantenimiento de un vehículo. ', '2016-07-12 12:12:00', 'mecanica1.jpg', 41.3762342, 2.1390416, 6, 'C/de Premia nº18 ent Barcelona', 0, 3, 0),
-(9, 'Compañia', 'Me ofrezco para dar compañia durante un dia a la semana.', '2016-05-18 00:00:00', 'compa.jpg', 41.3726882, 2.1131448, 7, 'C/Torrente Gornal nº 59 Hospitalet de Llobregat', 0, 1, 0),
-(10, 'Compañia para ir a correr.', 'Necesito compañia para ir a correr y que me enseñe como debo hacer los estiramientos.', '2016-05-15 09:00:00', 'correr1.jpg', 41.3563355, 2.0857301, 8, 'Carretera Hospitalet nº 137 Cornella de LLobregat', 1, 0, 0),
+(9, 'Compañia', 'Me ofrezco para dar compañia durante un dia a la semana.', '2016-05-18 00:00:00', 'compa.jpg', 41.3726882, 2.1131448, 7, 'C/Torrente Gornal nº 59 4º3 Hospitalet de Llobregat', 0, 1, 0),
+(10, 'Compañia para ir a correr.', 'Necesito compañia para ir a correr y que me enseñe como debo hacer los estiramientos.', '2016-05-15 09:00:00', 'correr1.jpg', 41.3563355, 2.0857301, 8, 'Carretera Hospitalet nº 137 7º2 Cornella de LLobregat', 1, 0, 0),
 (11, 'Arreglar pc', 'Necesito a una persona que me ayude arreglar mi pc.', '2016-05-25 12:00:00', 'mipc.jpg', 41.372627, 2.119982, 3, 'Calle Llobregat nº89 3º2 Hospitalet de LLobregat', 1, 0, 1),
-(12, 'Coser', 'Necesito que me enseñen a coser.', '2016-05-26 11:00:00', 'coser.jpg', 41.3535911, 2.1082485, 4, 'C/Portugal nº 42 Hospitalet de llobregat', 1, 0, 0),
-(13, 'aaa', 'dfdfd', '2016-05-09 00:00:00', 'correr1jpg', 0, 0, 0, '', 1, 0, 0),
-(14, 'gggg', 'fdfd', '2016-05-13 09:00:00', 'coser.jpg', 0, 0, 0, '', 1, 0, 0);
+(12, 'Coser', 'Necesito que me enseñen a coser.', '2016-05-26 11:00:00', 'coser.jpg', 41.3535911, 2.1082485, 4, 'C/Portugal nº 42 2º1 Hospitalet de llobregat', 1, 0, 0),
+(13, 'Clases de ingles.', 'Necesito una persona que me enseñe ingles.', '2016-06-08 10:00:00', 'enseingles.jpg', 41.3636386, 2.0991114, 9, 'C/Josep Tarradellas nº 197 1º1 Hospitalet de LLobregat.', 1, 0, 0),
+(14, 'cocinar', 'Necesito una persona que me enseñe hacer pasteles.', '2016-05-20 11:00:00', 'pasteles.jpg', 41.36026, 2.104756, 5, 'C/Josep Pla nº13 6º2 Hospitalet de LLobregat', 1, 0, 0),
+(15, 'Compañia', 'Necesito a una persona que me ayude hacer la compra.', '2016-05-19 11:00:00', 'compra.jpg', 41.362061, 2.102334, 7, 'C/Tarragona nº23 1º3 Hospitalet de LLobregat.', 1, 0, 0),
+(16, 'Disco duro', 'Necesito una persona que me ayude a montar un disco duro en mi pc sobremesa.', '2016-05-18 17:00:00', 'discoduro.jpg', 41.362255, 2.09754, 3, 'C/Sant Joan nº42 9º1 Hospitalet de LLobregat.', 1, 0, 0),
+(17, 'Movil', 'Necesito a una persona que me enseñe como utilizar el movil.', '2016-06-16 18:00:00', 'movil.jpg', 41.366906, 2.124796, 2, 'Carretera de Santa Eulalia nº160 4º3 Hospitalet de LLobregat.', 1, 0, 0),
+(18, 'Tablet', 'Necesito una persona que me enseñe a utilizar una tablet.', '2016-05-11 16:00:00', 'table.jpg', 41.366129, 2.127979, 2, 'C/Jacint Verdaguer nº22 2º1 Hospitalet de LLobregat.', 1, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -206,7 +210,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `actividad`
 --
 ALTER TABLE `actividad`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT de la tabla `donacion`
 --
