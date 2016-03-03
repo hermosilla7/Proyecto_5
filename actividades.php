@@ -27,28 +27,29 @@
                     $fichero = "img/actividades/$ofrezco[img]";
                     if (file_exists($fichero) && (($ofrezco['img']) != '')) {
                         echo "<div class='notic' >";
-                        echo "<a href='ver_mas.php?actividad=".$ofrezco['id']."'><h1>".utf8_encode($ofrezco['nombre'])."</h1></a><br/>";
-                        echo"<div class='notimg'>";
-                        echo "<img src='$fichero' width='90%' /><br />";
-                        echo"</div>";
-                        echo"<div class='notcont'>";
-                        echo "<h2>Tipo de actividad: </h2><br />".utf8_encode($ofrezco['ntact']).".<br /><br />";
-                        echo "<h2>Fecha: </h2><br />".$ofrezco['fecha'].".<br /><br />";
-                        echo "<h2>Dirección: </h2><br />".utf8_encode($ofrezco['direccion']).".<br /><br />";
-                        echo "</div>";
+                            echo "<a href='ver_mas.php?actividad=".$ofrezco['id']."'><h1>".utf8_encode($ofrezco['nombre'])."</h1></a><br />";
+                            echo"<div class='notcont'>";
+                                echo "<h2>Tipo de actividad: </h2><br />".utf8_encode($ofrezco['ntact']).".<br /><br />";
+                                echo "<h2>Fecha: </h2><br />".$ofrezco['fecha'].".<br /><br />";
+
+                                echo "<h2>Dirección: </h2><br />".utf8_encode($ofrezco['direccion']).".<br /><br />";
+                            echo "</div>";
+                            echo"<div class='notimg'>";
+                                echo "<img src='$fichero' width='60%' /><br />";
+                            echo"</div>";
                     } else {
                         echo "<div class='notic'>";
-                        echo  "<a href='ver_mas.php?actividad=".$ofrezco['id']."'><h1>".utf8_encode($ofrezco['nombre'])."</h1></a><br />";
-                        echo"<div class='notimg'>";
-                        echo "<img src ='img/no_disponible.jpg'width='90%' /><br />";
-                        echo"</div>";
-                        echo"<div class='notcont'>";
-                        echo "<h2>Tipo de actividad: </h2><br />".utf8_encode($ofrezco['ntact']).".<br /><br />";
-                        echo "<h2>Fecha: </h2><br />".$ofrezco['fecha'].".<br /><br />";
-                        echo "<h2>Dirección: </h2><br />".utf8_encode($ofrezco['direccion']).".<br /><br />";
-                        echo "</div>";
+                            echo  "<a href='ver_mas.php?actividad=".$ofrezco['id']."'><h1>".utf8_encode($ofrezco['nombre'])."</h1></a><br />";
+                            echo"<div class='notcont'>";
+                                echo "<h2>Tipo de actividad: </h2><br />".utf8_encode($ofrezco['ntact']).".<br /><br />";
+                                echo "<h2>Fecha: </h2><br />".$ofrezco['fecha'].".<br /><br />";
+                                echo "<h2>Dirección: </h2><br />".utf8_encode($ofrezco['direccion']).".<br /><br />";
+                            echo "</div>";
+                            echo"<div class='notimg'>";
+                                echo "<img src ='img/no_disponible.jpg'width='40%' /><br />";
+                            echo"</div>";
                     }
-                    echo "</div>";
+                        echo "</div>";
                 }
             } else {
                 echo "No tienes ningun ofrezco disponible";
@@ -69,25 +70,26 @@
                     if (file_exists($fichero) && (($necesito['img']) != '')) {
                         echo "<div class='notic'>";
                         echo "<a href='ver_mas.php?actividad=".$necesito['id']."'><h1>".utf8_encode($necesito['nombre'])."</h1></a><br />";
-                        echo"<div class='notimg'>";
-                        echo "<img src='$fichero' width='90%' /><br />";
-                        echo"</div>";
                         echo"<div class='notcont'>";
                         echo "<h2>Tipo de actividad: </h2><br />".utf8_encode($necesito['ntact']).".<br /><br />";
                         echo "<h2>Fecha: </h2><br />".$necesito['fecha'].".<br /><br />";
+
                         echo "<h2>Dirección: </h2><br />".utf8_encode($necesito['direccion']).".<br /><br />";
                         echo "</div>";
+                        echo"<div class='notimg'>";
+                        echo "<img src='$fichero' width='60%' /><br />";
+                         echo"</div>";
                     } else {
                         echo "<div class='notic'>";
                         echo "<a href='ver_mas.php?actividad=".$necesito['id']."'><h1>".utf8_encode($necesito['nombre'])."</h1></a><br />";
-                        echo"<div class='notimg'>";
-                        echo "<img src ='img/no_disponible.jpg'width='90%' /><br />";
-                        echo"</div>";
                         echo"<div class='notcont'>";
                         echo "<h2>Tipo de actividad: </h2><br />".utf8_encode($necesito['ntact']).".<br /><br />";
                         echo "<h2>Fecha: </h2><br />".$necesito['fecha'].".<br /><br />";
                         echo "<h2>Dirección: </h2><br />".utf8_encode($necesito['direccion']).".<br /><br />";
                         echo "</div>";
+                        echo"<div class='notimg'>";
+                        echo "<img src ='img/no_disponible.jpg'width='40%' /><br />";
+                        echo"</div>";
                     }
                     echo "</div>";
                 }

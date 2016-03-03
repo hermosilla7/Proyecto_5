@@ -23,9 +23,8 @@
 
 <!-- TIPO ACTIVIDAD -->
 <br></br>
-<div class="filtro">
 <form action="index.php" method="get">
- <span style="color:white;">Filtrar por:</span>
+ <span style="color:black;">Filtrar por:</span>
                 <select id="tipo_actividad" name="tipo_actividad" onchange="this.form.submit()">
                     <option value="">Seleccionar actividad</option>
                     <?php
@@ -33,11 +32,10 @@
                         echo utf8_encode("<option value=\"$fila[id]\">$fila[nombre]</option>");
                     }
                     ?>
-                </select>
+                </select></br><br>
                 <!-- <button class="btn btn-success" id="botonEnviar" type="submit">Enviar</button> -->
                 <!--  -->
                 </form>
-</div>
 
 <?php
     include 'resultados_actividades.php';
