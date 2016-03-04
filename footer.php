@@ -9,6 +9,6 @@
 			
 		</div>
 		 	
-<a href="#" class="crunchify-top"><img src ="img/btt.png" style="float: right;" width="50px" height="50px"></a>
+		<a href="#" class="crunchify-top"><img src ="img/btt.png" style="float: right;" width="50px" height="50px"></a>
 	</body>
 </html>

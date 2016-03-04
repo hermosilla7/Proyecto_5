@@ -116,7 +116,7 @@
 				<a href="index.php"><img src="img/logo150px.png" /></a>
 			</div>
 			<div class="title">
-				<h1>Hoy por tí, mañana por mí</h1>
+				<h1>Hoy por ti, mañana por mí</h1>
 			</div>
 		</div>
 		</div>
