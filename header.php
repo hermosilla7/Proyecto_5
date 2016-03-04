@@ -90,9 +90,7 @@
 						} else {
 					?>
 						<h3><?php echo "Bienvenido " .$nom_user?></h3>
-						<?php
-			            	echo "Monedas: ".$_SESSION['monedas']." $";
-			            ?>
+					
 						<div class="perfilimg">
 							<?php
 								if($foto==null){
@@ -102,6 +100,9 @@
 								}
 							 ?>
 			            </div>
+			            	<?php
+			            	echo "<div class='coin'> ".$_SESSION['monedas']." <img src='img/coin.png' /></div>";
+			            ?>
 			            <div class="logologin">
 				            <a href="logout.proc.php"><i class="fa fa-power-off fa-2x"></i></a>
 							<a href="#" onclick="confirmar();"><i class="fa fa-user-times fa-2x"></i></a>
