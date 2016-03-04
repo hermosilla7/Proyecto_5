@@ -12,6 +12,9 @@
     $consulta_actividades2 = "SELECT actividad.id, actividad.nombre, actividad.fecha, actividad.img, actividad.direccion, tipo_actividad.nombre AS 'ntact' FROM actividad LEFT JOIN tipo_actividad ON actividad.id_tipo_actividad=tipo_actividad.id WHERE actividad.id_usuario = $usuario AND actividad.peticion = 1 AND actividad.fecha >= '$fecha' ORDER BY actividad.fecha DESC";
     $result_actividades2 = mysqli_query($con, $consulta_actividades2);
 ?>
+<?php
+if (isset($_SESSION['mail'])) {
+        ?>
 <br />
 <br />
 
@@ -112,4 +115,8 @@
 
 <?php
     include "footer.php";
+} else {
+        $_SESSION['error'] = "No te saltes pasos!";
+        header("location: index.php");
+    }
 ?>

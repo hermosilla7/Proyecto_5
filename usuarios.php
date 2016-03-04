@@ -3,6 +3,9 @@
     $consulta_usuarios = "SELECT * FROM usuario where activo = 1";
     $result_usuarios = mysqli_query($con, $consulta_usuarios);
 ?>
+<?php
+if (isset($_SESSION['mail'])) {
+        ?>
 <div class="titluse">
         <h1>Usuarios</h1>
     </div>
@@ -35,5 +38,9 @@
         </div>
     </div>
 <?php
-    include 'footer.php';
+    include "footer.php";
+} else {
+        $_SESSION['error'] = "No te saltes pasos!";
+        header("location: index.php");
+    }
 ?>

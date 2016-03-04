@@ -1,6 +1,9 @@
 <?php
 	include 'header.php';
 ?>
+<?php
+if (isset($_SESSION['mail'])) {
+        ?>
   	<div class="titledona">
     	<h1>Campaña Solidaria</h1>
     </div>
@@ -56,5 +59,9 @@
 		</div>
 
 <?php
-	include "footer.php";
+    include "footer.php";
+} else {
+        $_SESSION['error'] = "No te saltes pasos!";
+        header("location: index.php");
+    }
 ?>

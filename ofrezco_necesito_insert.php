@@ -5,6 +5,9 @@
 	$result = mysqli_query($con, $sql);
 
 ?>
+<?php
+if (isset($_SESSION['mail'])) {
+        ?>
    <div class="titleact">
         <h1>Creación de eventos</h1>
     </div>
@@ -49,5 +52,9 @@
 		</div>
 	</div>
 <?php
-	include 'footer.php';
+    include "footer.php";
+} else {
+        $_SESSION['error'] = "No te saltes pasos!";
+        header("location: index.php");
+    }
 ?>

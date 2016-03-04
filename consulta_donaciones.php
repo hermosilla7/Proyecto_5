@@ -6,6 +6,9 @@
     $result_total_donaciones = mysqli_query($con, $consulta_total_donaciones);
     $donacion_total = mysqli_fetch_array($result_total_donaciones);
 ?>
+<?php
+if (isset($_SESSION['mail'])) {
+        ?>
     <div class="titleact">
         <h1>Donaciones</h1>
     </div>
@@ -164,4 +167,10 @@ $(function () {
 	
 <?php
     include "footer.php";
+} else {
+        $_SESSION['error'] = "No te saltes pasos!";
+        header("location: index.php");
+    }
 ?>
+
+
