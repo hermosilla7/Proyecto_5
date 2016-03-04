@@ -23,7 +23,7 @@
 			// if ($foto != "") {
 			$sql = "INSERT INTO actividad (nombre, descripcion, fecha, img, ubicacion_lat, ubicacion_lon, id_tipo_actividad, direccion, peticion, id_usuario) VALUES ('$_REQUEST[nombre]', '$_REQUEST[descripcion]', '$_REQUEST[fecha]', '$foto', '$_REQUEST[ubicacion_lat]', '$_REQUEST[ubicacion_lon]', '$_REQUEST[id_tipo_actividad]', '$_REQUEST[compensacion]', '$_REQUEST[peticion]', '$user_id')";
 			$sql=utf8_decode($sql);
-			echo $sql;
+			//echo $sql;
 			// }
 
 			//lanzamos la sentencia sql
@@ -32,7 +32,7 @@
 			$message = 'Actividad dada de alta';
 			echo "<SCRIPT type='text/javascript'> //not showing me this
 		        alert('$message');
-		        window.location.replace(\"index.php\");
+		        window.location.replace(\"actividades.php\");
 		    </SCRIPT>";
 		?>
 	</body>
