@@ -15,12 +15,15 @@
 <?php
     $donacionesArray = [];
     while ($donacion = mysqli_fetch_array($result_donaciones)) {
+		$sql_usuario = "SELECT * FROM usuario WHERE $donacion[id_usuario] = usuario.id";
+		$datos_usuario = mysqli_query($con, $sql_usuario);
+		$usuario = mysqli_fetch_array($datos_usuario);
         echo "<div class='actividad'> ";
         echo "<b style='margin-top: 15px;'>Fecha:</b> ";
         echo utf8_encode($donacion['fecha']);        
         echo "<br/>";
         echo "<b>Usuario:</b> ";
-        echo utf8_encode($donacion['id_usuario']);
+        echo utf8_encode($usuario['nombre'])." ".utf8_encode($usuario['apellidos']);
         echo "<br/>";
         echo "<b>Cantidad:</b> ";
         echo utf8_encode($donacion['cantidad'])."€";
