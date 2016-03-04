@@ -2,23 +2,21 @@
 
 class Conect_MySql {
      var $obj = array ( "dbname"	   =>	"bbdd_mesde65",
-                        "dbuser"		=>	"root"		,
-                        "dbpwd"		=>	""		,
+                        "dbuser"		=>	"root",
+                        "dbpwd"		=>	""	,
                         "dbhost"		=>	"localhost"	);
-
-
 
      var $q_id	="";
      var $ExeBit	="";
      var $db_connect_id = "";
      var $query_count   = 0;
-    private function connect(){
-		$this->db_connect_id = mysqli_connect($this->obj['dbhost'],$this->obj['dbuser'],$this->obj['dbpwd'],$this->obj['dbname']);
+     private function connect(){
+	  $this->db_connect_id = mysqli_connect($this->obj['dbhost'],$this->obj['dbuser'],$this->obj['dbpwd'],$this->obj['dbname']);
              if (!$this->db_connect_id)
               {
                 echo (" Error no se puede conectar al servidor:".mysqli_connect_error());
     	  }
-  }
+    }
 
 function execute($query) {
         $this->q_id = mysqli_query($this->db_connect_id,$query);
