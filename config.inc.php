@@ -1,10 +1,12 @@
 <?php
 
 class Conect_MySql {
-     var $obj = array ( "dbname"	   =>	"u200607218_65",
-                        "dbuser"		=>	"u200607218_65"		,
-                        "dbpwd"		=>	"admin123"		,
-                        "dbhost"		=>	"mysql.hostinger.es"	);
+     var $obj = array ( "dbname"	   =>	"bbdd_mesde65",
+                        "dbuser"		=>	"root"		,
+                        "dbpwd"		=>	""		,
+                        "dbhost"		=>	"localhost"	);
+
+                        $con = mysqli_connect("localhost", "root", "", "bbdd_mesde65");
 
 
      var $q_id	="";
