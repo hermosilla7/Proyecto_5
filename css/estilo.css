@@ -484,6 +484,11 @@ h2{
   margin-bottom: 2%;
   text-align: center;
 }
+.prin-img {
+  display: block;
+  height: 100%;
+  padding: 2%;
+}
 .actividad {
   border-radius: 5px;
   height: auto;
