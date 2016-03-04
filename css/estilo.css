@@ -53,7 +53,7 @@ input {
 }
  
 .crunchify-top {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 3.2rem;
   bottom: 1rem;
   color: #fff;
@@ -63,7 +63,7 @@ input {
   height: 3.2rem;
   line-height: 3.2rem;
   position: fixed;
-  right: 0rem;
+  right: 1rem;
   text-align: center;
   text-decoration: none;
   width: 3.2rem;
@@ -427,7 +427,10 @@ h2{
   color:#f00;
   float:left;
 }
-
+.btns {
+  float: right;
+  margin-top: -30px;
+}
 #contactos {
     line-height:30px;
     width:32%;
