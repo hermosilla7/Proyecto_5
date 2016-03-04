@@ -479,6 +479,27 @@ h2{
   width: 13%;
   border: 4px solid #fff;
 }
+.boton {
+  background: #5080ef none repeat scroll 0 0;
+  border-radius: 5px;
+  float: right;
+  margin-bottom: 10px;
+  padding: 2%;
+  text-align: center;
+}
+.boton:hover {
+  background: #5080ef none repeat scroll 0 0;
+  border-radius: 5px;
+  float: right;
+  margin-bottom: 10px;
+  padding: 2%;
+  text-align: center;
+  opacity: 0.6;
+}
+.boton > a {
+  color: white;
+  text-decoration: none;
+}
 .log-btn2 {
   background: #DBE6FF none repeat scroll 0 0;
   border: medium none;

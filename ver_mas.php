@@ -25,6 +25,15 @@
       <div class="prin-img" style="margin-bottom: 15px;">
         <?php
           echo "<div class='actividad'> ";
+            echo "<div class='boton'>";
+          if(($actividad['estado'] == 0) && ($actividad['id_usuario'] != $id_usuario)){
+            echo "<a href='reservar_actividad.proc.php?creador=".$actividad['id_usuario']."&actividad=".$actividad['id']."'><i class='fa fa-thumbs-up'></i>¡Lo quiero!</a>";
+          } else if(($actividad['estado'] == 2) && ($trueque['id_usuario_realiza'] == $id_usuario)){
+            echo "<a href='cancelar_actividad.proc.php?creador=".$actividad['id_usuario']."&actividad=".$actividad['id']."'><i class='fa fa-times'></i>¡Cancelar!</a>";
+          } else if($actividad['id_usuario'] == $id_usuario){
+            echo "<a href='modificar_actividad.php?actividad=".$actividad['id']."'><i class='fa fa-pencil'></i>Modificar</a>";
+          }
+          echo "</div>";
           echo '<img src="img/actividades/'.$actividad[img].'" alt="" />';
           echo "<br/><br/>";
           echo "<b>Creador: </b>";
@@ -45,13 +54,7 @@
           echo "<b>Dirección:</b> ";
           echo utf8_encode($actividad['direccion']);
           echo "<br/><br/>";
-          if(($actividad['estado'] == 0) && ($actividad['id_usuario'] != $id_usuario)){
-            echo "<a href='reservar_actividad.proc.php?creador=".$actividad['id_usuario']."&actividad=".$actividad['id']."'><i class='fa fa-thumbs-up'></i>¡Lo quiero!</a>";
-          } else if(($actividad['estado'] == 2) && ($trueque['id_usuario_realiza'] == $id_usuario)){
-            echo "<a href='cancelar_actividad.proc.php?creador=".$actividad['id_usuario']."&actividad=".$actividad['id']."'><i class='fa fa-times'></i>¡Cancelar!</a>";
-          } else if($actividad['id_usuario'] == $id_usuario){
-            echo "<a href='modificar_actividad.php?actividad=".$actividad['id']."'><i class='fa fa-pencil'></i>Modificar</a>";
-          }
+    
           echo "</div>";
           echo '<div id="map"></div>';
           echo '<script type="text/javascript">var myLat='.$actividad['ubicacion_lat'].'</script>';
