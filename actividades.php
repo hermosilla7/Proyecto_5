@@ -35,6 +35,9 @@
                         echo "<h2>Tipo de actividad: </h2><br />".utf8_encode($ofrezco['ntact']).".<br /><br />";
                         echo "<h2>Fecha: </h2><br />".$ofrezco['fecha'].".<br /><br />";
                         echo "<h2>Dirección: </h2><br />".utf8_encode($ofrezco['direccion']).".<br /><br />";
+                        echo "<div class='botonindex'>";
+                        echo "<a href='ver_mas.php?actividad=".$ofrezco['id']."'>Ver mas</a>";
+                        echo "</div>";
                         echo "</div>";
                     } else {
                         echo "<div class='notic'>";
@@ -46,6 +49,9 @@
                         echo "<h2>Tipo de actividad: </h2><br />".utf8_encode($ofrezco['ntact']).".<br /><br />";
                         echo "<h2>Fecha: </h2><br />".$ofrezco['fecha'].".<br /><br />";
                         echo "<h2>Dirección: </h2><br />".utf8_encode($ofrezco['direccion']).".<br /><br />";
+                        echo "<div class='botonindex'>";
+                        echo "<a href='ver_mas.php?actividad=".$ofrezco['id']."'>Ver mas</a>";
+                        echo "</div>";
                         echo "</div>";
                     }
                     echo "</div>";
@@ -76,6 +82,9 @@
                         echo "<h2>Tipo de actividad: </h2><br />".utf8_encode($necesito['ntact']).".<br /><br />";
                         echo "<h2>Fecha: </h2><br />".$necesito['fecha'].".<br /><br />";
                         echo "<h2>Dirección: </h2><br />".utf8_encode($necesito['direccion']).".<br /><br />";
+                        echo "<div class='botonindex'>";
+                        echo "<a href='ver_mas.php?actividad=".$ofrezco['id']."'>Ver mas</a>";
+                        echo "</div>";
                         echo "</div>";
                     } else {
                         echo "<div class='notic'>";
@@ -87,6 +96,9 @@
                         echo "<h2>Tipo de actividad: </h2><br />".utf8_encode($necesito['ntact']).".<br /><br />";
                         echo "<h2>Fecha: </h2><br />".$necesito['fecha'].".<br /><br />";
                         echo "<h2>Dirección: </h2><br />".utf8_encode($necesito['direccion']).".<br /><br />";
+                        echo "<div class='botonindex'>";
+                        echo "<a href='ver_mas.php?actividad=".$ofrezco['id']."'>Ver mas</a>";
+                        echo "</div>";
                         echo "</div>";
                     }
                     echo "</div>";

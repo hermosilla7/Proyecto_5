@@ -46,6 +46,28 @@ input {
   margin-bottom: 5px;
   text-align: center;
 }
+.crunchify-top:hover {
+  background-color: #DBE6FF;
+  color: #fff !important;
+  text-decoration: none;
+}
+ 
+.crunchify-top {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3.2rem;
+  bottom: 1rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  font-size: 1.4rem;
+  height: 3.2rem;
+  line-height: 3.2rem;
+  position: fixed;
+  right: 1rem;
+  text-align: center;
+  text-decoration: none;
+  width: 3.2rem;
+}
 .logo {
   float: left;
   margin-left: 2%;
@@ -405,7 +427,10 @@ h2{
   color:#f00;
   float:left;
 }
-
+.btns {
+  float: right;
+  margin-top: -30px;
+}
 #contactos {
     line-height:30px;
     width:32%;
@@ -462,10 +487,10 @@ h2{
 }
 
 .subir {
+  float: right;
+  margin-right: 2%;
   margin-top: 1%;
-  margin-left: 20%;
   width: 50%;
-
 }
 /*/////////////////////////////donaciones////////////////////////////////*/
 .donaciones {
@@ -479,6 +504,50 @@ h2{
   width: 13%;
   border: 4px solid #fff;
 }
+
+.botonindex {
+  background: #5080ef none repeat scroll 0 0;
+  border-radius: 5px;
+
+  margin-bottom: 10px;
+  padding: 2%;
+  text-align: center;
+}
+.botonindex:hover {
+  background: #5080ef none repeat scroll 0 0;
+  border-radius: 5px;
+
+  margin-bottom: 10px;
+  padding: 2%;
+  text-align: center;
+  opacity: 0.6;
+}
+.botonindex > a {
+  color: white;
+  text-decoration: none;
+}
+.boton {
+  background: #5080ef none repeat scroll 0 0;
+  border-radius: 5px;
+  float: right;
+  margin-bottom: 10px;
+  padding: 2%;
+  text-align: center;
+}
+.boton:hover {
+  background: #5080ef none repeat scroll 0 0;
+  border-radius: 5px;
+  float: right;
+  margin-bottom: 10px;
+  padding: 2%;
+  text-align: center;
+  opacity: 0.6;
+}
+.boton > a {
+  color: white;
+  text-decoration: none;
+}
+
 .log-btn2 {
   background: #DBE6FF none repeat scroll 0 0;
   border: medium none;
