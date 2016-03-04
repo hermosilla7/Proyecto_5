@@ -83,7 +83,7 @@
                         echo "<h2>Fecha: </h2><br />".$necesito['fecha'].".<br /><br />";
                         echo "<h2>Dirección: </h2><br />".utf8_encode($necesito['direccion']).".<br /><br />";
                         echo "<div class='botonindex'>";
-                        echo "<a href='ver_mas.php?actividad=".$ofrezco['id']."'>Ver mas</a>";
+                        echo "<a href='ver_mas.php?actividad=".$necesito['id']."'>Ver mas</a>";
                         echo "</div>";
                         echo "</div>";
                     } else {
@@ -97,7 +97,7 @@
                         echo "<h2>Fecha: </h2><br />".$necesito['fecha'].".<br /><br />";
                         echo "<h2>Dirección: </h2><br />".utf8_encode($necesito['direccion']).".<br /><br />";
                         echo "<div class='botonindex'>";
-                        echo "<a href='ver_mas.php?actividad=".$ofrezco['id']."'>Ver mas</a>";
+                        echo "<a href='ver_mas.php?actividad=".$necesito['id']."'>Ver mas</a>";
                         echo "</div>";
                         echo "</div>";
                     }
