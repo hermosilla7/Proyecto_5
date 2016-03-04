@@ -35,9 +35,11 @@
 			return enviar;
 		}
 	</script>
-		
+			<div class="titleact">
+        <h1>Edición de perfil</h1>
+    </div>
 	<div class="mod-form">
-		<h1>Mi perfil</h1>
+		
  		<div class="form-group ">
 			<form name="f1" action="usuarios_modificar_admin.proc.php?id=<?php echo $_REQUEST['id']; ?>" method="post" enctype="multipart/form-data" onsubmit="return validar();">
 				<div class="form-group">
