@@ -1,6 +1,9 @@
 <?php
 	include 'header.php';
 
+	$sql = "SELECT * FROM tipo_actividad";
+	$result = mysqli_query($con, $sql);
+
 ?>
    <div class="titleact">
         <h1>Creación de eventos</h1>
@@ -35,7 +38,7 @@
 				<select id="selects" name="id_tipo_actividad">
 					<option value="">Seleccionar actividad</option>
 					<?php
-					while($fila=mysqli_fetch_array($result_actividad)){
+					while($fila=mysqli_fetch_array($result)){
 						echo utf8_encode("<option value=\"$fila[id]\">$fila[nombre]</option>");
 					}
 		        	?>

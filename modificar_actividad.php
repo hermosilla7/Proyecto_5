@@ -1,7 +1,7 @@
 <?php
     include 'header.php';
 
-    $consulta_actividades = "SELECT actividad.nombre, actividad.descripcion, actividad.fecha, , tipo_actividad.* FROM actividad INNER JOIN tipo_actividad ON actividad.id_tipo_actividad = tipo_actividad.id WHERE actividad.id = $_REQUEST[actividad]";
+    $consulta_actividades = "SELECT actividad.nombre, actividad.descripcion, actividad.fecha , tipo_actividad.* FROM actividad INNER JOIN tipo_actividad ON actividad.id_tipo_actividad = tipo_actividad.id WHERE actividad.id = $_REQUEST[actividad]";
     $result_actividades = mysqli_query($con, $consulta_actividades);
     $act = mysqli_fetch_array($result_actividades);
 ?>

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-03-2016 a las 11:23:55
+-- Tiempo de generación: 03-03-2016 a las 11:27:52
 -- Versión del servidor: 5.6.26
 -- Versión de PHP: 5.6.12
 
@@ -97,24 +97,23 @@ INSERT INTO `donacion` (`id`, `cantidad`, `id_usuario`, `fecha`) VALUES
 
 CREATE TABLE IF NOT EXISTS `tipo_actividad` (
   `id` int(2) NOT NULL,
-  `nombre` varchar(35) COLLATE utf8_unicode_ci NOT NULL,
-  `compensacion` int(4) NOT NULL
+  `nombre` varchar(35) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `tipo_actividad`
 --
 
-INSERT INTO `tipo_actividad` (`id`, `nombre`, `compensacion`) VALUES
-(1, 'Paseo', 100),
-(2, 'Electronica', 50),
-(3, 'Informática', 30),
-(4, 'Manualidades', 10),
-(5, 'Alimentación', 0),
-(6, 'Mecánica', 0),
-(7, 'Compañia', 0),
-(8, 'Deporte', 0),
-(9, 'Idiomas', 0);
+INSERT INTO `tipo_actividad` (`id`, `nombre`) VALUES
+(1, 'Paseo'),
+(2, 'Electronica'),
+(3, 'Informática'),
+(4, 'Manualidades'),
+(5, 'Alimentación'),
+(6, 'Mecánica'),
+(7, 'Compañia'),
+(8, 'Deporte'),
+(9, 'Idiomas');
 
 -- --------------------------------------------------------
 
