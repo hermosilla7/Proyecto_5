@@ -1,10 +1,10 @@
-<?php 
+<?php
 
-class Conect_MySql {   
-     var $obj = array ( "dbname"	=>	"bbdd_mesde65",
-                       "dbuser"		=>	"root"		,
-                       "dbpwd"		=>	""		,
-                       "dbhost"		=>	"localhost"	);
+class Conect_MySql {
+     var $obj = array ( "dbname"	   =>	"u200607218_65",
+                        "dbuser"		=>	"u200607218_65"		,
+                        "dbpwd"		=>	"admin123"		,
+                        "dbhost"		=>	"mysql.hostinger.es"	);
 
 
      var $q_id	="";
@@ -19,15 +19,15 @@ class Conect_MySql {
     	  }
   }
 
-function execute($query) {       
-        $this->q_id = mysqli_query($this->db_connect_id,$query);        
+function execute($query) {
+        $this->q_id = mysqli_query($this->db_connect_id,$query);
         if(!$this->q_id ) {
             $error1 = mysqli_error($this->db_connect_id);
             die ("ERROR: error DB.<br> No Se Puede Ejecutar La Consulta:<br> $query <br>MySql Tipo De Error: $error1");
             exit;
-        }         
-	$this->query_count++; 
-	return $this->q_id;    
+        }
+	$this->query_count++;
+	return $this->q_id;
     }
 
 
@@ -37,7 +37,7 @@ function execute($query) {
    	 	}
         $result = mysqli_fetch_array($q_id);
         return $result;
-    }	
+    }
 
  public function get_num_rows() {
         return mysqli_num_rows($this->q_id);
@@ -56,7 +56,7 @@ public  function free_result($q_id) {
     		$q_id = $this->q_id;
 		}
 	mysqli_free_result($q_id);
-    }	
+    }
 
 public function close_db(){
         return mysqli_close($this->db_connect_id);
@@ -72,6 +72,6 @@ public function next_result() {
   public function __construct(){
         $this->connect();
     }
-  
+
 }
 ?>

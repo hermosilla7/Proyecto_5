@@ -19,8 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `bbdd_mesde65`
 --
-CREATE DATABASE IF NOT EXISTS `bbdd_mesde65` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-USE `bbdd_mesde65`;
+/*CREATE DATABASE IF NOT EXISTS `bbdd_mesde65` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+USE `bbdd_mesde65`;*/
 
 -- --------------------------------------------------------
 
