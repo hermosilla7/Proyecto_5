@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-03-2016 a las 11:27:52
+-- Tiempo de generación: 04-03-2016 a las 11:53:14
 -- Versión del servidor: 5.6.26
 -- Versión de PHP: 5.6.12
 
@@ -85,9 +85,16 @@ CREATE TABLE IF NOT EXISTS `donacion` (
 --
 
 INSERT INTO `donacion` (`id`, `cantidad`, `id_usuario`, `fecha`) VALUES
-(1, 200, 2, '2016-06-08 12:00:00'),
-(2, 3000, 3, '2016-05-19 13:00:00'),
-(3, 150, 1, '2016-06-13 10:00:00');
+(1, 200, 2, '2016-03-07 12:00:00'),
+(2, 3000, 4, '2016-03-08 13:00:00'),
+(3, 150, 1, '2016-03-06 10:00:00'),
+(4, 20, 3, '2016-03-09 09:00:00'),
+(5, 70, 6, '2016-03-10 13:00:00'),
+(6, 30, 7, '2016-03-21 11:00:00'),
+(7, 80, 5, '2016-03-16 16:00:00'),
+(8, 10, 9, '2016-03-23 18:00:00'),
+(9, 40, 10, '2016-03-27 15:00:00'),
+(10, 110, 8, '2016-03-22 13:00:00');
 
 -- --------------------------------------------------------
 
@@ -147,18 +154,23 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `telefono` int(9) NOT NULL,
   `monedas` int(11) NOT NULL,
   `dni` varchar(9) COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
 INSERT INTO `usuario` (`id`, `nombre`, `apellidos`, `img`, `correo`, `pass`, `nivel`, `activo`, `telefono`, `monedas`, `dni`) VALUES
-(1, 'David ', 'Marin Salvador', '5.jpg', 'david.marin@fje.edu', '827ccb0eea8a706c4c34a16891f84e7b', 2, 1, 933367898, 0, '33789876A'),
-(2, 'Ignasi', 'Romero Sanjuan', '3.jpg', 'ignasi.romero@fje.edu', '827ccb0eea8a706c4c34a16891f84e7b', 1, 1, 654678987, 0, '33567987B'),
-(3, 'Armand', 'Gutierrez Arumi', '4.jpg', 'armand.gutierrez@fje.edu', '827ccb0eea8a706c4c34a16891f84e7b', 0, 1, 634789867, 0, '44567908B'),
-(4, 'prueba', '', '', '', 'd41d8cd98f00b204e9800998ecf8427e', 0, 0, 0, 0, ''),
-(5, 'german', 'luque sanchez', 'icon.png', 'fasion4@hotmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 0, 1, 0, 0, '');
+(1, 'David ', 'Marin Salvador', '5.jpg', 'david.marin@fje.edu', '827ccb0eea8a706c4c34a16891f84e7b', 2, 1, 933367898, 100, '33789876A'),
+(2, 'Ignasi', 'Romero Sanjuan', '3.jpg', 'ignasi.romero@fje.edu', '827ccb0eea8a706c4c34a16891f84e7b', 1, 1, 654678987, 100, '33567987B'),
+(3, 'Armand', 'Gutierrez Arumi', '4.jpg', 'armand.gutierrez@fje.edu', '827ccb0eea8a706c4c34a16891f84e7b', 0, 1, 634789867, 100, '44567908B'),
+(4, 'Marcos', 'Antonio Antolin', '1.jpg', 'marcos.antolin@fje.edu', '827ccb0eea8a706c4c34a16891f84e7b', 0, 1, 650894578, 100, '44234567A'),
+(5, 'German', 'Luque Sanchez', '6.jpg', 'german.luque@fje.edu', '827ccb0eea8a706c4c34a16891f84e7b', 0, 1, 634267941, 100, '44194765N'),
+(6, 'Anayansi ', 'Lopez Nuñez', '8.jpg', 'Anayansi.lopez@fje.edu', '827ccb0eea8a706c4c34a16891f84e7b', 0, 1, 634786534, 100, '44129876D'),
+(7, 'Fernando', 'Ruiz Romero', '10.jpg', 'Fernando.ruiz@fje.edu', '827ccb0eea8a706c4c34a16891f84e7b', 0, 1, 600112233, 100, '43234123A'),
+(8, 'Montse', 'Moreno Ramon', '9.jpg', 'Montse.moreno@fje.edu', '827ccb0eea8a706c4c34a16891f84e7b', 0, 1, 623456789, 100, '41234890T'),
+(9, 'Maria', 'Sanchez Julian', '2.jpg', 'Mariasanchez@fje.edu', '827ccb0eea8a706c4c34a16891f84e7b', 0, 1, 689344312, 100, '21345789I'),
+(10, 'Marta', 'Lopez Pilas', '7.jpg', 'Marta.lopez@fje.edu', '827ccb0eea8a706c4c34a16891f84e7b', 0, 1, 654323411, 100, '44234980A');
 
 --
 -- Índices para tablas volcadas
@@ -229,7 +241,7 @@ ALTER TABLE `trueque`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- Restricciones para tablas volcadas
 --
