@@ -36,7 +36,29 @@
 
 		<!-- FONT AWESOME -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
+		<!-- Crunchify's Scroll to Top Script -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+		</script>
+ 
+		<script>            
+			jQuery(document).ready(function() {
+				var offset = 220;
+				var duration = 500;
+			jQuery(window).scroll(function() {
+				if (jQuery(this).scrollTop() > offset) {
+					jQuery('.crunchify-top').fadeIn(duration);
+					} else {
+					jQuery('.crunchify-top').fadeOut(duration);
+				}
+			});
+ 
+			jQuery('.crunchify-top').click(function(event) {
+				event.preventDefault();
+			jQuery('html, body').animate({scrollTop: 0}, duration);
+				return false;
+				})
+			});
+		</script>
 	</head>
 	<body>
 		<div class="header">
