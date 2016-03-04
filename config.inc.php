@@ -6,7 +6,6 @@ class Conect_MySql {
                         "dbpwd"		=>	""		,
                         "dbhost"		=>	"localhost"	);
 
-                        $con = mysqli_connect("localhost", "root", "", "bbdd_mesde65");
 
 
      var $q_id	="";
