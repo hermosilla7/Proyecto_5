@@ -504,6 +504,28 @@ h2{
   width: 13%;
   border: 4px solid #fff;
 }
+
+.botonindex {
+  background: #5080ef none repeat scroll 0 0;
+  border-radius: 5px;
+
+  margin-bottom: 10px;
+  padding: 2%;
+  text-align: center;
+}
+.botonindex:hover {
+  background: #5080ef none repeat scroll 0 0;
+  border-radius: 5px;
+
+  margin-bottom: 10px;
+  padding: 2%;
+  text-align: center;
+  opacity: 0.6;
+}
+.botonindex > a {
+  color: white;
+  text-decoration: none;
+}
 .boton {
   background: #5080ef none repeat scroll 0 0;
   border-radius: 5px;
@@ -525,6 +547,7 @@ h2{
   color: white;
   text-decoration: none;
 }
+
 .log-btn2 {
   background: #DBE6FF none repeat scroll 0 0;
   border: medium none;
