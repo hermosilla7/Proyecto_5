@@ -15,5 +15,5 @@
 		mysqli_close($con);
 
 
-	header("Location: index.php");
+	header("Location: logout.proc.php");
 ?>

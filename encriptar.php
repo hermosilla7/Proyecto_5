@@ -6,6 +6,4 @@
 
 	echo $pass_encriptada . "<br/><br/>";
 
-
-
 ?>
