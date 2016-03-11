@@ -1,33 +1,37 @@
-<?php 
 
-class Conect_MySql {   
-     var $obj = array ( "dbname"	=>	"bbdd_mesde65",
-                       "dbuser"		=>	"root"		,
-                       "dbpwd"		=>	""		,
-                       "dbhost"		=>	"localhost"	);
+<?php
 
+class Conect_MySql {
+     var $obj = array ( "dbname"	   =>	"bbdd_mesde65",
+                        "dbuser"		=>	"root",
+                        "dbpwd"		=>	""	,
+                        "dbhost"		=>	"localhost"	);
 
      var $q_id	="";
      var $ExeBit	="";
      var $db_connect_id = "";
      var $query_count   = 0;
-    private function connect(){
-		$this->db_connect_id = mysqli_connect($this->obj['dbhost'],$this->obj['dbuser'],$this->obj['dbpwd'],$this->obj['dbname']);
+
+     private function connect(){
+	  $this->db_connect_id = mysqli_connect($this->obj['dbhost'],$this->obj['dbuser'],$this->obj['dbpwd'],$this->obj['dbname']);
              if (!$this->db_connect_id)
               {
                 echo (" Error no se puede conectar al servidor:".mysqli_connect_error());
     	  }
-  }
 
-function execute($query) {       
-        $this->q_id = mysqli_query($this->db_connect_id,$query);        
+    }
+
+function execute($query) {
+        $this->q_id = mysqli_query($this->db_connect_id,$query);
+
         if(!$this->q_id ) {
             $error1 = mysqli_error($this->db_connect_id);
             die ("ERROR: error DB.<br> No Se Puede Ejecutar La Consulta:<br> $query <br>MySql Tipo De Error: $error1");
             exit;
-        }         
-	$this->query_count++; 
-	return $this->q_id;    
+
+        }
+	$this->query_count++;
+	return $this->q_id;
     }
 
 
@@ -37,7 +41,8 @@ function execute($query) {
    	 	}
         $result = mysqli_fetch_array($q_id);
         return $result;
-    }	
+
+    }
 
  public function get_num_rows() {
         return mysqli_num_rows($this->q_id);
@@ -56,7 +61,7 @@ public  function free_result($q_id) {
     		$q_id = $this->q_id;
 		}
 	mysqli_free_result($q_id);
-    }	
+    }
 
 public function close_db(){
         return mysqli_close($this->db_connect_id);
@@ -72,6 +77,7 @@ public function next_result() {
   public function __construct(){
         $this->connect();
     }
-  
+
+
 }
 ?>

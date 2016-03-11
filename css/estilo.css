@@ -28,7 +28,11 @@
 }
 .mod-form3 {
   border-radius: 5px;
+<<<<<<< HEAD
   margin-left: 21%;
+=======
+  margin-left: 25%;
+>>>>>>> 8e4df751a856d8001e0fb7c11f9a37e232038a19
   margin-top: -7px;
   padding: 10px;
   text-align: center;
@@ -260,6 +264,7 @@ li a.active {
   margin-left: 39%;
   margin-top: 18px;
   text-align: center;
+<<<<<<< HEAD
 }
 .perfil {
   display: inline-block;
@@ -284,6 +289,32 @@ body {
   height: auto;
   padding: 1px;
 }
+=======
+}
+.perfil {
+  display: inline-block;
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+.info {
+  display: inline-block;
+  width: 30%;
+}
+.slider {
+  box-shadow: 20px 20px 20px #999;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(219, 230, 255, 1) 0%, rgba(219, 230, 255, 1) 51%, rgba(255, 255, 255, 1) 100%) repeat scroll 0 0;
+  height: auto;
+  padding: 1px;
+}
+>>>>>>> 8e4df751a856d8001e0fb7c11f9a37e232038a19
 
 h1 { color: white }
 /*/////////////////////////////other/////////////////////*/
@@ -484,6 +515,14 @@ h2{
   margin-bottom: 2%;
   text-align: center;
 }
+<<<<<<< HEAD
+=======
+.prin-img {
+  display: block;
+  height: 100%;
+  padding: 2%;
+}
+>>>>>>> 8e4df751a856d8001e0fb7c11f9a37e232038a19
 .actividad {
   border-radius: 5px;
   height: auto;
@@ -723,6 +762,7 @@ h2{
 }
 /*/////////////////////////////////////responsive//////////////////////*/
 
+<<<<<<< HEAD
 @media (max-width: 1330px) {
 .form-grouptxt {
   float: none;
@@ -772,10 +812,112 @@ ul {
 }
   }
 @media (max-width: 830px min-width: 565px) {
+=======
+@media (max-width: 440px) {
+.title > h1 {
+  display: none;
+}
+.header {
+  background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(80, 128, 239, 1) 0%, rgba(80, 128, 239, 1) 8%, rgba(219, 230, 255, 1) 100%) repeat scroll 0 0;
+  border-radius: 5px;
+  height: 240px;
+}
+.logo img {
+  width: 100%;
+}
+.menu {
+  height: 100px;
+}
+.logo {
+  float: left;
+  margin-left: 2%;
+  margin-top: 0;
+  padding: 1% 3px 3px;
+  width: 40%;
+}
+input {
+  max-width: 100%;
+}
+.login-form {
+  background: #dbe6ff none repeat scroll 0 0;
+  border-radius: 5px;
+  float: right;
+  margin-right: 9px;
+  margin-top: 9px;
+  padding: 10px;
+  width: 40%;
+}
+.filtro {
+  background: #5080ef none repeat scroll 0 0;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  box-shadow: 14px 14px 18px #999;
+  margin-left: 15%;
+  margin-top: 20px;
+  padding: 1%;
+  text-align: center;
+  width: 220px;
+}
+.titlofrezco {
+  background: #5080ef none repeat scroll 0 0;
+  border: 4px solid #fff;
+  display: block;
+  font-size: 14px;
+  height: 65px;
+  margin-bottom: 2%;
+  text-align: center;
+}
+.titlofrezco img {
+  margin-right: 40%!important;
+  margin-top: 0!important;
+}
+.notic h1 {
+  color: #5080ef !important;
+  font-size: 16px;
+}
+.notcont > h2 {
+  color: #2358d1;
+  font-family: icon;
+  font-size: 14px;
+  line-height: 15px;
+  position: absolute;
+  text-align: left;
+}
+.notic {
+  background: #dbe6ff none repeat scroll 0 0;
+  border-radius: 5px;
+  display: inline-table;
+  height: 470px;
+  margin-bottom: 10%;
+  margin-left: 3%;
+  padding: 1%;
+  width: auto;
+}
+.notic:hover {
+  background: #dbe6ff none repeat scroll 0 0;
+  border-radius: 5px;
+  display: inline-table;
+  height: 470px;
+  margin-bottom: 10%;
+  margin-left: 3%;
+  padding: 1%;
+  width: auto;
+}
+.footimg > img {
+  max-width: 60px;
+}
+.footimg {
+  margin-left: 1%;
+  margin-top: 18px;
+  text-align: center;
+}
+/*///////////////////////*/
+>>>>>>> 8e4df751a856d8001e0fb7c11f9a37e232038a19
 .titleact {
   background: #5080ef none repeat scroll 0 0;
   border: 4px solid #fff;
   display: block;
+<<<<<<< HEAD
   margin-left: 20%;
   margin-top: 100px;
   text-align: center;
@@ -883,3 +1025,150 @@ textarea {
 }
 
 }
+=======
+  margin-left: 2%;
+  margin-top: 5%;
+  text-align: center;
+  width: 90%;
+}
+.regis {
+  margin-left: 3%;
+  text-align: justify;
+  width: 90%;
+}
+.form-grouptxt {
+  float: left;
+  margin-left: 2%;
+}
+.mod-form3 {
+  border-radius: 5px;
+  margin-left: 2%;
+  padding: 10px;
+  text-align: center;
+  width: 90%;
+}
+.mod-form {
+  background: #dbe6ff none repeat scroll 0 0;
+  border-radius: 5px;
+  float: left;
+  margin-left: 2%;
+  margin-top: 9px;
+  padding: 10px;
+  text-align: center;
+}
+.dona {
+  background: #7cb5ec none repeat scroll 0 0;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  float: right;
+  height: auto;
+  margin-left: 1%;
+  margin-top: 20px;
+  padding: 1%;
+  width: 45%;
+  height: 160px;
+}
+.total {
+  display: block;
+  margin-bottom: 4%;
+  padding: 0%;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+.actividades {
+  background: #dbe6ff none repeat scroll 0 0;
+  margin-bottom: 20px;
+  margin-left: 2%;
+  width: 90%;
+  border: none;
+}
+/*//////////////////////////////*/
+.titluse {
+  background: #5080ef none repeat scroll 0 0;
+  border: 4px solid #fff;
+  display: block;
+  margin-left: 2%;
+  margin-top: 5%;
+  text-align: center;
+  width: 90%;
+}
+.usuarios {
+  background: #dbe6ff none repeat scroll 0 0;
+  border: 4px solid #fff;
+  margin-left: 2%;
+  width: 90%;
+}
+.users {
+  border-bottom: 2px solid #17326e;
+  border-radius: 5px;
+  height: 100px;
+  padding: 2%;
+}
+.btns {
+  float: left;
+  margin-top: 0;
+}
+.titledona {
+  background: #5080ef none repeat scroll 0 0;
+  border: 4px solid #fff;
+  display: block;
+  margin-left: 2%;
+  margin-top: 5%;
+  text-align: center;
+  width: 92%;
+}
+.donacionestxt {
+  background: #87aafa none repeat scroll 0 0;
+  border: 4px solid #fff;
+  border-radius: 5px;
+  margin-left: 2%;
+  margin-top: -11%;
+  padding: 1%;
+  width: 90%;
+  text-align: justify;
+}
+.donaciones {
+  background: #87aafa none repeat scroll 0 0;
+  border-radius: 5px;
+  display: block;
+  float: left;
+  margin-left: 5%;
+  margin-top: 1.4%;
+  padding: 2%;
+  text-align: center;
+  width: 71%;
+  border:none;
+}
+p {
+  padding: 3%;
+}
+.actividad > img {
+  float: left;
+  margin-bottom: 3%;
+  margin-right: 1%;
+  width: 100%;
+}
+.actividades {
+  background: #dbe6ff none repeat scroll 0 0;
+  border: medium none;
+  margin-bottom: 20px;
+  margin-left: 2%;
+  width: 95%;
+}
+.mod-form4 {
+  background: #dbe6ff none repeat scroll 0 0;
+  border-radius: 5px;
+  float: left;
+  margin-left: 2%;
+  margin-top: 9px;
+  padding: 10px;
+  text-align: center;
+}
+.bienvenido {
+  line-height: 25px;
+  margin-left: 4%;
+  width: 90%;
+}
+}
+>>>>>>> 8e4df751a856d8001e0fb7c11f9a37e232038a19
