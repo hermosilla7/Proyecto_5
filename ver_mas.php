@@ -37,7 +37,11 @@
 	  }
           echo "</div>";
           if (file_exists($fichero) && (($ofrezco['img']) != '')) {
+<<<<<<< HEAD
             echo '<img src="img/actividades/'.$actividad[img].'" alt="" />';
+=======
+            echo '<img src="img/actividades/'.$actividad[img].'" alt="" />';       
+>>>>>>> 30a394981dc4cc94406b0425cd90eb4acafa4fdc
           } else {
             echo "<img src ='img/no_disponible.jpg'  /><br />";
           }
@@ -60,7 +64,11 @@
           echo "<b>Dirección:</b> ";
           echo utf8_encode($actividad['direccion']);
           echo "<br/><br/>";
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 30a394981dc4cc94406b0425cd90eb4acafa4fdc
           echo "</div>";
           echo '<div id="map"></div>';
           echo '<script type="text/javascript">var myLat='.$actividad['ubicacion_lat'].'</script>';

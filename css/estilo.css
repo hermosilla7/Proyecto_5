@@ -196,7 +196,7 @@ li a.active {
   display: inline-table;
   height: 550px;
   margin-bottom: 2%;
-  margin-left: 3%;
+  margin-left: 7%;
   padding: 1%;
   width: 250px;
   border: 3px solid transparent;
@@ -207,7 +207,7 @@ li a.active {
   display: inline-table;
   height: 550px;
   margin-bottom: 2%;
-  margin-left: 3%;
+  margin-left: 7%;
   padding: 1%;
   width: 250px;
   border: 3px solid #0E2862;
@@ -686,6 +686,12 @@ h2{
   width: 100%;
 }
 /*/////////////////////////////////////icons//////////////////////*/
+#foto {
+  background: #5080ef none repeat scroll 0 0;
+  color: white;
+  margin-top: 10px;
+  padding: 1%;
+}
 .fa.fa-user {
   margin-right: 5px;
 }
@@ -693,7 +699,7 @@ h2{
   margin-right: 5px;
 }
 .fa.fa-lock {
-  margin-right: 5px;
+  margin-right: 9px;
 }
 .fa.fa-phone {
   margin-right: 5px;

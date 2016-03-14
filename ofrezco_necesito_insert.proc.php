@@ -16,6 +16,12 @@
 			$ruta=$_FILES["foto"]["tmp_name"];
 			$destino="img/avatar/".$foto;
 			copy($ruta, $destino);
+<<<<<<< HEAD
+=======
+			//echo $foto;
+			//echo $ruta;
+			//echo $destino;
+>>>>>>> 30a394981dc4cc94406b0425cd90eb4acafa4fdc
 			//
 			// if ($foto != "") {
 			$sql = "INSERT INTO actividad (nombre, descripcion, fecha, img, ubicacion_lat, ubicacion_lon, id_tipo_actividad, direccion, peticion, id_usuario) VALUES ('$_REQUEST[nombre]', '$_REQUEST[descripcion]', '$_REQUEST[fecha]', '$foto', '$_REQUEST[ubicacion_lat]', '$_REQUEST[ubicacion_lon]', '$_REQUEST[id_tipo_actividad]', '$_REQUEST[compensacion]', '$_REQUEST[peticion]', '$user_id')";
