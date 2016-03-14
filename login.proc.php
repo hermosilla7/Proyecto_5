@@ -16,14 +16,17 @@
 		$datos_usuario=mysqli_fetch_array($resultado);
 		
 		//creamos la variable de sesión mail
-		$_SESSION['id']=$datos_usuario['id'];
-		$_SESSION['mail']=$_REQUEST['mail'];
-		$_SESSION['nombre']=$datos_usuario['nombre'];
-		$_SESSION['nivel']=$datos_usuario['nivel'];
-		$_SESSION['img']=$datos_usuario['img'];
+		$_SESSION['id'] = $datos_usuario['id'];
+		$_SESSION['mail'] = $_REQUEST['mail'];
+		$_SESSION['nombre'] = $datos_usuario['nombre'];
+		$_SESSION['apellidos'] = $datos_usuario['apellidos'];
+		$_SESSION['telefono'] = $datos_usuario['telefono'];
+		$_SESSION['nivel'] = $datos_usuario['nivel'];
+		$_SESSION['img'] = $datos_usuario['img'];
+		$_SESSION['monedas'] = $datos_usuario['monedas'];
 
 		//redirigimos a la página principal
-		header("location: principal.php");
+		header("location: index.php");
 	} else {
 		//como no se ha encontrado la pareja de usuario y contraseña, redirigimos a la página index.php con un mensaje de error
 		$_SESSION['error']="Usuario y contraseña incorrectos";

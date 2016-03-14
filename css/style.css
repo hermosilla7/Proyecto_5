@@ -1,0 +1,19 @@
+
+
+.container {
+    width: 100%;
+    margin: 0px auto;
+}
+
+h1, a {
+    color: #DE8F26;
+}
+
+p {
+    padding-bottom: 10px;
+}
+
+#map {
+  width: 440px;
+  height: 200px;
+}

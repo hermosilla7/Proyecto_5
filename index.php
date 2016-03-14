@@ -1,44 +1,45 @@
 <?php
-	session_start();
-	error_reporting(0);
-	if(isset($_SESSION ['error'])){
-		$error=$_SESSION['error'];
-	}
-	session_destroy();
+    include "header.php";
+    
+
+    $fecha = date("Y-m-d h:i:s");
+    // Peticiones Ofrezco
+    $consulta_actividades = "SELECT actividad.id, actividad.nombre, actividad.fecha, actividad.img, actividad.direccion, tipo_actividad.nombre AS 'ntact' FROM actividad LEFT JOIN tipo_actividad ON actividad.id_tipo_actividad=tipo_actividad.id WHERE actividad.peticion = 0 AND actividad.fecha >= '$fecha' ORDER BY actividad.fecha DESC";
+    $result_actividades = mysqli_query($con, $consulta_actividades);
+
+    // Peticiones Necesito
+    $consulta_actividades2 = "SELECT actividad.id, actividad.nombre, actividad.fecha, actividad.img, actividad.direccion, tipo_actividad.nombre AS 'ntact' FROM actividad LEFT JOIN tipo_actividad ON actividad.id_tipo_actividad=tipo_actividad.id WHERE actividad.peticion = 1 AND actividad.fecha >= '$fecha' ORDER BY actividad.fecha DESC";
+    $result_actividades2 = mysqli_query($con, $consulta_actividades2);
+
+    $consulta_actividad = ("SELECT * FROM tipo_actividad");
+    $result_actividad = mysqli_query($con, $consulta_actividad);
 ?>
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8"/>
-		<title>Jubilados</title>
-		<link rel="icon" type="image/png" href="img/favicon.png" />
-		<link rel="stylesheet" type="text/css" href="css/estilo.css"/>
-	</head>
-	<body>	
-		<div class="login-form">
-			<div class="prin-img" align="middle" style="margin-bottom: 10px;">
-		</div>
-     		<div class="form-group ">
-				<form name="f1" action="login.proc.php" method="get">
-					<input type="text" name="mail" class="form-control" placeholder="Correo"maxlength="50">
-			</div>
-				    <div class="form-group">
-				       <input type="password" name="pass" class="form-control" placeholder="Contraseña">
-				       <i class="fa fa-lock"></i>
-				    </div>
-    				<button type="submit" class="log-btn" name="acce">Entrar</button>
-     				<button type="button" class="sign-btn" onclick="window.location.href='usuarios_insert.php'">Registrarme</button>  
-     				<button type="button" class="sign-btn" onclick="window.location.href='donaciones.php'">Donaciones</button>  
-				</form>
-			</div>
-		</div>
-		<?php
-		echo "<div class='log-error'>";
-			if(isset($error)){
-				echo "ERROR: " . $error;
-				echo "<br/><br/>";
-			}
-		echo "</div>";
-		?>		
-	</body>
-</html>
+<br />
+<br />
+
+<?php
+    include "with-jquery.html";
+?>
+
+<!-- TIPO ACTIVIDAD -->
+<br></br>
+<div class="filtro">
+<form action="index.php" method="get">
+ <span style="color:white;">Filtrar por:</span>
+                <select id="tipo_actividad" name="tipo_actividad" onchange="this.form.submit()">
+                    <option value="">Seleccionar actividad</option>
+                    <?php
+                    while($fila=mysqli_fetch_array($result_actividad)){
+                        echo utf8_encode("<option value=\"$fila[id]\">$fila[nombre]</option>");
+                    }
+                    ?>
+                </select>
+                <!-- <button class="btn btn-success" id="botonEnviar" type="submit">Enviar</button> -->
+                <!--  -->
+                </form>
+</div>
+
+<?php
+    include 'resultados_actividades.php';
+    include "footer.php";
+?>
