@@ -35,22 +35,12 @@
     <div class="regis">
     	<p>Para cualquier duda o sugerencia rellena este formulario de contacto. Estudiaremos tu caso e intentaremos ponernos en contacto contigo lo antes posible. Gracias por la paciencia.</p>
 	</div>
-<<<<<<< HEAD
-
-
-	<div class="form-group ">
-		<form name="f1" action="contacto.proc.php" method="post" enctype="multipart/form-data" onsubmit="return validar();"><br /></br />
-			<div class="form-grouptxt">
-
-				<textarea id="txtArea" rows="10" cols="40" placeholder="Déjanos tu sugerencia o consulta..." required></textarea>
-=======
 	
 	
 	<div class="form-group ">
 		<form name="f1" action="contacto.proc.php" method="post" enctype="multipart/form-data" onsubmit="return validar();"><br /></br />
 			<div class="form-grouptxt">
 				<textarea id="txtArea" rows="10" cols="55" placeholder="Déjanos tu sugerencia o consulta..." required></textarea>
->>>>>>> 30a394981dc4cc94406b0425cd90eb4acafa4fdc
 			</div>
 			<div class="mod-form3">
 				<div class="form-group">
@@ -72,8 +62,4 @@
 	</div>
 <?php
 	include 'footer.php';
-<<<<<<< HEAD
 ?>
-=======
-?>
->>>>>>> 30a394981dc4cc94406b0425cd90eb4acafa4fdc

@@ -3,12 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
-<<<<<<< HEAD
-
--- Tiempo de generación: 04-03-2016 a las 13:18:18
-=======
 -- Tiempo de generación: 04-03-2016 a las 12:07:54
->>>>>>> 30a394981dc4cc94406b0425cd90eb4acafa4fdc
 -- Versión del servidor: 5.6.26
 -- Versión de PHP: 5.6.12
 
@@ -16,14 +11,11 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
-<<<<<<< HEAD
-=======
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
->>>>>>> 30a394981dc4cc94406b0425cd90eb4acafa4fdc
 --
 -- Base de datos: `bbdd_mesde65`
 --
@@ -259,10 +251,7 @@ ALTER TABLE `usuario`
 --
 ALTER TABLE `trueque`
   ADD CONSTRAINT `trueque_ibfk_1` FOREIGN KEY (`id_actividad`) REFERENCES `actividad` (`id`);
-<<<<<<< HEAD
-=======
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
->>>>>>> 30a394981dc4cc94406b0425cd90eb4acafa4fdc

@@ -11,12 +11,9 @@
 			$ruta_new=$_FILES["foto"]["tmp_name"];
 			$destino_new="img/avatar/".$foto_new;
 			copy($ruta_new, $destino_new);
-<<<<<<< HEAD
-=======
 			//echo $foto_new;
 			//echo $ruta_new;
 			//echo $destino_new;
->>>>>>> 30a394981dc4cc94406b0425cd90eb4acafa4fdc
 	//
 
 	if ($foto_new != "") {

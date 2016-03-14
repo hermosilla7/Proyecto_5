@@ -12,16 +12,9 @@
 	<div class="titleact">
   		<h1>Modificar actividad</h1>
     </div>
-<<<<<<< HEAD
-
-	<div class="mod-form">
-		<div class="form-group ">
-
-=======
 	
 	<div class="mod-form">
 		<div class="form-group ">
->>>>>>> 30a394981dc4cc94406b0425cd90eb4acafa4fdc
 			<form name="f1" action="modificar_actividad.proc.php" method="post" enctype="multipart/form-data" onsubmit="return validar();">
 					<div class="form-group">
 						<input type="hidden" name="actividad" value="<?php echo $_REQUEST[actividad]; ?>">
@@ -50,11 +43,7 @@
 									echo utf8_encode("<option value='".$act2['id']."' selected>".$act2['nombre']."</option>");
 								} else {
 									echo utf8_encode("<option value='".$act2['id']."'>".$act2['nombre']."</option>");
-<<<<<<< HEAD
-								}
-=======
 								}							
->>>>>>> 30a394981dc4cc94406b0425cd90eb4acafa4fdc
 							}
 			        	?>
 				    </select><br /><br />
@@ -70,8 +59,4 @@
 
 <?php
     include 'footer.php';
-<<<<<<< HEAD
 ?>
-=======
-?>
->>>>>>> 30a394981dc4cc94406b0425cd90eb4acafa4fdc

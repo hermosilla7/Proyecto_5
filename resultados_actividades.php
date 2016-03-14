@@ -50,10 +50,6 @@
                 echo "</div>";
         	}
             ?>
-<<<<<<< HEAD
-
-=======
->>>>>>> 30a394981dc4cc94406b0425cd90eb4acafa4fdc
 			</div>
 			</div>
 			<div class="content">
@@ -84,10 +80,6 @@
                     echo "<h2>Fecha: </h2><br />".$necesito['fecha'].".<br /><br />";
                     echo "<h2>Dirección: </h2><br />".utf8_encode($necesito['direccion']).".<br /><br />";
                     echo "<div class='botonindex'>";
-<<<<<<< HEAD
-
-=======
->>>>>>> 30a394981dc4cc94406b0425cd90eb4acafa4fdc
                     echo "<a href='ver_mas.php?actividad=".$necesito['id']."'>Ver mas</a>";
                     echo "</div>";
                     echo "</div>";
@@ -102,10 +94,6 @@
                     echo "<h2>Fecha: </h2><br />".$necesito['fecha'].".<br /><br />";
                     echo "<h2>Dirección: </h2><br />".utf8_encode($necesito['direccion']).".<br /><br />";
                     echo "<div class='botonindex'>";
-<<<<<<< HEAD
-
-=======
->>>>>>> 30a394981dc4cc94406b0425cd90eb4acafa4fdc
                     echo "<a href='ver_mas.php?actividad=".$necesito['id']."'>Ver mas</a>";
                     echo "</div>";
                     echo "</div>";
@@ -129,11 +117,7 @@
 		while($ofrezco = mysqli_fetch_array($datos_ofrezco)){
 			$fichero = "img/actividades/$ofrezco[img]";
                 if (file_exists($fichero) && (($ofrezco['img']) != '')) {
-<<<<<<< HEAD
-
-=======
                         
->>>>>>> 30a394981dc4cc94406b0425cd90eb4acafa4fdc
             ?>
             <div class="content">
             <div class="destacado">
@@ -182,11 +166,7 @@
         ?>
         </div>
         </div>
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 30a394981dc4cc94406b0425cd90eb4acafa4fdc
         <div class="content">
         <div class="necesito">
         <div class="titlofrezco">
@@ -210,11 +190,7 @@
         while($necesito = mysqli_fetch_array($datos_necesito)){
             $fichero = "img/actividades/$necesito[img]";
                 if (file_exists($fichero) && (($necesito['img']) != '')) {
-<<<<<<< HEAD
-
-=======
                     
->>>>>>> 30a394981dc4cc94406b0425cd90eb4acafa4fdc
                         echo "<div class='notic'>";
                     echo "<a href='ver_mas.php?actividad=".$necesito['id']."'><h1>".utf8_encode($necesito['nombre'])."</h1></a><br />";
                     echo"<div class='notimg'>";
@@ -249,11 +225,7 @@
          ?>
         </div>
         </div>
-<<<<<<< HEAD
-
-=======
       
->>>>>>> 30a394981dc4cc94406b0425cd90eb4acafa4fdc
         <?php
 
 	}
