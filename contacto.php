@@ -55,7 +55,7 @@
 				<div class="form-group">
 					<i class="fa fa-phone"></i><input type="text" name="telefono" class="form-control" placeholder="Teléfono" pattern="[0-9]{9}" title="Formato correcto: 618589666" required <?php if(isset($telf)){ echo "value = '".$telf."'"; } ?>><br />
 				</div>
-				<button type="submit" class="log-btn" onClick="validar()" name="acce">Registrar</button>
+				<button type="submit" class="log-btn" onClick="validar()" name="acce">Enviar</button>
 				<button type="button" class="sign-btn" onClick="window.location.href='index.php'">Volver</button>
 			</div>
 		</form>

@@ -38,10 +38,9 @@
 			</form>
 		</div>
 	</div>
-	<script>
-
-	</script>
-
+	
+	<div class="espacio">
+	</div>
 <?php
 	include 'footer.php';
 ?>
