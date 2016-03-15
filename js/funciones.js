@@ -30,5 +30,3 @@ function validardni(){
         alert("Error! Revise el DNI introducido!");
       }
 }
-
-//función de asignar click a un div

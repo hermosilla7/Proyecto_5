@@ -11,6 +11,9 @@
 			$ruta_new=$_FILES["foto"]["tmp_name"];
 			$destino_new="img/avatar/".$foto_new;
 			copy($ruta_new, $destino_new);
+			//echo $foto_new;
+			//echo $ruta_new;
+			//echo $destino_new;
 	//
 
 	if ($foto_new != "") {

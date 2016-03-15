@@ -12,10 +12,9 @@
 	<div class="titleact">
   		<h1>Modificar actividad</h1>
     </div>
-
+	
 	<div class="mod-form">
 		<div class="form-group ">
-
 			<form name="f1" action="modificar_actividad.proc.php" method="post" enctype="multipart/form-data" onsubmit="return validar();">
 					<div class="form-group">
 						<input type="hidden" name="actividad" value="<?php echo $_REQUEST[actividad]; ?>">
@@ -39,7 +38,7 @@
 									echo utf8_encode("<option value='".$act2['id']."' selected>".$act2['nombre']."</option>");
 								} else {
 									echo utf8_encode("<option value='".$act2['id']."'>".$act2['nombre']."</option>");
-								}
+								}							
 							}
 			        	?>
 				    </select><br /><br />

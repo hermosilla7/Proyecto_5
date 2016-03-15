@@ -36,7 +36,7 @@
           }
 	  }
           echo "</div>";
-          if (file_exists($fichero) && (($ofrezco['img']) != '')) {
+          if ($actividad['img'] != '') {
             echo '<img src="img/actividades/'.$actividad[img].'" alt="" />';
           } else {
             echo "<img src ='img/no_disponible.jpg'  /><br />";
