@@ -57,6 +57,8 @@ if (isset($_SESSION['mail'])) {
          <img src="./img/formapago/paypal.jpg" width="85" height="50">
         
 		</div>
+			<div class="espacio">
+	</div>
 
 <?php
     include "footer.php";

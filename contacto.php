@@ -60,6 +60,8 @@
 			</div>
 		</form>
 	</div>
+	<div class="espacio">
+	</div>
 <?php
 	include 'footer.php';
 ?>

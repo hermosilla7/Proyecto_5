@@ -16,12 +16,16 @@ if (isset($_SESSION['mail'])) {
         <div class="prin-img" style="margin-bottom: 15px;">
 
 <?php
+            echo "<div class='total'>";
+    echo "<b>Total recaudado:</b> ";
+    echo $donacion_total['total']."€";
+    echo "</div>";
     $donacionesArray = [];
     while ($donacion = mysqli_fetch_array($result_donaciones)) {
 		$sql_usuario = "SELECT * FROM usuario WHERE $donacion[id_usuario] = usuario.id";
 		$datos_usuario = mysqli_query($con, $sql_usuario);
 		$usuario = mysqli_fetch_array($datos_usuario);
-        
+
         echo "<div class='dona'>";
         echo "<b style='margin-top: 15px;'>Fecha:</b> ";
         echo utf8_encode($donacion['fecha']);        
@@ -33,10 +37,7 @@ if (isset($_SESSION['mail'])) {
         echo utf8_encode($donacion['cantidad'])."€";
         echo "</div>";
     }
-    echo "<div class='total'>";
-    echo "<b>Total recaudado:</b> ";
-    echo $donacion_total['total']."€";
-    echo "</div>"
+
 ?>
             <a href="#" class="crunchify-top"><img src ="img/btt.png" style="float: right;" width="50px" height="50px"></a>
         </div>
