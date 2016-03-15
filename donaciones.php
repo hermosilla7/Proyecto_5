@@ -47,15 +47,11 @@ if (isset($_SESSION['mail'])) {
 	para así ayudar a lograr un mundo mejor para nuestros asociados.</p>
 	</div>
 			<div class="formaPago">
-       	 <img src="./img/formapago/servired.jpg" width="85" height="50">
-         <img src="./img/formapago/maestro.jpg" width="85" height="50">
-         <img src="./img/formapago/VISA(1).jpg" width="85" height="50">
-         <img src="./img/formapago/americanexpress.jpg" width="85" height="50">
-         <img src="./img/formapago/euro6000.jpg" width="85" height="50">
-         <img src="./img/formapago/4b.jpg" width="85" height="50">
-         <img src="./img/formapago/mastercard.jpg" width="85" height="50">
-         <img src="./img/formapago/paypal.jpg" width="85" height="50">
-        
+	       	<img src="./img/formapago/1.jpg">
+	         <img src="./img/formapago/2.jpg">
+	         <img src="./img/formapago/3.jpg">
+	         <img src="./img/formapago/4.jpg">
+	         <img src="./img/formapago/5.jpg">
 		</div>
 			<div class="espacio">
 	</div>
