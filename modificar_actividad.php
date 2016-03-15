@@ -28,14 +28,9 @@
 						<input type="datetime" name="fecha" class="form-control" placeholder="Fecha/hora" required value="<?php echo utf8_encode($act['fecha']);  ?>" ><br>
 					</div>
 					<div class="form-group">
-						<input type="text" name="direccion" class="form-control" placeholder="Dirección" value="<?php echo utf8_encode($act['direccion']);  ?>" ><br>
-					</div>
-					<div class="form-group">
-						<input type="text" name="ubicacion_lat" class="form-control" placeholder="Latitud" value="<?php echo utf8_encode($act['ubicacion_lat']);  ?>" ><br>
-					</div>
-					<div class="form-group">
-						<input type="text" name="ubicacion_lon" class="form-control" placeholder="Longitud" value="<?php echo utf8_encode($act['ubicacion_lon']);  ?>"><br>
-					</div>
+						<input type="text" id="direccion"name="direccion" class="form-control" placeholder="Dirección" value="<?php echo utf8_encode($act['direccion']);  ?>" onblur="buscarDireccion();" ><br>
+               </div>
+
 					<select id="selects" name="id_tipo_actividad">
 						<option value="">Seleccionar actividad</option>
 						<?php
@@ -51,11 +46,14 @@
 					<div class="form-group">
 						<input type="file" name="foto" id="foto" class="form-control"></br><br>
 					</div>
-					<button type="submit" class="log-btn" onClick="validar()" name="acce">Registrar</button>
-					<button type="button" class="sign-btn" onClick="window.location.href='index.php'">Volver</button>
+					<button type="submit" class="log-btn" onClick="validar()" name="acce">Modificar</button>
+					<button type="button" class="sign-btn" onClick="window.location.href='ver_mas.php?actividad=<?php echo $_REQUEST[actividad]; ?>'">Volver</button>
+               <input type="hidden" id="ubicacion_lat"name="ubicacion_lat" class="form-control" placeholder="Latitud" value="<?php echo utf8_encode($act['ubicacion_lat']);  ?>" ><br>
+               <input type="hidden" id="ubicacion_lon"name="ubicacion_lon" class="form-control" placeholder="Longitud" value="<?php echo utf8_encode($act['ubicacion_lon']);  ?>"><br>
 				</form>
 		</div>
 	</div>
+   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmihl9cGb7phazsa5HoQebsd4Eyv0B4T0&libraries=places"></script>
 
 
 <?php

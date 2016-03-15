@@ -20,3 +20,26 @@ var map=null,myZoom=15,myLat,myLng;
          window.open('http://maps.google.com/maps?q='+myLat+','+myLng+'&hl=es');
       });
   }
+
+  function buscarDireccion() {
+      // Obtenemos la dirección y la asignamos a una variable
+      var direccion = document.getElementById('direccion').value;
+      // Creamos el Objeto Geocoder
+      var geocoder = new google.maps.Geocoder();
+      // Hacemos la petición indicando la dirección e invocamos la función
+      // geocodeResult enviando todo el resultado obtenido
+      geocoder.geocode({ 'address': direccion}, geocodeResult);
+    };
+
+  function geocodeResult(results, status) {
+      if (status === "OK"){
+          var input = results[0].geometry.location;
+          document.getElementById('ubicacion_lat').value=input.lat();
+          document.getElementById('ubicacion_lon').value=input.lng();
+        }else {
+          document.getElementById('ubicacion_lat').value='41.352205';
+          document.getElementById('ubicacion_lon').value='2.111291';
+
+        }
+
+  }

@@ -9,7 +9,7 @@
             <?php
                 if (isset($_SESSION['id'])){
             ?>
-            <a href="ofrezco_necesito_insert.php"><img src="img/plus.png" /></a>
+            <a href="ofrezco_necesito_insert.php?servicio=0"><img src="img/plus.png" /></a>
             <?php
                 }
             ?>
@@ -21,10 +21,10 @@
                 if (file_exists($fichero) && (($ofrezco['img']) != '')) {
                     echo "<div class='notic' >";
                     echo "<a href='ver_mas.php?actividad=".$ofrezco['id']."'><h1>".utf8_encode($ofrezco['nombre'])."</h1></a><br/>";
-                    echo"<div class='notimg'>";
+                    echo "<div class='notimg'>";
                     echo "<img src='$fichero' width='90%' /><br />";
-                    echo"</div>";
-                    echo"<div class='notcont'>";
+                    echo "</div>";
+                    echo "<div class='notcont'>";
                     echo "<h2>Tipo de actividad: </h2><br />".utf8_encode($ofrezco['ntact']).".<br /><br />";
                     echo "<h2>Fecha: </h2><br />".$ofrezco['fecha'].".<br /><br />";
                     echo "<h2>Dirección: </h2><br />".utf8_encode($ofrezco['direccion']).".<br /><br />";
@@ -34,11 +34,11 @@
                     echo "</div>";
                 } else {
                     echo "<div class='notic'>";
-                    echo  "<a href='ver_mas.php?actividad=".$ofrezco['id']."'><h1>".utf8_encode($ofrezco['nombre'])."</h1></a><br />";
-                    echo"<div class='notimg'>";
+                    echo "<a href='ver_mas.php?actividad=".$ofrezco['id']."'><h1>".utf8_encode($ofrezco['nombre'])."</h1></a><br />";
+                    echo "<div class='notimg'>";
                     echo "<img src ='img/no_disponible.jpg'width='90%' /><br />";
-                    echo"</div>";
-                    echo"<div class='notcont'>";
+                    echo "</div>";
+                    echo "<div class='notcont'>";
                     echo "<h2>Tipo de actividad: </h2><br />".utf8_encode($ofrezco['ntact']).".<br /><br />";
                     echo "<h2>Fecha: </h2><br />".$ofrezco['fecha'].".<br /><br />";
                     echo "<h2>Dirección: </h2><br />".utf8_encode($ofrezco['direccion']).".<br /><br />";
@@ -60,7 +60,7 @@
                     <?php
                         if (isset($_SESSION['id'])){
                     ?>
-                    <a href="ofrezco_necesito_insert.php"><img src="img/plus.png" /></a>
+                    <a href="ofrezco_necesito_insert.php?servicio=1"><img src="img/plus.png" /></a>
                     <?php
                         }
                     ?>

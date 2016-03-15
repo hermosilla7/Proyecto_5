@@ -26,7 +26,7 @@
 
 		<!-- MAPA WEB -->
 		<script type="text/javascript" src="js/maps.js"></script>
-
+		
 		<!-- ESTILOS Y FAVICON -->
 		<link rel="icon" type="image/png" href="img/favicon.png" />
 		<link rel="stylesheet" type="text/css" href="css/estilo.css"/>
@@ -39,8 +39,8 @@
 		<!-- Crunchify's Scroll to Top Script -->
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 		</script>
- 
-		<script>            
+
+		<script>
 			jQuery(document).ready(function() {
 				var offset = 220;
 				var duration = 500;
@@ -51,7 +51,7 @@
 					jQuery('.crunchify-top').fadeOut(duration);
 				}
 			});
- 
+
 			jQuery('.crunchify-top').click(function(event) {
 				event.preventDefault();
 			jQuery('html, body').animate({scrollTop: 0}, duration);
@@ -77,7 +77,7 @@
 				    	<?php
 							echo "<div class='log-error'>";
 								if(isset($_SESSION['error'])){
-									echo "ERROR: " . $_SESSION['error'];
+									echo $_SESSION['error'];
 									echo "<br/><br/>";
 								}
 							echo "</div>";
@@ -90,7 +90,7 @@
 						} else {
 					?>
 						<h3><?php echo "Bienvenido " .$nom_user?></h3>
-					
+
 						<div class="perfilimg">
 							<?php
 								if($foto==null){

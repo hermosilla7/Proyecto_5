@@ -24,21 +24,23 @@ if (isset($_SESSION['mail'])) {
 					<input type="datetime-local" name="fecha" class="form-control" placeholder="Fecha/hora" required><br>
 				</div>
 				<div class="form-group">
-					<input type="text" name="direccion" class="form-control" placeholder="Dirección"><br>
+					<input type="text" id="direccion" name="direccion" class="form-control" placeholder="Dirección" onblur="buscarDireccion();"><br><br>
 				</div>
-				<div class="form-group">
-					<input type="text" name="ubicacion_lat" class="form-control" placeholder="Latitud"><br>
-				</div>
-				<div class="form-group">
-					<input type="text" name="ubicacion_lon" class="form-control" placeholder="Longitud"><br>
-				</div>
-				<input id="radio" type="radio" name="peticion" <?php if( $user['nivel'] == '0' ) { ?>checked="checked"<?php } ?> value='0' >Ofrezco</br><br>
-				<input id="radio" type="radio" name="peticion" <?php if( $user['nivel'] == '1' ) { ?>checked="checked"<?php } ?> value='1' >Necesito</br><br>
+				<?php
+					if ($_REQUEST['servicio']==0){
+						echo '<input id="radio" type="radio" name="peticion" checked value="0">Ofrezco</br><br>';
+						echo '<input id="radio" type="radio" name="peticion" value="1">Necesito</br><br>';
+				}else {
+						echo '<input id="radio" type="radio" name="peticion" value="0">Ofrezco</br><br>';
+						echo '<input id="radio" type="radio" name="peticion" checked value="1">Necesito</br><br>';
+				}
+
+				 ?>
 				<div class="form-group">
 					<input type="file" name="foto" id="foto" class="form-control"></br>
 				</div>
 							<!-- TIPO ACTIVIDAD -->
-				<select id="selects" name="id_tipo_actividad">
+				<select id="selects" name="id_tipo_actividad" required>
 					<option value="">Seleccionar actividad</option>
 					<?php
 					while($fila=mysqli_fetch_array($result)){
@@ -48,9 +50,12 @@ if (isset($_SESSION['mail'])) {
 			    </select></br><br>
 				<button type="submit" class="log-btn" onClick="validar()" name="acce">Registrar</button>
 				<button type="button" class="sign-btn" onClick="window.location.href='index.php'">Volver</button>
+				<input type="hidden" id="ubicacion_lat" name="ubicacion_lat" class="form-control" placeholder="Latitud"><br>
+				<input type="hidden" id="ubicacion_lon" name="ubicacion_lon" class="form-control" placeholder="Longitud"><br>
 			</form>
 		</div>
 	</div>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmihl9cGb7phazsa5HoQebsd4Eyv0B4T0&libraries=places"></script>
 <?php
     include "footer.php";
 } else {

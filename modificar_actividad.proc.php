@@ -14,10 +14,10 @@
 
 
    	if ($foto_new != "") {
-   		$sql = "UPDATE actividad SET nombre='$_REQUEST[nombre]', descripcion='$_REQUEST[descripcion]', fecha='$_REQUEST[fecha]', direccion='$_REQUEST[direccion]', ubicacion_lat=$_REQUEST[ubicacion_lat], ubicacion_lon=$_REQUEST[ubicacion_lat], img=$destino_new WHERE id=$_REQUEST[actividad]";
+   		$sql = "UPDATE actividad SET nombre='$_REQUEST[nombre]', descripcion='$_REQUEST[descripcion]', fecha='$_REQUEST[fecha]', direccion='$_REQUEST[direccion]', ubicacion_lat=$_REQUEST[ubicacion_lat], ubicacion_lon=$_REQUEST[ubicacion_lon], img=$destino_new WHERE id=$_REQUEST[actividad]";
    	}
    	else{
-         $sql = "UPDATE actividad SET nombre='$_REQUEST[nombre]', descripcion='$_REQUEST[descripcion]', fecha='$_REQUEST[fecha]', direccion='$_REQUEST[direccion]', ubicacion_lat=$_REQUEST[ubicacion_lat], ubicacion_lon=$_REQUEST[ubicacion_lat] WHERE id=$_REQUEST[actividad]";
+         $sql = "UPDATE actividad SET nombre='$_REQUEST[nombre]', descripcion='$_REQUEST[descripcion]', fecha='$_REQUEST[fecha]', direccion='$_REQUEST[direccion]', ubicacion_lat=$_REQUEST[ubicacion_lat], ubicacion_lon=$_REQUEST[ubicacion_lon] WHERE id=$_REQUEST[actividad]";
 
    	}
 
@@ -25,10 +25,6 @@
    	$datos = mysqli_query($con, $sql);
 
 
-   	header("location: actividades.php");
+   	header("location: ver_mas.php?actividad=$_REQUEST[actividad]");
 
-   ?>
-
-   <?php
-   	include 'footer.php';
    ?>
